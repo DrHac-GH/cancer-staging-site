@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>肝癌ステージングツール</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 25px; /* Adjusted for consistency */
+            background-color: #fff;
+            border-radius: 10px; /* Adjusted for consistency */
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* Adjusted for consistency */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 12px; /* Adjusted for consistency */
+            border: 1px solid #ced4da;
+            border-radius: 6px; /* Adjusted for consistency */
+            font-size: 1em;
+        }
+        .result-box {
+            margin-top: 20px;
+            padding: 20px; /* Adjusted for consistency */
+            border: 1px solid #28a745; /* Adjusted for consistency */
+            border-radius: 10px; /* Adjusted for consistency */
+            background-color: #e6ffe6; /* Adjusted for consistency */
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0; /* Initial state for fade-in */
+            animation: fadeIn 0.5s forwards; /* Fade-in animation */
+        }
+        /* Keyframe for fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="page-nav">
+        <a href="../index.html">ホームに戻る</a>
+        <a href="jp.html">日本の規約へ</a>
+        <a href="uicc.html">UICC分類へ</a>
+        <a href="jp_tool.html">日本の規約ステージングツールへ</a>
+    </nav>
+
+    <div class="main-content">
+        <h1>肝癌ステージングツール</h1>
+        <p>T, N, M因子を選択して、肝癌のステージを判定します。</p>
+
+        <div class="tool-container">
+            <div class="form-group">
+                <label for="tFactor">T因子:</label>
+                <select id="tFactor" onchange="calculateStage()" aria-label="T因子">
+                    <option value="">選択してください</option>
+                    <option value="T1a">T1a: 孤立性腫瘍で最大径が2cm以下（脈管浸潤の有無を問わない）</option>
+                    <option value="T1b">T1b: 孤立性腫瘍で最大径が2cmを超える（脈管浸潤なし）</option>
+                    <option value="T2">T2: 孤立性腫瘍で最大径が2cmを超え、脈管浸潤を認める。または、多発性腫瘍で最大径が5cm以下。</option>
+                    <option value="T3">T3: 多発性腫瘍で、少なくとも1つが最大径5cmを超える。</option>
+                    <option value="T4">T4: 門脈または肝静脈の主枝に浸潤する腫瘍。または、胆嚢を除く隣接臓器に直接浸潤、または臓側腹膜を穿破する腫瘍。</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nFactor">N因子:</label>
+                <select id="nFactor" onchange="calculateStage()" aria-label="N因子">
+                    <option value="">選択してください</option>
+                    <option value="N0">N0: 所属リンパ節転移なし</option>
+                    <option value="N1">N1: 所属リンパ節転移あり</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mFactor">M因子:</label>
+                <select id="mFactor" onchange="calculateStage()" aria-label="M因子">
+                    <option value="">選択してください</option>
+                    <option value="M0">M0: 遠隔転移なし</option>
+                    <option value="M1">M1: 遠隔転移あり</option>
+                </select>
+            </div>
+
+            <div class="result-box" id="result" role="status"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculateStage() {
+            const t = document.getElementById('tFactor').value;
+            const n = document.getElementById('nFactor').value;
+            const m = document.getElementById('mFactor').value;
+            const resultDiv = document.getElementById('result');
+
+            if (!t || !n || !m) {
+                resultDiv.textContent = '全ての因子を選択してください。';
+                return;
+            }
+
+            let stage = '判定不能';
+
+            if (m === 'M1') {
+                stage = 'IVB';
+            } else if (n === 'N1') {
+                stage = 'IVA';
+            } else if (m === 'M0' && n === 'N0') {
+                if (t === 'T1a') {
+                    stage = 'IA';
+                } else if (t === 'T1b') {
+                    stage = 'IB';
+                } else if (t === 'T2') {
+                    stage = 'II';
+                } else if (t === 'T3') {
+                    stage = 'IIIA';
+                } else if (t === 'T4') {
+                    stage = 'IIIB';
+                }
+            }
+
+            resultDiv.textContent = `判定ステージ: ${stage}`;
+        }
+
+        // Initial calculation on page load
+        window.onload = calculateStage;
+    </script>
+</body>
+</html>

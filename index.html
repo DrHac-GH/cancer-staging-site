@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消化器癌ステージング</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ここに追加 -->
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>消化器癌ステージング</h1>
+    <p class="intro-text">各種癌のステージング分類（規約・UICC TNM分類）をまとめたサイトです。</p>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="esophagus/index.html">食道癌 (Esophageal Cancer)</a></li>
+            <li><a href="stomach/index.html">胃癌 (Stomach Cancer)</a></li>
+            <li><a href="colorectal/index.html">大腸癌 (Colorectal Cancer)</a></li>
+            <li><a href="liver/jp.html">肝癌 (Liver Cancer)</a></li>
+            <li><a href="pancreas/jp.html">膵癌 (Pancreatic Cancer)</a></li>
+            <li><a href="biliary-tract/index.html">胆道癌 (Biliary Tract Cancer)</a></li>
+        </ul>
+    </nav>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('service-worker.js')
+            .then(reg => console.log('SW registered:', reg.scope))
+            .catch(err => console.error('SW failed:', err));
+        });
+      }
+    </script>
+    </body>
+</html>

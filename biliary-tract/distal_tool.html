@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遠位胆管癌ステージングツール</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 25px; /* Adjusted for consistency */
+            background-color: #fff;
+            border-radius: 10px; /* Adjusted for consistency */
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* Adjusted for consistency */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 12px; /* Adjusted for consistency */
+            border: 1px solid #ced4da;
+            border-radius: 6px; /* Adjusted for consistency */
+            font-size: 1em;
+        }
+        .result-box {
+            margin-top: 20px;
+            padding: 20px; /* Adjusted for consistency */
+            border: 1px solid #28a745; /* Adjusted for consistency */
+            border-radius: 10px; /* Adjusted for consistency */
+            background-color: #e6ffe6; /* Adjusted for consistency */
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0; /* Initial state for fade-in */
+            animation: fadeIn 0.5s forwards; /* Fade-in animation */
+        }
+        /* Keyframe for fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="page-nav">
+        <a href="../index.html">ホームに戻る</a>
+        <a href="index.html">胆道癌トップへ</a>
+        <a href="distal.html">遠位胆管癌情報へ</a>
+    </nav>
+
+    <div class="main-content">
+        <h1>遠位胆管癌ステージングツール</h1>
+        <p>T, N, M因子を選択して、遠位胆管癌のステージを判定します。（UICC TNM分類 第8版に基づく）</p>
+
+        <div class="tool-container">
+            <div class="form-group">
+                <label for="tFactor">T因子:</label>
+                <select id="tFactor" onchange="calculateStage()" aria-label="T因子">
+                    <option value="">選択してください</option>
+                    <option value="Tis">Tis: 上皮内癌/高度異形成</option>
+                    <option value="T1">T1: 胆管壁に浸潤し、深達度5mm未満</option>
+                    <option value="T2">T2: 胆管壁に浸潤し、深達度5mm以上12mm未満</option>
+                    <option value="T3">T3: 胆管壁に浸潤し、深達度12mm以上</option>
+                    <option value="T4">T4: 腹腔動脈、上腸間膜動脈、および/または総肝動脈に浸潤</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nFactor">N因子:</label>
+                <select id="nFactor" onchange="calculateStage()" aria-label="N因子">
+                    <option value="">選択してください</option>
+                    <option value="N0">N0: 所属リンパ節転移なし</option>
+                    <option value="N1">N1: 1-3個の所属リンパ節転移あり</option>
+                    <option value="N2">N2: 4個以上の所属リンパ節転移あり</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mFactor">M因子:</label>
+                <select id="mFactor" onchange="calculateStage()" aria-label="M因子">
+                    <option value="">選択してください</option>
+                    <option value="M0">M0: 遠隔転移なし</option>
+                    <option value="M1">M1: 遠隔転移あり</option>
+                </select>
+            </div>
+
+            <div class="result-box" id="result" role="status"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculateStage() {
+            const t = document.getElementById('tFactor').value;
+            const n = document.getElementById('nFactor').value;
+            const m = document.getElementById('mFactor').value;
+            const resultDiv = document.getElementById('result');
+
+            if (!t || !n || !m) {
+                resultDiv.textContent = '全ての因子を選択してください。';
+                return;
+            }
+
+            let stage = '判定不能';
+
+            if (m === 'M1') {
+                stage = 'IV';
+            } else if (n === 'N2') {
+                if (t === 'T1' || t === 'T2' || t === 'T3') {
+                    stage = 'IIIA';
+                }
+            } else if (n === 'N1') {
+                if (t === 'T1') {
+                    stage = 'IIA';
+                } else if (t === 'T2') {
+                    stage = 'IIB';
+                } else if (t === 'T3') {
+                    stage = 'IIB';
+                }
+            }
+
+            resultDiv.textContent = `判定ステージ: ${stage}`;
+        }
+
+        window.onload = calculateStage;
+    </script>
+</body>
+</html>

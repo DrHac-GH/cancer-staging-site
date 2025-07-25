@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大腸癌ステージングツール</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 25px; /* Adjusted for consistency */
+            background-color: #fff;
+            border-radius: 10px; /* Adjusted for consistency */
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* Adjusted for consistency */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 12px; /* Adjusted for consistency */
+            border: 1px solid #ced4da;
+            border-radius: 6px; /* Adjusted for consistency */
+            font-size: 1em;
+        }
+        .result-box {
+            margin-top: 20px;
+            padding: 20px; /* Adjusted for consistency */
+            border: 1px solid #28a745; /* Adjusted for consistency */
+            border-radius: 10px; /* Adjusted for consistency */
+            background-color: #e6ffe6; /* Adjusted for consistency */
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0; /* Initial state for fade-in */
+            animation: fadeIn 0.5s forwards; /* Fade-in animation */
+        }
+        /* Keyframe for fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="page-nav">
+        <a href="../index.html">ホームに戻る</a>
+        <a href="index.html">大腸癌ステージング情報へ</a>
+    </nav>
+
+    <div class="main-content">
+        <h1>大腸癌ステージングツール</h1>
+        <p>T, N, M因子を選択して、大腸癌のステージを判定します。（規約第9版・UICC第8版に基づく）</p>
+
+        <div class="tool-container">
+            <div class="form-group">
+                <label for="tFactor">T因子:</label>
+                <select id="tFactor" onchange="calculateStage()" aria-label="T因子">
+                    <option value="">選択してください</option>
+                    <option value="Tis">Tis: 上皮内癌</option>
+                    <option value="T1">T1: 粘膜下層まで</option>
+                    <option value="T2">T2: 固有筋層まで</option>
+                    <option value="T3">T3: 漿膜下層または固有筋層外の結腸・直腸周囲組織まで</option>
+                    <option value="T4a">T4a: 腹膜の表面に露出</option>
+                    <option value="T4b">T4b: 他の臓器に直接浸潤</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nFactor">N因子:</label>
+                <select id="nFactor" onchange="calculateStage()" aria-label="N因子">
+                    <option value="">選択してください</option>
+                    <option value="N0">N0: なし</option>
+                    <option value="N1a">N1a: 1個の転移</option>
+                    <option value="N1b">N1b: 2-3個の転移</option>
+                    <option value="N1c">N1c: 漿膜下、腸間膜、または腹膜に覆われていない結腸・直腸周囲組織に腫瘍の塊があるが、リンパ節転移はない</option>
+                    <option value="N2a">N2a: 4-6個の転移</option>
+                    <option value="N2b">N2b: 7個以上の転移</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mFactor">M因子:</label>
+                <select id="mFactor" onchange="calculateStage()" aria-label="M因子">
+                    <option value="">選択してください</option>
+                    <option value="M0">M0: なし</option>
+                    <option value="M1a">M1a: 1つの臓器に遠隔転移がある（腹膜転移はなし）</option>
+                    <option value="M1b">M1b: 2つ以上の臓器に遠隔転移がある</option>
+                    <option value="M1c">M1c: 腹膜に転移がある（他の臓器転移の有無を問わない）</option>
+                </select>
+            </div>
+
+            <div class="result-box" id="result" role="status"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculateStage() {
+            const t = document.getElementById('tFactor').value;
+            const n = document.getElementById('nFactor').value;
+            const m = document.getElementById('mFactor').value;
+            const resultDiv = document.getElementById('result');
+
+            if (!t || !n || !m) {
+                resultDiv.textContent = '全ての因子を選択してください。';
+                return;
+            }
+
+            let stage = '判定不能';
+
+            // M因子による判定
+            if (m === 'M1c') {
+                stage = 'IVC';
+            } else if (m === 'M1b') {
+                stage = 'IVB';
+            } else if (m === 'M1a') {
+                stage = 'IVA';
+            } else if (m === 'M0') {
+                // N因子による判定
+                if (n === 'N0') {
+                    if (t === 'Tis') {
+                        stage = '0';
+                    } else if (t === 'T1' || t === 'T2') {
+                        stage = 'I';
+                    } else if (t === 'T3') {
+                        stage = 'IIA';
+                    } else if (t === 'T4a') {
+                        stage = 'IIB';
+                    } else if (t === 'T4b') {
+                        stage = 'IIC';
+                    }
+                } else if (n === 'N1a' || n === 'N1b' || n === 'N1c') {
+                    if (t === 'T1' || t === 'T2') {
+                        stage = 'IIIA';
+                    } else if (t === 'T3' || t === 'T4a') {
+                        stage = 'IIIB';
+                    }
+                } else if (n === 'N2a') {
+                    if (t === 'T1') {
+                        stage = 'IIIA';
+                    } else if (t === 'T2' || t === 'T3') {
+                        stage = 'IIIB';
+                    }
+                } else if (n === 'N2b') {
+                    if (t === 'T1' || t === 'T2') {
+                        stage = 'IIIB';
+                    } else if (t === 'T3' || t === 'T4a') {
+                        stage = 'IIIC';
+                    }
+                }
+            }
+
+            resultDiv.textContent = `判定ステージ: ${stage}`;
+        }
+
+        // Initial calculation on page load
+        window.onload = calculateStage;
+    </script>
+</body>
+</html>

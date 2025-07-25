@@ -1,0 +1,258 @@
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans JP", sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #212529;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Page transition animation */
+}
+
+header, .main-content {
+    padding: 30px 50px;
+}
+
+h1, h2, h3 {
+    color: #343a40;
+    margin-bottom: 25px;
+}
+
+h1 {
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.intro-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 700px;
+}
+
+.main-nav li a {
+    display: block;
+    background: #fff;
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #28a745;
+    font-size: 1.3em;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transition */
+}
+
+.main-nav li a:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2); /* Stronger shadow */
+}
+
+/* Content page styles */
+.page-nav {
+    background-color: #343a40;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.page-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    margin: 5px;
+}
+
+.page-nav a:hover {
+    background-color: #495057;
+}
+
+h2 {
+    border-left: 6px solid #28a745;
+    padding-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #e0e0e0;
+}
+
+th, td {
+    padding: 18px 25px;
+    text-align: left;
+}
+
+thead {
+    background-color: #455a64;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.t-factor-details h3 {
+    margin-top: 30px;
+    color: #495057;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+.t-factor-details ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    padding-left: 0;
+}
+
+/* Tool specific styles */
+.tool-container {
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.form-group select {
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.result-box {
+    border: 1px solid #28a745;
+    background-color: #e6ffe6;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    opacity: 0; /* Initial state for fade-in */
+    animation: fadeIn 0.5s forwards; /* Fade-in animation */
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.calculate-button {
+    background-color: #28a745;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.calculate-button:hover {
+    background-color: #218838;
+}
+
+/* Notification warning style */
+.notification.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header, .main-content {
+        padding: 20px 25px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .main-nav li a {
+        font-size: 1.1em;
+        padding: 15px 20px;
+    }
+
+    .page-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 25px;
+    }
+
+    .page-nav a {
+        width: calc(100% - 10px);
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    .tool-container {
+        padding: 20px;
+    }
+
+    .form-group select {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header, .main-content {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .main-nav li a {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+
+    .page-nav a {
+        font-size: 1em;
+    }
+
+    table {
+        font-size: 0.85em;
+    }
+
+    .result-box {
+        font-size: 1.1em;
+    }
+}

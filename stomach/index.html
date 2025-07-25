@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胃癌ステージング（規約・UICC対応）</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="page-nav">
+        <a href="../index.html">ホームに戻る</a>
+        <a href="tool.html">ステージングツールへ</a>
+    </nav>
+
+    <div class="main-content">
+        <h1>胃癌ステージング</h1>
+        <p>「胃癌取扱い規約 第15版」は、国際的な「UICC TNM分類 第8版」に準拠しています。ここでは両方に対応したステージ分類を記載します。</p>
+        <p>ステージには、手術前の画像診断などに基づく「臨床分類 (cStage)」と、手術で切除した組織を調べる「病理分類 (pStage)」があります。</p>
+
+        <h2>TNM因子の詳細</h2>
+        <div class="t-factor-details">
+            <h3>T因子 (深達度)</h3>
+            <ul>
+                <li><strong>T1:</strong> 癌が粘膜または粘膜下層にとどまる (T1a: 粘膜, T1b: 粘膜下層)</li>
+                <li><strong>T2:</strong> 固有筋層にとどまる</li>
+                <li><strong>T3:</strong> 漿膜下層にとどまる</li>
+                <li><strong>T4a:</strong> 漿膜を越えて胃の表面に露出</li>
+                <li><strong>T4b:</strong> 周囲の他臓器に直接浸潤</li>
+            </ul>
+            <h3>N因子 (リンパ節転移の個数)</h3>
+            <ul>
+                <li><strong>N0:</strong> なし</li>
+                <li><strong>N1:</strong> 1〜2個</li>
+                <li><strong>N2:</strong> 3〜6個</li>
+                <li><strong>N3a:</strong> 7〜15個</li>
+                <li><strong>N3b:</strong> 16個以上</li>
+            </ul>
+            <h3>M因子 (遠隔転移)</h3>
+            <ul>
+                <li><strong>M0:</strong> なし</li>
+                <li><strong>M1:</strong> あり</li>
+            </ul>
+        </div>
+
+        <h2>臨床分類 (cStage)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>深達度 \ リンパ節転移</th>
+                    <th>N0</th>
+                    <th>N1, N2, N3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>T1, T2</strong></td>
+                    <td>I</td>
+                    <td>IIA</td>
+                </tr>
+                <tr>
+                    <td><strong>T3, T4a</strong></td>
+                    <td>IIB</td>
+                    <td>III</td>
+                </tr>
+                <tr>
+                    <td><strong>T4b</strong></td>
+                    <td>IVA</td>
+                    <td>IVA</td>
+                </tr>
+                <tr>
+                    <td><strong>M1 (遠隔転移あり)</strong></td>
+                    <td colspan="2">IVB</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>病理分類 (pStage)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>深達度 \ リンパ節転移</th>
+                    <th>N0</th>
+                    <th>N1 (1-2個)</th>
+                    <th>N2 (3-6個)</th>
+                    <th>N3a (7-15個)</th>
+                    <th>N3b (16個以上)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>T1</strong></td>
+                    <td>IA</td>
+                    <td>IB</td>
+                    <td>IIA</td>
+                    <td>IIB</td>
+                    <td>IIIB</td>
+                </tr>
+                <tr>
+                    <td><strong>T2</strong></td>
+                    <td>IB</td>
+                    <td>IIA</td>
+                    <td>IIB</td>
+                    <td>IIIA</td>
+                    <td>IIIB</td>
+                </tr>
+                <tr>
+                    <td><strong>T3</strong></td>
+                    <td>IIA</td>
+                    <td>IIB</td>
+                    <td>IIIA</td>
+                    <td>IIIB</td>
+                    <td>IIIC</td>
+                </tr>
+                <tr>
+                    <td><strong>T4a</strong></td>
+                    <td>IIB</td>
+                    <td>IIIA</td>
+                    <td>IIIA</td>
+                    <td>IIIB</td>
+                    <td>IIIC</td>
+                </tr>
+                <tr>
+                    <td><strong>T4b</strong></td>
+                    <td>IIIA</td>
+                    <td>IIIB</td>
+                    <td>IIIB</td>
+                    <td>IIIC</td>
+                    <td>IIIC</td>
+                </tr>
+                 <tr>
+                    <td><strong>M1 (遠隔転移あり)</strong></td>
+                    <td colspan="5">IV</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
