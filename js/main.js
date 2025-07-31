@@ -15,8 +15,8 @@ function calculateStage() {
     };
 
     const resultMessages = {
-        ja: '判定ステージ: ',
-        en: 'Determined Stage: '
+        ja: 'ステージ: ',
+        en: 'Stage: '
     };
 
     if (!t || !n || !m) {
