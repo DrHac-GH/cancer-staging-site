@@ -25,7 +25,19 @@ function calculateStage() {
     }
 
     if (stagingLogic[cancerType]) {
-        const stage = stagingLogic[cancerType](t, n, m);
+        let stage;
+        if (cancerType === 'liver-jp') {
+            const tumorCount = document.getElementById('tumorCount')?.value;
+            const tumorSize = document.getElementById('tumorSize')?.value;
+            const vascularInvasion = document.getElementById('vascularInvasion')?.value;
+            if (!tumorCount || !tumorSize || !vascularInvasion || !n || !m) {
+                resultDiv.textContent = errorMessages[lang];
+                return;
+            }
+            stage = stagingLogic[cancerType](tumorCount, tumorSize, vascularInvasion, n, m);
+        } else {
+            stage = stagingLogic[cancerType](t, n, m);
+        }
         resultDiv.textContent = resultMessages[lang] + stage;
     } else {
         resultDiv.textContent = 'この癌腫の計算ロジックが見つかりません。';
