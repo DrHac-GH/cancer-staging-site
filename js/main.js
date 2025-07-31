@@ -3,9 +3,6 @@ function calculateStage() {
     if (!toolContainer) return;
 
     const cancerType = toolContainer.dataset.cancerType;
-    const t = document.getElementById('tFactor')?.value;
-    const n = document.getElementById('nFactor')?.value;
-    const m = document.getElementById('mFactor')?.value;
     const resultDiv = document.getElementById('result');
     const lang = localStorage.getItem('language') || 'ja';
 
@@ -19,7 +16,30 @@ function calculateStage() {
         en: 'Stage: '
     };
 
-    if (!t || !n || !m) {
+    let allFactorsSelected = true;
+    let t, n, m, tumorCount, tumorSize, vascularInvasion;
+
+    if (cancerType === 'liver-jp') {
+        tumorCount = document.getElementById('tumorCount')?.value;
+        tumorSize = document.getElementById('tumorSize')?.value;
+        vascularInvasion = document.getElementById('vascularInvasion')?.value;
+        n = document.getElementById('nFactor')?.value;
+        m = document.getElementById('mFactor')?.value;
+
+        if (!tumorCount || !tumorSize || !vascularInvasion || !n || !m) {
+            allFactorsSelected = false;
+        }
+    } else {
+        t = document.getElementById('tFactor')?.value;
+        n = document.getElementById('nFactor')?.value;
+        m = document.getElementById('mFactor')?.value;
+
+        if (!t || !n || !m) {
+            allFactorsSelected = false;
+        }
+    }
+
+    if (!allFactorsSelected) {
         resultDiv.textContent = errorMessages[lang];
         return;
     }
@@ -27,13 +47,6 @@ function calculateStage() {
     if (stagingLogic[cancerType]) {
         let stage;
         if (cancerType === 'liver-jp') {
-            const tumorCount = document.getElementById('tumorCount')?.value;
-            const tumorSize = document.getElementById('tumorSize')?.value;
-            const vascularInvasion = document.getElementById('vascularInvasion')?.value;
-            if (!tumorCount || !tumorSize || !vascularInvasion || !n || !m) {
-                resultDiv.textContent = errorMessages[lang];
-                return;
-            }
             stage = stagingLogic[cancerType](tumorCount, tumorSize, vascularInvasion, n, m);
         } else {
             stage = stagingLogic[cancerType](t, n, m);
