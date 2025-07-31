@@ -61,10 +61,10 @@
         <h1>大腸癌ステージングツール</h1>
         <p>T, N, M因子を選択して、大腸癌のステージを判定します。（規約第9版・UICC第8版に基づく）</p>
 
-        <div class="tool-container">
+        <div class="tool-container" data-cancer-type="colorectal">
             <div class="form-group">
                 <label for="tFactor">T因子:</label>
-                <select id="tFactor" onchange="calculateStage()" aria-label="T因子">
+                <select id="tFactor" aria-label="T因子">
                     <option value="">選択してください</option>
                     <option value="Tis">Tis: 上皮内癌</option>
                     <option value="T1">T1: 粘膜下層まで</option>
@@ -77,7 +77,7 @@
 
             <div class="form-group">
                 <label for="nFactor">N因子:</label>
-                <select id="nFactor" onchange="calculateStage()" aria-label="N因子">
+                <select id="nFactor" aria-label="N因子">
                     <option value="">選択してください</option>
                     <option value="N0">N0: なし</option>
                     <option value="N1a">N1a: 1個の転移</option>
@@ -90,7 +90,7 @@
 
             <div class="form-group">
                 <label for="mFactor">M因子:</label>
-                <select id="mFactor" onchange="calculateStage()" aria-label="M因子">
+                <select id="mFactor" aria-label="M因子">
                     <option value="">選択してください</option>
                     <option value="M0">M0: なし</option>
                     <option value="M1a">M1a: 1つの臓器に遠隔転移がある（腹膜転移はなし）</option>
@@ -103,67 +103,7 @@
         </div>
     </div>
 
-    <script>
-        function calculateStage() {
-            const t = document.getElementById('tFactor').value;
-            const n = document.getElementById('nFactor').value;
-            const m = document.getElementById('mFactor').value;
-            const resultDiv = document.getElementById('result');
-
-            if (!t || !n || !m) {
-                resultDiv.textContent = '全ての因子を選択してください。';
-                return;
-            }
-
-            let stage = '判定不能';
-
-            // M因子による判定
-            if (m === 'M1c') {
-                stage = 'IVC';
-            } else if (m === 'M1b') {
-                stage = 'IVB';
-            } else if (m === 'M1a') {
-                stage = 'IVA';
-            } else if (m === 'M0') {
-                // N因子による判定
-                if (n === 'N0') {
-                    if (t === 'Tis') {
-                        stage = '0';
-                    } else if (t === 'T1' || t === 'T2') {
-                        stage = 'I';
-                    } else if (t === 'T3') {
-                        stage = 'IIA';
-                    } else if (t === 'T4a') {
-                        stage = 'IIB';
-                    } else if (t === 'T4b') {
-                        stage = 'IIC';
-                    }
-                } else if (n === 'N1a' || n === 'N1b' || n === 'N1c') {
-                    if (t === 'T1' || t === 'T2') {
-                        stage = 'IIIA';
-                    } else if (t === 'T3' || t === 'T4a') {
-                        stage = 'IIIB';
-                    }
-                } else if (n === 'N2a') {
-                    if (t === 'T1') {
-                        stage = 'IIIA';
-                    } else if (t === 'T2' || t === 'T3') {
-                        stage = 'IIIB';
-                    }
-                } else if (n === 'N2b') {
-                    if (t === 'T1' || t === 'T2') {
-                        stage = 'IIIB';
-                    } else if (t === 'T3' || t === 'T4a') {
-                        stage = 'IIIC';
-                    }
-                }
-            }
-
-            resultDiv.textContent = `判定ステージ: ${stage}`;
-        }
-
-        // Initial calculation on page load
-        window.onload = calculateStage;
-    </script>
+    <script src="../js/staging-logic.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

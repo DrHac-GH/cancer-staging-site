@@ -61,10 +61,10 @@
         <h1>食道癌ステージングツール</h1>
         <p>T, N, M因子を選択して、食道癌のステージを判定します。</p>
 
-        <div class="tool-container">
+        <div class="tool-container" data-cancer-type="esophagus">
             <div class="form-group">
                 <label for="tFactor">T因子:</label>
-                <select id="tFactor" onchange="calculateStage()" aria-label="T因子">
+                <select id="tFactor" aria-label="T因子">
                     <option value="">選択してください</option>
                     <option value="Tis">Tis: 高度異形成（上皮内癌）</option>
                     <option value="T1">T1: 癌が粘膜または粘膜下層にとどまる (T1a: 粘膜, T1b: 粘膜下層)</option>
@@ -77,7 +77,7 @@
 
             <div class="form-group">
                 <label for="nFactor">N因子:</label>
-                <select id="nFactor" onchange="calculateStage()" aria-label="N因子">
+                <select id="nFactor" aria-label="N因子">
                     <option value="">選択してください</option>
                     <option value="N0">N0: なし</option>
                     <option value="N1">N1: 1〜2個</option>
@@ -88,7 +88,7 @@
 
             <div class="form-group">
                 <label for="mFactor">M因子:</label>
-                <select id="mFactor" onchange="calculateStage()" aria-label="M因子">
+                <select id="mFactor" aria-label="M因子">
                     <option value="">選択してください</option>
                     <option value="M0">M0: なし</option>
                     <option value="M1">M1: あり（日本の規約第12版では、鎖骨上リンパ節転移をM1aとして区別することがある）</option>
@@ -99,50 +99,7 @@
         </div>
     </div>
 
-    <script>
-        function calculateStage() {
-            const t = document.getElementById('tFactor').value;
-            const n = document.getElementById('nFactor').value;
-            const m = document.getElementById('mFactor').value;
-            const resultDiv = document.getElementById('result');
-
-            if (!t || !n || !m) {
-                resultDiv.textContent = '全ての因子を選択してください。';
-                return;
-            }
-
-            let stage = '判定不能';
-
-            // 食道癌ステージングロジック (UICC 8th edition general staging)
-            if (m === 'M1') {
-                stage = 'IVB';
-            } else if (n === 'N3') {
-                stage = 'IVB'; // N3はIVBに分類される
-            } else if (n === 'N2') {
-                stage = 'IVA';
-            } else if (n === 'N1') {
-                stage = 'IIIC';
-            } else if (n === 'N0') {
-                if (t === 'Tis') {
-                    stage = '0';
-                } else if (t === 'T1') {
-                    stage = 'I';
-                } else if (t === 'T2') {
-                    stage = 'II';
-                } else if (t === 'T3') {
-                    stage = 'IIIA';
-                } else if (t === 'T4a') {
-                    stage = 'IIIB';
-                } else if (t === 'T4b') {
-                    stage = 'IIIC';
-                }
-            }
-
-            resultDiv.textContent = `判定ステージ: ${stage}`;
-        }
-
-        // Initial calculation on page load
-        window.onload = calculateStage;
-    </script>
+    <script src="../js/staging-logic.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
