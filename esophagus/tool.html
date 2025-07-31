@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>食道癌ステージングツール</title>
+    <title data-ja="食道癌ステージングツール" data-en="Esophageal Cancer Staging Tool">食道癌ステージングツール</title>
     <link rel="stylesheet" href="../style.css">
     <style>
         .tool-container {
@@ -53,45 +53,45 @@
 </head>
 <body>
     <nav class="page-nav">
-        <a href="../index.html">ホームに戻る</a>
-        <a href="index.html">食道癌ステージング情報へ</a>
+        <a href="../index.html" data-ja="ホームに戻る" data-en="Back to Home">ホームに戻る</a>
+        <a href="index.html" data-ja="食道癌ステージング情報へ" data-en="Back to Esophageal Cancer Staging Info">食道癌ステージング情報へ</a>
     </nav>
 
     <div class="main-content">
-        <h1>食道癌ステージングツール</h1>
-        <p>T, N, M因子を選択して、食道癌のステージを判定します。</p>
+        <h1 data-ja="食道癌ステージングツール" data-en="Esophageal Cancer Staging Tool">食道癌ステージングツール</h1>
+        <p data-ja="T, N, M因子を選択して、食道癌のステージを判定します。" data-en="Select T, N, and M factors to determine the stage of esophageal cancer.">T, N, M因子を選択して、食道癌のステージを判定します。</p>
 
         <div class="tool-container" data-cancer-type="esophagus">
             <div class="form-group">
-                <label for="tFactor">T因子:</label>
-                <select id="tFactor" aria-label="T因子">
-                    <option value="">選択してください</option>
-                    <option value="Tis">Tis: 高度異形成（上皮内癌）</option>
-                    <option value="T1">T1: 癌が粘膜または粘膜下層にとどまる (T1a: 粘膜, T1b: 粘膜下層)</option>
-                    <option value="T2">T2: 固有筋層にとどまる</option>
-                    <option value="T3">T3: 食道外膜まで浸潤</option>
-                    <option value="T4a">T4a: 周囲の他臓器に浸潤 (胸膜、心膜、横隔膜など)</option>
-                    <option value="T4b">T4b: 周囲の他臓器に浸潤 (大動脈、気管、椎体など)</option>
+                <label for="tFactor" data-ja="T因子:" data-en="T Factor:">T因子:</label>
+                <select id="tFactor" aria-label="T Factor">
+                    <option value="" data-ja="選択してください" data-en="Please select">選択してください</option>
+                    <option value="Tis" data-ja="Tis: 高度異形成（上皮内癌）" data-en="Tis: High-grade dysplasia (carcinoma in situ)">Tis: 高度異形成（上皮内癌）</option>
+                    <option value="T1" data-ja="T1: 癌が粘膜または粘膜下層にとどまる (T1a: 粘膜, T1b: 粘膜下層)" data-en="T1: Tumor invades lamina propria, muscularis mucosae, or submucosa (T1a: lamina propria or muscularis mucosae, T1b: submucosa)">T1: 癌が粘膜または粘膜下層にとどまる (T1a: 粘膜, T1b: 粘膜下層)</option>
+                    <option value="T2" data-ja="T2: 固有筋層にとどまる" data-en="T2: Tumor invades muscularis propria">T2: 固有筋層にとどまる</option>
+                    <option value="T3" data-ja="T3: 食道外膜まで浸潤" data-en="T3: Tumor invades adventitia">T3: 食道外膜まで浸潤</option>
+                    <option value="T4a" data-ja="T4a: 周囲の他臓器に浸潤 (胸膜、心膜、横隔膜など)" data-en="T4a: Tumor invades adjacent structures (pleura, pericardium, diaphragm, etc.)">T4a: 周囲の他臓器に浸潤 (胸膜、心膜、横隔膜など)</option>
+                    <option value="T4b" data-ja="T4b: 周囲の他臓器に浸潤 (大動脈、気管、椎体など)" data-en="T4b: Tumor invades adjacent structures (aorta, trachea, vertebral body, etc.)">T4b: 周囲の他臓器に浸潤 (大動脈、気管、椎体など)</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="nFactor">N因子:</label>
-                <select id="nFactor" aria-label="N因子">
-                    <option value="">選択してください</option>
-                    <option value="N0">N0: なし</option>
-                    <option value="N1">N1: 1〜2個</option>
-                    <option value="N2">N2: 3〜6個</option>
-                    <option value="N3">N3: 7個以上</option>
+                <label for="nFactor" data-ja="N因子:" data-en="N Factor:">N因子:</label>
+                <select id="nFactor" aria-label="N Factor">
+                    <option value="" data-ja="選択してください" data-en="Please select">選択してください</option>
+                    <option value="N0" data-ja="N0: なし" data-en="N0: None">N0: なし</option>
+                    <option value="N1" data-ja="N1: 1〜2個" data-en="N1: 1-2 nodes">N1: 1〜2個</option>
+                    <option value="N2" data-ja="N2: 3〜6個" data-en="N2: 3-6 nodes">N2: 3〜6個</option>
+                    <option value="N3" data-ja="N3: 7個以上" data-en="N3: 7 or more nodes">N3: 7個以上</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="mFactor">M因子:</label>
-                <select id="mFactor" aria-label="M因子">
-                    <option value="">選択してください</option>
-                    <option value="M0">M0: なし</option>
-                    <option value="M1">M1: あり（日本の規約第12版では、鎖骨上リンパ節転移をM1aとして区別することがある）</option>
+                <label for="mFactor" data-ja="M因子:" data-en="M Factor:">M因子:</label>
+                <select id="mFactor" aria-label="M Factor">
+                    <option value="" data-ja="選択してください" data-en="Please select">選択してください</option>
+                    <option value="M0" data-ja="M0: なし" data-en="M0: None">M0: なし</option>
+                    <option value="M1" data-ja="M1: あり（日本の規約第12版では、鎖骨上リンパ節転移をM1aとして区別することがある）" data-en="M1: Present (In the 12th edition of the Japanese classification, supraclavicular lymph node metastasis may be classified as M1a)">M1: あり（日本の規約第12版では、鎖骨上リンパ節転移をM1aとして区別することがある）</option>
                 </select>
             </div>
 
@@ -101,5 +101,6 @@
 
     <script src="../js/staging-logic.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/language.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-site-cache-v4'; // Cache version updated
+const CACHE_NAME = 'my-site-cache-v5'; // Cache version updated
 const urlsToCache = [
   './',
   './index.html',
@@ -8,6 +8,7 @@ const urlsToCache = [
   './images/icon-512x512.png',
   './js/staging-logic.js',
   './js/main.js',
+  './js/language.js',
   './esophagus/index.html',
   './esophagus/tool.html',
   './stomach/index.html',
