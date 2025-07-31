@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>胆嚢癌ステージングツール</title>
+    <title data-ja="胆嚢癌ステージングツール" data-en="Gallbladder Cancer Staging Tool">胆嚢癌ステージングツール</title>
     <link rel="stylesheet" href="../style.css">
     <style>
         .tool-container {
@@ -53,46 +53,46 @@
 </head>
 <body>
     <nav class="page-nav">
-        <a href="../index.html">ホームに戻る</a>
-        <a href="index.html">胆道癌トップへ</a>
-        <a href="gallbladder.html">胆嚢癌情報へ</a>
+        <a href="../index.html" data-ja="ホームに戻る" data-en="Back to Home">ホームに戻る</a>
+        <a href="index.html" data-ja="胆道癌トップへ" data-en="Back to Biliary Tract Cancer Top">胆道癌トップへ</a>
+        <a href="gallbladder.html" data-ja="胆嚢癌情報へ" data-en="Back to Gallbladder Cancer Info">胆嚢癌情報へ</a>
     </nav>
 
     <div class="main-content">
-        <h1>胆嚢癌ステージングツール</h1>
-        <p>T, N, M因子を選択して、胆嚢癌のステージを判定します。（UICC TNM分類 第8版に基づく）</p>
+        <h1 data-ja="胆嚢癌ステージングツール" data-en="Gallbladder Cancer Staging Tool">胆嚢癌ステージングツール</h1>
+        <p data-ja="T, N, M因子を選択して、胆嚢癌のステージを判定します。（UICC TNM分類 第8版に基づく）" data-en="Select T, N, and M factors to determine the stage of gallbladder cancer (based on UICC TNM Classification 8th Ed.).">T, N, M因子を選択して、胆嚢癌のステージを判定します。（UICC TNM分類 第8版に基づく）</p>
 
-        <div class="tool-container">
+        <div class="tool-container" data-cancer-type="biliary-gallbladder">
             <div class="form-group">
-                <label for="tFactor">T因子:</label>
-                <select id="tFactor" onchange="calculateStage()" aria-label="T因子">
-                    <option value="">選択してください</option>
-                    <option value="Tis">Tis: 上皮内癌（粘膜内）</option>
-                    <option value="T1a">T1a: 粘膜固有層に浸潤</option>
-                    <option value="T1b">T1b: 筋層に浸潤</option>
-                    <option value="T2a">T2a: 腹膜側（遊離面）の筋層外結合組織に浸潤</option>
-                    <option value="T2b">T2b: 肝側（肝臓に付着している面）の筋層外結合組織に浸潤</option>
-                    <option value="T3">T3: 漿膜（臓側腹膜）を穿破、および/または肝臓に直接浸潤、および/または他の隣接臓器に直接浸潤</option>
-                    <option value="T4">T4: 主門脈または肝動脈に浸潤、または2つ以上の肝外臓器または構造に浸潤</option>
+                <label for="tFactor" data-ja="T因子:" data-en="T Factor:">T因子:</label>
+                <select id="tFactor" aria-label="T Factor">
+                    <option value="" data-ja="選択してください" data-en="Please select">選択してください</option>
+                    <option value="Tis" data-ja="Tis: 上皮内癌（粘膜内）" data-en="Tis: Carcinoma in situ (intramucosal)">Tis: 上皮内癌（粘膜内）</option>
+                    <option value="T1a" data-ja="T1a: 粘膜固有層に浸潤" data-en="T1a: Invades lamina propria">T1a: 粘膜固有層に浸潤</option>
+                    <option value="T1b" data-ja="T1b: 筋層に浸潤" data-en="T1b: Invades muscularis propria">T1b: 筋層に浸潤</option>
+                    <option value="T2a" data-ja="T2a: 腹膜側（遊離面）の筋層外結合組織に浸潤" data-en="T2a: Invades perimuscular connective tissue on the peritoneal side (free surface)">T2a: 腹膜側（遊離面）の筋層外結合組織に浸潤</option>
+                    <option value="T2b" data-ja="T2b: 肝側（肝臓に付着している面）の筋層外結合組織に浸潤" data-en="T2b: Invades perimuscular connective tissue on the hepatic side (attached to liver)">T2b: 肝側（肝臓に付着している面）の筋層外結合組織に浸潤</option>
+                    <option value="T3" data-ja="T3: 漿膜（臓側腹膜）を穿破、および/または肝臓に直接浸潤、および/または他の隣接臓器に直接浸潤" data-en="T3: Perforates serosa (visceral peritoneum) and/or directly invades the liver and/or one other adjacent organ">T3: 漿膜（臓側腹膜）を穿破、および/または肝臓に直接浸潤、および/または他の隣接臓器に直接浸潤</option>
+                    <option value="T4" data-ja="T4: 主門脈または肝動脈に浸潤、または2つ以上の肝外臓器または構造に浸潤" data-en="T4: Invades main portal vein or hepatic artery, or two or more extrahepatic organs or structures">T4: 主門脈または肝動脈に浸潤、または2つ以上の肝外臓器または構造に浸潤</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="nFactor">N因子:</label>
-                <select id="nFactor" onchange="calculateStage()" aria-label="N因子">
-                    <option value="">選択してください</option>
-                    <option value="N0">N0: 所属リンパ節転移なし</option>
-                    <option value="N1">N1: 1-3個の所属リンパ節転移あり</option>
-                    <option value="N2">N2: 4個以上の所属リンパ節転移あり</option>
+                <label for="nFactor" data-ja="N因子:" data-en="N Factor:">N因子:</label>
+                <select id="nFactor" aria-label="N Factor">
+                    <option value="" data-ja="選択してください" data-en="Please select">選択してください</option>
+                    <option value="N0" data-ja="N0: 所属リンパ節転移なし" data-en="N0: No regional lymph node metastasis">N0: 所属リンパ節転移なし</option>
+                    <option value="N1" data-ja="N1: 1-3個の所属リンパ節転移あり" data-en="N1: 1-3 regional lymph node metastases">N1: 1-3個の所属リンパ節転移あり</option>
+                    <option value="N2" data-ja="N2: 4個以上の所属リンパ節転移あり" data-en="N2: 4 or more regional lymph node metastases">N2: 4個以上の所属リンパ節転移あり</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="mFactor">M因子:</label>
-                <select id="mFactor" onchange="calculateStage()" aria-label="M因子">
-                    <option value="">選択してください</option>
-                    <option value="M0">M0: 遠隔転移なし</option>
-                    <option value="M1">M1: 遠隔転移あり</option>
+                <label for="mFactor" data-ja="M因子:" data-en="M Factor:">M因子:</label>
+                <select id="mFactor" aria-label="M Factor">
+                    <option value="" data-ja="選択してください" data-en="Please select">選択してください</option>
+                    <option value="M0" data-ja="M0: 遠隔転移なし" data-en="M0: No distant metastasis">M0: 遠隔転移なし</option>
+                    <option value="M1" data-ja="M1: 遠隔転移あり" data-en="M1: Distant metastasis present">M1: 遠隔転移あり</option>
                 </select>
             </div>
 
@@ -100,51 +100,8 @@
         </div>
     </div>
 
-    <script>
-        function calculateStage() {
-            const t = document.getElementById('tFactor').value;
-            const n = document.getElementById('nFactor').value;
-            const m = document.getElementById('mFactor').value;
-            const resultDiv = document.getElementById('result');
-
-            if (!t || !n || !m) {
-                resultDiv.textContent = '全ての因子を選択してください。';
-                return;
-            }
-
-            let stage = '判定不能';
-
-            if (m === 'M1') {
-                stage = 'IVB';
-            } else if (n === 'N2') {
-                stage = 'IVB';
-            } else if (n === 'N1') {
-                if (t === 'T1a' || t === 'T1b' || t === 'T2a' || t === 'T2b' || t === 'T3') {
-                    stage = 'IIIB';
-                }
-            }
-            else if (n === 'N0') {
-                if (t === 'Tis') {
-                    stage = '0';
-                } else if (t === 'T1a') {
-                    stage = 'IA';
-                } else if (t === 'T1b') {
-                    stage = 'IB';
-                } else if (t === 'T2a') {
-                    stage = 'IIA';
-                } else if (t === 'T2b') {
-                    stage = 'IIB';
-                } else if (t === 'T3') {
-                    stage = 'IIIA';
-                } else if (t === 'T4') {
-                    stage = 'IVA';
-                }
-            }
-
-            resultDiv.textContent = `判定ステージ: ${stage}`;
-        }
-
-        window.onload = calculateStage;
-    </script>
+    <script src="../js/staging-logic.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/language.js"></script>
 </body>
 </html>

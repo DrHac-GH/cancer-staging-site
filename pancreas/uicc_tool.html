@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>膵癌ステージングツール</title>
+    <title data-ja="膵癌ステージングツール" data-en="Pancreatic Cancer Staging Tool">膵癌ステージングツール</title>
     <link rel="stylesheet" href="../style.css">
     <style>
         .tool-container {
@@ -53,45 +53,45 @@
 </head>
 <body>
     <nav class="page-nav">
-        <a href="../index.html">ホームに戻る</a>
-        <a href="jp.html">規約へ</a>
-        <a href="uicc.html">UICC分類へ</a>
-        <a href="jp_tool.html">規約ステージングツールへ</a>
+        <a href="../index.html" data-ja="ホームに戻る" data-en="Back to Home">ホームに戻る</a>
+        <a href="jp.html" data-ja="規約へ" data-en="Go to Japanese Rules">規約へ</a>
+        <a href="jp_tool.html" data-ja="規約ステージングツールへ" data-en="Go to Japanese Rules Staging Tool">規約ステージングツールへ</a>
+        <a href="uicc_tool.html" data-ja="UICCステージングツールへ" data-en="Go to UICC Staging Tool">UICCステージングツールへ</a>
     </nav>
 
     <div class="main-content">
-        <h1>膵癌ステージングツール</h1>
-        <p>T, N, M因子を選択して、膵癌のステージを判定します。（UICC TNM分類 第8版に基づく）</p>
+        <h1 data-ja="膵癌ステージングツール" data-en="Pancreatic Cancer Staging Tool">膵癌ステージングツール</h1>
+        <p data-ja="T, N, M因子を選択して、膵癌のステージを判定します。（UICC TNM分類 第8版に基づく）" data-en="Select T, N, and M factors to determine the stage of pancreatic cancer (based on UICC TNM Classification 8th Ed.).">T, N, M因子を選択して、膵癌のステージを判定します。（UICC TNM分類 第8版に基づく）</p>
 
-        <div class="tool-container">
+        <div class="tool-container" data-cancer-type="pancreas-uicc">
             <div class="form-group">
-                <label for="tFactor">T因子:</label>
-                <select id="tFactor" onchange="calculateStage()" aria-label="T因子">
-                    <option value="">選択してください</option>
-                    <option value="Tis">Tis: 上皮内癌</option>
-                    <option value="T1">T1: 腫瘍の最大径が2cm以下 (T1a: ≤0.5cm, T1b: >0.5-<1cm, T1c: 1-2cm)</option>
-                    <option value="T2">T2: 腫瘍の最大径が2cmを超え4cm以下</option>
-                    <option value="T3">T3: 腫瘍の最大径が4cmを超える</option>
-                    <option value="T4">T4: 腹腔動脈、上腸間膜動脈、総肝動脈に及ぶ腫瘍</option>
+                <label for="tFactor" data-ja="T因子:" data-en="T Factor:">T因子:</label>
+                <select id="tFactor" aria-label="T Factor">
+                    <option value="" data-ja="選択してください" data-en="Please select">選択してください</option>
+                    <option value="Tis" data-ja="Tis: 上皮内癌" data-en="Tis: Carcinoma in situ">Tis: 上皮内癌</option>
+                    <option value="T1" data-ja="T1: 腫瘍の最大径が2cm以下 (T1a: ≤0.5cm, T1b: >0.5-<1cm, T1c: 1-2cm)" data-en="T1: Tumor ≤ 2 cm in greatest dimension (T1a: ≤0.5cm, T1b: >0.5-<1cm, T1c: 1-2cm)">T1: 腫瘍の最大径が2cm以下 (T1a: ≤0.5cm, T1b: >0.5-<1cm, T1c: 1-2cm)</option>
+                    <option value="T2" data-ja="T2: 腫瘍の最大径が2cmを超え4cm以下" data-en="T2: Tumor > 2 cm and ≤ 4 cm in greatest dimension">T2: 腫瘍の最大径が2cmを超え4cm以下</option>
+                    <option value="T3" data-ja="T3: 腫瘍の最大径が4cmを超える" data-en="T3: Tumor > 4 cm in greatest dimension">T3: 腫瘍の最大径が4cmを超える</option>
+                    <option value="T4" data-ja="T4: 腹腔動脈、上腸間膜動脈、総肝動脈に及ぶ腫瘍" data-en="T4: Tumor involves celiac axis, superior mesenteric artery, or common hepatic artery">T4: 腹腔動脈、上腸間膜動脈、総肝動脈に及ぶ腫瘍</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="nFactor">N因子:</label>
-                <select id="nFactor" onchange="calculateStage()" aria-label="N因子">
-                    <option value="">選択してください</option>
-                    <option value="N0">N0: 所属リンパ節転移なし</option>
-                    <option value="N1">N1: 1〜3個の所属リンパ節転移あり</option>
-                    <option value="N2">N2: 4個以上の所属リンパ節転移あり</option>
+                <label for="nFactor" data-ja="N因子:" data-en="N Factor:">N因子:</label>
+                <select id="nFactor" aria-label="N Factor">
+                    <option value="" data-ja="選択してください" data-en="Please select">選択してください</option>
+                    <option value="N0" data-ja="N0: 所属リンパ節転移なし" data-en="N0: No regional lymph node metastasis">N0: 所属リンパ節転移なし</option>
+                    <option value="N1" data-ja="N1: 1〜3個の所属リンパ節転移あり" data-en="N1: 1-3 regional lymph node metastases">N1: 1〜3個の所属リンパ節転移あり</option>
+                    <option value="N2" data-ja="N2: 4個以上の所属リンパ節転移あり" data-en="N2: 4 or more regional lymph node metastases">N2: 4個以上の所属リンパ節転移あり</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="mFactor">M因子:</label>
-                <select id="mFactor" onchange="calculateStage()" aria-label="M因子">
-                    <option value="">選択してください</option>
-                    <option value="M0">M0: 遠隔転移なし</option>
-                    <option value="M1">M1: 遠隔転移あり</option>
+                <label for="mFactor" data-ja="M因子:" data-en="M Factor:">M因子:</label>
+                <select id="mFactor" aria-label="M Factor">
+                    <option value="" data-ja="選択してください" data-en="Please select">選択してください</option>
+                    <option value="M0" data-ja="M0: 遠隔転移なし" data-en="M0: No distant metastasis">M0: 遠隔転移なし</option>
+                    <option value="M1" data-ja="M1: 遠隔転移あり" data-en="M1: Distant metastasis present">M1: 遠隔転移あり</option>
                 </select>
             </div>
 
@@ -99,47 +99,8 @@
         </div>
     </div>
 
-    <script>
-        function calculateStage() {
-            const t = document.getElementById('tFactor').value;
-            const n = document.getElementById('nFactor').value;
-            const m = document.getElementById('mFactor').value;
-            const resultDiv = document.getElementById('result');
-
-            if (!t || !n || !m) {
-                resultDiv.textContent = '全ての因子を選択してください。';
-                return;
-            }
-
-            let stage = '判定不能';
-
-            if (m === 'M1') {
-                stage = 'IV';
-            } else if (n === 'N2') {
-                stage = 'III';
-            } else if (n === 'N1') {
-                if (t === 'T1' || t === 'T2' || t === 'T3') {
-                    stage = 'IIB';
-                }
-            } else if (n === 'N0') {
-                if (t === 'Tis') {
-                    stage = '0';
-                } else if (t === 'T1') {
-                    stage = 'IA';
-                } else if (t === 'T2') {
-                    stage = 'IB';
-                } else if (t === 'T3') {
-                    stage = 'IIA';
-                } else if (t === 'T4') {
-                    stage = 'III';
-                }
-            }
-
-            resultDiv.textContent = `判定ステージ: ${stage}`;
-        }
-
-        // Initial calculation on page load
-        window.onload = calculateStage;
-    </script>
+    <script src="../js/staging-logic.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/language.js"></script>
 </body>
 </html>
