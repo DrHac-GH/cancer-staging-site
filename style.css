@@ -226,33 +226,34 @@ tbody tr:nth-child(even) {
     }
 }
 
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.language-selector button {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 8px 15px; /* パディングを増やしてボタンを大きくする */
+    cursor: pointer;
+    margin-left: 5px;
+    min-width: 80px; /* 最小幅を設定して揃える */
+    text-align: center;
+}
+
+.language-selector button:hover {
+    background-color: #e9ecef;
+}
+
 @media (max-width: 480px) {
-    header, .main-content {
-        padding: 15px 20px;
+    .language-selector {
+        top: 5px;
+        right: 5px;
     }
-
-    h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    .main-nav li a {
-        font-size: 1em;
-        padding: 12px 15px;
-    }
-
-    .page-nav a {
-        font-size: 1em;
-    }
-
-    table {
-        font-size: 0.85em;
-    }
-
-    .result-box {
-        font-size: 1.1em;
+    .language-selector button {
+        padding: 5px 10px;
+        min-width: 60px;
     }
 }
