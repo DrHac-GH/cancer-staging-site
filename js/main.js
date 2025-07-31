@@ -7,15 +7,26 @@ function calculateStage() {
     const n = document.getElementById('nFactor')?.value;
     const m = document.getElementById('mFactor')?.value;
     const resultDiv = document.getElementById('result');
+    const lang = localStorage.getItem('language') || 'ja';
+
+    const errorMessages = {
+        ja: '全ての因子を選択してください。',
+        en: 'Please select all factors.'
+    };
+
+    const resultMessages = {
+        ja: '判定ステージ: ',
+        en: 'Determined Stage: '
+    };
 
     if (!t || !n || !m) {
-        resultDiv.textContent = '全ての因子を選択してください。';
+        resultDiv.textContent = errorMessages[lang];
         return;
     }
 
     if (stagingLogic[cancerType]) {
         const stage = stagingLogic[cancerType](t, n, m);
-        resultDiv.textContent = `判定ステージ: ${stage}`;
+        resultDiv.textContent = resultMessages[lang] + stage;
     } else {
         resultDiv.textContent = 'この癌腫の計算ロジックが見つかりません。';
     }
