@@ -256,4 +256,8 @@ tbody tr:nth-child(even) {
         padding: 5px 10px;
         min-width: 60px;
     }
+    h1 {
+        margin-top: 60px; /* 言語切り替えボタンとの重なりを避けるためのマージン */
+    }
 }
+
