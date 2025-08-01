@@ -177,6 +177,16 @@ const stagingLogic = {
             } else if (t === 'T3') {
                 stage = 'IIB';
             }
+        } else if (n === 'N0') { // N0の場合のロジックを追加
+            if (t === 'Tis') {
+                stage = '0';
+            } else if (t === 'T1') {
+                stage = 'I';
+            } else if (t === 'T2') {
+                stage = 'IIA';
+            } else if (t === 'T3') {
+                stage = 'IIB';
+            }
         }
         return stage;
     },
