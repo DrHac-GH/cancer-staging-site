@@ -44,6 +44,7 @@ const stagingLogic = {
             } else if (n === 'N2a') {
                 if (t === 'T1') return 'IIIA';
                 if (t === 'T2' || t === 'T3') return 'IIIB';
+                if (t === 'T4a') return 'IIIC'; // T4a N2a M0 の場合を追加
             } else if (n === 'N2b') {
                 if (t === 'T1' || t === 'T2') return 'IIIB';
                 if (t === 'T3' || t === 'T4a') return 'IIIC';
