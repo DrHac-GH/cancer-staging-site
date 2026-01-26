@@ -4,14 +4,18 @@ body {
     margin: 0;
     background-color: #f8f9fa;
     color: #212529;
-    transition: background-color 0.5s ease, color 0.5s ease; /* Page transition animation */
+    transition: background-color 0.5s ease, color 0.5s ease;
+    /* Page transition animation */
 }
 
-header, .main-content {
+header,
+.main-content {
     padding: 30px 50px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #343a40;
     margin-bottom: 25px;
 }
@@ -49,12 +53,14 @@ h1 {
     color: #28a745;
     font-size: 1.3em;
     border: 1px solid #e0e0e0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smoother transition */
 }
 
 .main-nav li a:hover {
     transform: translateY(-7px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.2); /* Stronger shadow */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow */
 }
 
 /* Content page styles */
@@ -92,19 +98,22 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 30px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
     display: block;
     overflow-x: auto;
     white-space: nowrap;
     border-radius: 10px;
-    overflow: hidden;
+
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #e0e0e0;
 }
 
-th, td {
+th,
+td {
     padding: 18px 25px;
     text-align: left;
 }
@@ -135,7 +144,7 @@ tbody tr:nth-child(even) {
 .tool-container {
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .form-group select {
@@ -147,16 +156,25 @@ tbody tr:nth-child(even) {
     border: 1px solid #28a745;
     background-color: #e6ffe6;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    opacity: 0; /* Initial state for fade-in */
-    animation: fadeIn 0.5s forwards; /* Fade-in animation */
+    opacity: 0;
+    /* Initial state for fade-in */
+    animation: fadeIn 0.5s forwards;
+    /* Fade-in animation */
 }
 
 /* Keyframe for fade-in animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .calculate-button {
@@ -184,7 +202,9 @@ tbody tr:nth-child(even) {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    header, .main-content {
+
+    header,
+    .main-content {
         padding: 20px 25px;
     }
 
@@ -236,10 +256,12 @@ tbody tr:nth-child(even) {
 .language-selector button {
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
-    padding: 8px 15px; /* パディングを増やしてボタンを大きくする */
+    padding: 8px 15px;
+    /* パディングを増やしてボタンを大きくする */
     cursor: pointer;
     margin-left: 5px;
-    min-width: 80px; /* 最小幅を設定して揃える */
+    min-width: 80px;
+    /* 最小幅を設定して揃える */
     text-align: center;
 }
 
@@ -252,12 +274,14 @@ tbody tr:nth-child(even) {
         top: 5px;
         right: 5px;
     }
+
     .language-selector button {
         padding: 5px 10px;
         min-width: 60px;
     }
+
     h1 {
-        margin-top: 60px; /* 言語切り替えボタンとの重なりを避けるためのマージン */
+        margin-top: 60px;
+        /* 言語切り替えボタンとの重なりを避けるためのマージン */
     }
 }
-
