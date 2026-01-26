@@ -41,13 +41,14 @@ const stagingLogic = {
             } else if (n === 'N1a' || n === 'N1b' || n === 'N1c') {
                 if (t === 'T1' || t === 'T2') return 'IIIA';
                 if (t === 'T3' || t === 'T4a') return 'IIIB';
+                if (t === 'T4b') return 'IIIC';
             } else if (n === 'N2a') {
                 if (t === 'T1') return 'IIIA';
                 if (t === 'T2' || t === 'T3') return 'IIIB';
-                if (t === 'T4a') return 'IIIC'; // T4a N2a M0 の場合を追加
+                if (t === 'T4a' || t === 'T4b') return 'IIIC';
             } else if (n === 'N2b') {
                 if (t === 'T1' || t === 'T2') return 'IIIB';
-                if (t === 'T3' || t === 'T4a') return 'IIIC';
+                if (t === 'T3' || t === 'T4a' || t === 'T4b') return 'IIIC';
             }
         }
         return '判定不能';
@@ -119,6 +120,8 @@ const stagingLogic = {
         } else if (n === 'N1') {
             if (t === 'T1' || t === 'T2' || t === 'T3') {
                 stage = 'IIB';
+            } else if (t === 'T4') {
+                stage = 'III';
             }
         } else if (n === 'N0') {
             if (t === 'Tis') {
@@ -145,6 +148,8 @@ const stagingLogic = {
         } else if (n === 'N1') {
             if (t === 'T1' || t === 'T2' || t === 'T3') {
                 stage = 'IIB';
+            } else if (t === 'T4') {
+                stage = 'III';
             }
         } else if (n === 'N0') {
             if (t === 'Tis') {
@@ -167,7 +172,7 @@ const stagingLogic = {
         if (m === 'M1') {
             stage = 'IV';
         } else if (n === 'N2') {
-            if (t === 'T1' || t === 'T2' || t === 'T3') {
+            if (t === 'T1' || t === 'T2' || t === 'T3' || t === 'T4') {
                 stage = 'IIIA';
             }
         } else if (n === 'N1') {
@@ -177,6 +182,8 @@ const stagingLogic = {
                 stage = 'IIB';
             } else if (t === 'T3') {
                 stage = 'IIB';
+            } else if (t === 'T4') {
+                stage = 'IIIB';
             }
         } else if (n === 'N0') { // N0の場合のロジックを追加
             if (t === 'Tis') {
@@ -201,6 +208,8 @@ const stagingLogic = {
         } else if (n === 'N1') {
             if (t === 'T1a' || t === 'T1b' || t === 'T2a' || t === 'T2b' || t === 'T3') {
                 stage = 'IIIB';
+            } else if (t === 'T4') {
+                stage = 'IVA';
             }
         }
         else if (n === 'N0') {
