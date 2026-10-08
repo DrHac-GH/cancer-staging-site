@@ -18,7 +18,7 @@
       "status": "unverified",
       "basis": [{ "source": "jp-esophagus", "implemented": "12", "latest": "12", "published": null, "sourceUrl": null, "errataAppliedAt": null }],
       "effectiveFrom": null,
-      "note": "要照合・書籍未入手。表示は第12版だが、実装の Stage 表が第12版と一致するか未検収（ネイティブ版の第12版実装と結果が異なる）。差分表は Web 公開情報で起草し、書籍照合は入手後。"
+      "note": "要照合・書籍未入手。実装の因子区分と Stage 表は第12版と一致しない（学会公式の英訳版 Esophagus 2024 と照合・docs/diff/esophagus-12.md）。反映は書籍での検収後。"
     },
     "stomach": {
       "status": "outdated",
