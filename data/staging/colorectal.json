@@ -2,7 +2,7 @@
   "id": "colorectal",
   "name": { "ja": "大腸癌", "en": "Colorectal Cancer" },
   "edition": "colorectal",
-  "labelStatus": "legacy",
+  "labelStatus": "summarized-unreviewed",
   "factors": [
     {
       "key": "t",
@@ -35,22 +35,22 @@
         {
           "value": "T3",
           "label": {
-            "ja": "T3: 漿膜下層または固有筋層外の結腸・直腸周囲組織まで",
-            "en": "T3: Invades subserosa or pericolic/perirectal tissues"
+            "ja": "T3: 固有筋層を越える（漿膜下層・周囲組織まで）",
+            "en": "T3: Through the muscle layer into subserosa or surrounding tissue"
           }
         },
         {
           "value": "T4a",
           "label": {
-            "ja": "T4a: 腹膜の表面に露出",
-            "en": "T4a: Penetrates visceral peritoneum"
+            "ja": "T4a: 漿膜表面に露出",
+            "en": "T4a: Reaches the serosal surface"
           }
         },
         {
           "value": "T4b",
           "label": {
-            "ja": "T4b: 他の臓器に直接浸潤",
-            "en": "T4b: Directly invades other organs or structures"
+            "ja": "T4b: 他臓器へ直接浸潤",
+            "en": "T4b: Directly involves other organs"
           }
         }
       ]
@@ -86,8 +86,8 @@
         {
           "value": "N1c",
           "label": {
-            "ja": "N1c: 漿膜下、腸間膜、または腹膜に覆われていない結腸・直腸周囲組織に腫瘍の塊があるが、リンパ節転移はない",
-            "en": "N1c: Tumor deposits in subserosa, mesentery, or non-peritonealized pericolic/perirectal tissues without lymph node metastasis"
+            "ja": "N1c: リンパ節転移なし・周囲組織に腫瘍結節あり",
+            "en": "N1c: No nodal metastasis, but tumor deposits in surrounding tissue"
           }
         },
         {
@@ -123,22 +123,22 @@
         {
           "value": "M1a",
           "label": {
-            "ja": "M1a: 1つの臓器に遠隔転移がある（腹膜転移はなし）",
-            "en": "M1a: Distant metastasis to one organ (no peritoneal metastasis)"
+            "ja": "M1a: 遠隔転移1臓器（腹膜転移なし）",
+            "en": "M1a: One organ, no peritoneal spread"
           }
         },
         {
           "value": "M1b",
           "label": {
-            "ja": "M1b: 2つ以上の臓器に遠隔転移がある",
-            "en": "M1b: Distant metastasis to two or more organs"
+            "ja": "M1b: 遠隔転移2臓器以上",
+            "en": "M1b: Two or more organs"
           }
         },
         {
           "value": "M1c",
           "label": {
-            "ja": "M1c: 腹膜に転移がある（他の臓器転移の有無を問わない）",
-            "en": "M1c: Peritoneal metastasis (with or without other organ metastasis)"
+            "ja": "M1c: 腹膜転移あり（他臓器は問わない）",
+            "en": "M1c: Peritoneal spread, with or without other organs"
           }
         }
       ]

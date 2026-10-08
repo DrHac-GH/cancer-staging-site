@@ -2,7 +2,7 @@
   "id": "pancreas-uicc",
   "name": { "ja": "膵癌（UICC）", "en": "Pancreatic Cancer (UICC)" },
   "edition": "pancreas-uicc",
-  "labelStatus": "legacy",
+  "labelStatus": "summarized-unreviewed",
   "factors": [
     {
       "key": "t",
@@ -21,29 +21,29 @@
         {
           "value": "T1",
           "label": {
-            "ja": "T1: 腫瘍の最大径が2cm以下 (T1a: ≤0.5cm, T1b: >0.5-<1cm, T1c: 1-2cm)",
-            "en": "T1: Tumor ≤ 2 cm in greatest dimension (T1a: ≤0.5cm, T1b: >0.5-<1cm, T1c: 1-2cm)"
+            "ja": "T1: 2cm以下（T1a 0.5cm以下／T1b 0.5cm超1cm未満／T1c 1〜2cm）",
+            "en": "T1: 2 cm or less (T1a up to 0.5 cm / T1b over 0.5 to under 1 cm / T1c 1–2 cm)"
           }
         },
         {
           "value": "T2",
           "label": {
-            "ja": "T2: 腫瘍の最大径が2cmを超え4cm以下",
-            "en": "T2: Tumor > 2 cm and ≤ 4 cm in greatest dimension"
+            "ja": "T2: 2cm超4cm以下",
+            "en": "T2: Over 2 cm, up to 4 cm"
           }
         },
         {
           "value": "T3",
           "label": {
-            "ja": "T3: 腫瘍の最大径が4cmを超える",
-            "en": "T3: Tumor > 4 cm in greatest dimension"
+            "ja": "T3: 4cm超",
+            "en": "T3: Over 4 cm"
           }
         },
         {
           "value": "T4",
           "label": {
-            "ja": "T4: 腹腔動脈、上腸間膜動脈、総肝動脈に及ぶ腫瘍",
-            "en": "T4: Tumor involves celiac axis, superior mesenteric artery, or common hepatic artery"
+            "ja": "T4: 主要動脈（腹腔・上腸間膜・総肝）に及ぶ",
+            "en": "T4: Reaches a major artery (celiac, SMA or common hepatic)"
           }
         }
       ]
@@ -65,15 +65,15 @@
         {
           "value": "N1",
           "label": {
-            "ja": "N1: 1〜3個の所属リンパ節転移あり",
-            "en": "N1: 1-3 regional lymph node metastases"
+            "ja": "N1: 1〜3個",
+            "en": "N1: 1–3 nodes"
           }
         },
         {
           "value": "N2",
           "label": {
-            "ja": "N2: 4個以上の所属リンパ節転移あり",
-            "en": "N2: 4 or more regional lymph node metastases"
+            "ja": "N2: 4個以上",
+            "en": "N2: 4 or more nodes"
           }
         }
       ]

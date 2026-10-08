@@ -1,0 +1,558 @@
+{
+ "biliary-distal": {
+  "t.Tis": {
+   "ja": "Tis: 上皮内癌/高度異形成",
+   "en": "Tis: Carcinoma in situ/High-grade dysplasia"
+  },
+  "t.T1": {
+   "ja": "T1: 胆管壁に浸潤し、深達度5mm未満",
+   "en": "T1: Tumor invades bile duct wall, depth of invasion < 5mm"
+  },
+  "t.T2": {
+   "ja": "T2: 胆管壁に浸潤し、深達度5mm以上12mm未満",
+   "en": "T2: Tumor invades bile duct wall, depth of invasion ≥ 5mm and < 12mm"
+  },
+  "t.T3": {
+   "ja": "T3: 胆管壁に浸潤し、深達度12mm以上",
+   "en": "T3: Tumor invades bile duct wall, depth of invasion ≥ 12mm"
+  },
+  "t.T4": {
+   "ja": "T4: 腹腔動脈、上腸間膜動脈、および/または総肝動脈に浸潤",
+   "en": "T4: Tumor invades celiac axis, superior mesenteric artery, and/or common hepatic artery"
+  },
+  "n.N0": {
+   "ja": "N0: 所属リンパ節転移なし",
+   "en": "N0: No regional lymph node metastasis"
+  },
+  "n.N1": {
+   "ja": "N1: 1-3個の所属リンパ節転移あり",
+   "en": "N1: 1-3 regional lymph node metastases"
+  },
+  "n.N2": {
+   "ja": "N2: 4個以上の所属リンパ節転移あり",
+   "en": "N2: 4 or more regional lymph node metastases"
+  },
+  "m.M0": {
+   "ja": "M0: 遠隔転移なし",
+   "en": "M0: No distant metastasis"
+  },
+  "m.M1": {
+   "ja": "M1: 遠隔転移あり",
+   "en": "M1: Distant metastasis present"
+  }
+ },
+ "biliary-gallbladder": {
+  "t.Tis": {
+   "ja": "Tis: 上皮内癌（粘膜内）",
+   "en": "Tis: Carcinoma in situ (intramucosal)"
+  },
+  "t.T1a": {
+   "ja": "T1a: 粘膜固有層に浸潤",
+   "en": "T1a: Invades lamina propria"
+  },
+  "t.T1b": {
+   "ja": "T1b: 筋層に浸潤",
+   "en": "T1b: Invades muscularis propria"
+  },
+  "t.T2a": {
+   "ja": "T2a: 腹膜側（遊離面）の筋層外結合組織に浸潤",
+   "en": "T2a: Invades perimuscular connective tissue on the peritoneal side (free surface)"
+  },
+  "t.T2b": {
+   "ja": "T2b: 肝側（肝臓に付着している面）の筋層外結合組織に浸潤",
+   "en": "T2b: Invades perimuscular connective tissue on the hepatic side (attached to liver)"
+  },
+  "t.T3": {
+   "ja": "T3: 漿膜（臓側腹膜）を穿破、および/または肝臓に直接浸潤、および/または他の隣接臓器に直接浸潤",
+   "en": "T3: Perforates serosa (visceral peritoneum) and/or directly invades the liver and/or one other adjacent organ"
+  },
+  "t.T4": {
+   "ja": "T4: 主門脈または肝動脈に浸潤、または2つ以上の肝外臓器または構造に浸潤",
+   "en": "T4: Invades main portal vein or hepatic artery, or two or more extrahepatic organs or structures"
+  },
+  "n.N0": {
+   "ja": "N0: 所属リンパ節転移なし",
+   "en": "N0: No regional lymph node metastasis"
+  },
+  "n.N1": {
+   "ja": "N1: 1-3個の所属リンパ節転移あり",
+   "en": "N1: 1-3 regional lymph node metastases"
+  },
+  "n.N2": {
+   "ja": "N2: 4個以上の所属リンパ節転移あり",
+   "en": "N2: 4 or more regional lymph node metastases"
+  },
+  "m.M0": {
+   "ja": "M0: 遠隔転移なし",
+   "en": "M0: No distant metastasis"
+  },
+  "m.M1": {
+   "ja": "M1: 遠隔転移あり",
+   "en": "M1: Distant metastasis present"
+  }
+ },
+ "biliary-intrahepatic": {
+  "t.Tis": {
+   "ja": "Tis: 上皮内癌（管内腫瘍）",
+   "en": "Tis: Carcinoma in situ (intraductal tumor)"
+  },
+  "t.T1a": {
+   "ja": "T1a: 脈管侵襲を伴わない孤立性腫瘍で5cm以下",
+   "en": "T1a: Solitary tumor ≤ 5cm without vascular invasion"
+  },
+  "t.T1b": {
+   "ja": "T1b: 脈管侵襲を伴わない孤立性腫瘍で5cm超",
+   "en": "T1b: Solitary tumor > 5cm without vascular invasion"
+  },
+  "t.T2": {
+   "ja": "T2: 肝内脈管侵襲を伴う孤立性腫瘍、または脈管侵襲の有無にかかわらず多発性腫瘍",
+   "en": "T2: Solitary tumor with intrahepatic vascular invasion, or multiple tumors with or without vascular invasion"
+  },
+  "t.T3": {
+   "ja": "T3: 臓側腹膜を穿破する腫瘍",
+   "en": "T3: Tumor perforating the visceral peritoneum"
+  },
+  "t.T4": {
+   "ja": "T4: 直接浸潤により肝外の局所構造に及ぶ腫瘍",
+   "en": "T4: Tumor directly invading adjacent extrahepatic structures"
+  },
+  "n.N0": {
+   "ja": "N0: 所属リンパ節転移なし",
+   "en": "N0: No regional lymph node metastasis"
+  },
+  "n.N1": {
+   "ja": "N1: 所属リンパ節転移あり",
+   "en": "N1: Regional lymph node metastasis present"
+  },
+  "m.M0": {
+   "ja": "M0: 遠隔転移なし",
+   "en": "M0: No distant metastasis"
+  },
+  "m.M1": {
+   "ja": "M1: 遠隔転移あり",
+   "en": "M1: Distant metastasis present"
+  }
+ },
+ "biliary-perihilar": {
+  "t.Tis": {
+   "ja": "Tis: 上皮内癌/高度異形成",
+   "en": "Tis: Carcinoma in situ/High-grade dysplasia"
+  },
+  "t.T1": {
+   "ja": "T1: 胆管壁に限局する腫瘍（筋層または線維組織まで進展）",
+   "en": "T1: Tumor confined to bile duct wall (invades muscularis or fibrous tissue)"
+  },
+  "t.T2a": {
+   "ja": "T2a: 胆管壁を越えて周囲の脂肪組織に浸潤",
+   "en": "T2a: Tumor invades beyond bile duct wall into periductal adipose tissue"
+  },
+  "t.T2b": {
+   "ja": "T2b: 隣接する肝実質に浸潤",
+   "en": "T2b: Tumor invades adjacent liver parenchyma"
+  },
+  "t.T3": {
+   "ja": "T3: 片側の門脈枝または肝動脈に浸潤",
+   "en": "T3: Tumor invades unilateral portal vein or hepatic artery"
+  },
+  "t.T4": {
+   "ja": "T4: 主門脈またはその両側枝、あるいは片側の二次胆管枝と対側の門脈または肝動脈に浸潤",
+   "en": "T4: Tumor invades main portal vein or both branches, or unilateral secondary biliary radicles with contralateral portal vein or hepatic artery invasion"
+  },
+  "n.N0": {
+   "ja": "N0: 所属リンパ節転移なし",
+   "en": "N0: No regional lymph node metastasis"
+  },
+  "n.N1": {
+   "ja": "N1: 1-3個の所属リンパ節転移あり",
+   "en": "N1: 1-3 regional lymph node metastases"
+  },
+  "n.N2": {
+   "ja": "N2: 4個以上の所属リンパ節転移あり",
+   "en": "N2: 4 or more regional lymph node metastases"
+  },
+  "m.M0": {
+   "ja": "M0: 遠隔転移なし",
+   "en": "M0: No distant metastasis"
+  },
+  "m.M1": {
+   "ja": "M1: 遠隔転移あり",
+   "en": "M1: Distant metastasis present"
+  }
+ },
+ "colorectal": {
+  "t.Tis": {
+   "ja": "Tis: 上皮内癌",
+   "en": "Tis: Carcinoma in situ"
+  },
+  "t.T1": {
+   "ja": "T1: 粘膜下層まで",
+   "en": "T1: Invades submucosa"
+  },
+  "t.T2": {
+   "ja": "T2: 固有筋層まで",
+   "en": "T2: Invades muscularis propria"
+  },
+  "t.T3": {
+   "ja": "T3: 漿膜下層または固有筋層外の結腸・直腸周囲組織まで",
+   "en": "T3: Invades subserosa or pericolic/perirectal tissues"
+  },
+  "t.T4a": {
+   "ja": "T4a: 腹膜の表面に露出",
+   "en": "T4a: Penetrates visceral peritoneum"
+  },
+  "t.T4b": {
+   "ja": "T4b: 他の臓器に直接浸潤",
+   "en": "T4b: Directly invades other organs or structures"
+  },
+  "n.N0": {
+   "ja": "N0: なし",
+   "en": "N0: None"
+  },
+  "n.N1a": {
+   "ja": "N1a: 1個の転移",
+   "en": "N1a: 1 regional lymph node metastasis"
+  },
+  "n.N1b": {
+   "ja": "N1b: 2-3個の転移",
+   "en": "N1b: 2-3 regional lymph node metastases"
+  },
+  "n.N1c": {
+   "ja": "N1c: 漿膜下、腸間膜、または腹膜に覆われていない結腸・直腸周囲組織に腫瘍の塊があるが、リンパ節転移はない",
+   "en": "N1c: Tumor deposits in subserosa, mesentery, or non-peritonealized pericolic/perirectal tissues without lymph node metastasis"
+  },
+  "n.N2a": {
+   "ja": "N2a: 4-6個の転移",
+   "en": "N2a: 4-6 regional lymph node metastases"
+  },
+  "n.N2b": {
+   "ja": "N2b: 7個以上の転移",
+   "en": "N2b: 7 or more regional lymph node metastases"
+  },
+  "m.M0": {
+   "ja": "M0: なし",
+   "en": "M0: None"
+  },
+  "m.M1a": {
+   "ja": "M1a: 1つの臓器に遠隔転移がある（腹膜転移はなし）",
+   "en": "M1a: Distant metastasis to one organ (no peritoneal metastasis)"
+  },
+  "m.M1b": {
+   "ja": "M1b: 2つ以上の臓器に遠隔転移がある",
+   "en": "M1b: Distant metastasis to two or more organs"
+  },
+  "m.M1c": {
+   "ja": "M1c: 腹膜に転移がある（他の臓器転移の有無を問わない）",
+   "en": "M1c: Peritoneal metastasis (with or without other organ metastasis)"
+  }
+ },
+ "esophagus": {
+  "t.Tis": {
+   "ja": "Tis: 高度異形成（上皮内癌）",
+   "en": "Tis: High-grade dysplasia (carcinoma in situ)"
+  },
+  "t.T1": {
+   "ja": "T1: 癌が粘膜または粘膜下層にとどまる (T1a: 粘膜, T1b: 粘膜下層)",
+   "en": "T1: Tumor invades lamina propria, muscularis mucosae, or submucosa (T1a: lamina propria or muscularis mucosae, T1b: submucosa)"
+  },
+  "t.T2": {
+   "ja": "T2: 固有筋層にとどまる",
+   "en": "T2: Tumor invades muscularis propria"
+  },
+  "t.T3": {
+   "ja": "T3: 食道外膜まで浸潤",
+   "en": "T3: Tumor invades adventitia"
+  },
+  "t.T4a": {
+   "ja": "T4a: 周囲の他臓器に浸潤 (胸膜、心膜、横隔膜など)",
+   "en": "T4a: Tumor invades adjacent structures (pleura, pericardium, diaphragm, etc.)"
+  },
+  "t.T4b": {
+   "ja": "T4b: 周囲の他臓器に浸潤 (大動脈、気管、椎体など)",
+   "en": "T4b: Tumor invades adjacent structures (aorta, trachea, vertebral body, etc.)"
+  },
+  "n.N0": {
+   "ja": "N0: なし",
+   "en": "N0: None"
+  },
+  "n.N1": {
+   "ja": "N1: 1〜2個",
+   "en": "N1: 1-2 nodes"
+  },
+  "n.N2": {
+   "ja": "N2: 3〜6個",
+   "en": "N2: 3-6 nodes"
+  },
+  "n.N3": {
+   "ja": "N3: 7個以上",
+   "en": "N3: 7 or more nodes"
+  },
+  "m.M0": {
+   "ja": "M0: なし",
+   "en": "M0: None"
+  },
+  "m.M1": {
+   "ja": "M1: あり（日本の規約第12版では、鎖骨上リンパ節転移をM1aとして区別することがある）",
+   "en": "M1: Present (In the 12th edition of the Japanese classification, supraclavicular lymph node metastasis may be classified as M1a)"
+  }
+ },
+ "liver-jp": {
+  "tumorCount.single": {
+   "ja": "単発",
+   "en": "Single"
+  },
+  "tumorCount.multiple": {
+   "ja": "多発",
+   "en": "Multiple"
+  },
+  "tumorSize.le2cm": {
+   "ja": "2cm以下",
+   "en": "≤ 2cm"
+  },
+  "tumorSize.gt2cm": {
+   "ja": "2cm超",
+   "en": "> 2cm"
+  },
+  "vascularInvasion.none": {
+   "ja": "なし",
+   "en": "None"
+  },
+  "vascularInvasion.present": {
+   "ja": "あり",
+   "en": "Present"
+  },
+  "n.N0": {
+   "ja": "N0: 所属リンパ節転移なし",
+   "en": "N0: No regional lymph node metastasis"
+  },
+  "n.N1": {
+   "ja": "N1: 所属リンパ節転移あり",
+   "en": "N1: Regional lymph node metastasis present"
+  },
+  "m.M0": {
+   "ja": "M0: 遠隔転移なし",
+   "en": "M0: No distant metastasis"
+  },
+  "m.M1": {
+   "ja": "M1: 遠隔転移あり",
+   "en": "M1: Distant metastasis present"
+  }
+ },
+ "liver-uicc": {
+  "t.T1a": {
+   "ja": "T1a: 孤立性腫瘍で最大径が2cm以下（脈管浸潤の有無を問わない）",
+   "en": "T1a: Solitary tumor ≤ 2 cm in greatest dimension (with or without vascular invasion)"
+  },
+  "t.T1b": {
+   "ja": "T1b: 孤立性腫瘍で最大径が2cmを超える（脈管浸潤なし）",
+   "en": "T1b: Solitary tumor > 2 cm in greatest dimension (without vascular invasion)"
+  },
+  "t.T2": {
+   "ja": "T2: 孤立性腫瘍で最大径が2cmを超え、脈管浸潤を認める。または、多発性腫瘍で最大径が5cm以下。",
+   "en": "T2: Solitary tumor > 2 cm with vascular invasion, or multiple tumors, none > 5 cm"
+  },
+  "t.T3": {
+   "ja": "T3: 多発性腫瘍で、少なくとも1つが最大径5cmを超える。",
+   "en": "T3: Multiple tumors, at least one > 5 cm"
+  },
+  "t.T4": {
+   "ja": "T4: 門脈または肝静脈の主枝に浸潤する腫瘍。または、胆嚢を除く隣接臓器に直接浸潤、または臓側腹膜を穿破する腫瘍。",
+   "en": "T4: Tumor with vascular invasion of a major branch of the portal vein or hepatic vein, or tumor with direct invasion of adjacent organs other than the gallbladder, or tumor with perforation of the visceral peritoneum"
+  },
+  "n.N0": {
+   "ja": "N0: 所属リンパ節転移なし",
+   "en": "N0: No regional lymph node metastasis"
+  },
+  "n.N1": {
+   "ja": "N1: 所属リンパ節転移あり",
+   "en": "N1: Regional lymph node metastasis present"
+  },
+  "m.M0": {
+   "ja": "M0: 遠隔転移なし",
+   "en": "M0: No distant metastasis"
+  },
+  "m.M1": {
+   "ja": "M1: 遠隔転移あり",
+   "en": "M1: Distant metastasis present"
+  }
+ },
+ "pancreas-jp": {
+  "t.Tis": {
+   "ja": "Tis: 上皮内癌",
+   "en": "Tis: Carcinoma in situ"
+  },
+  "t.T1": {
+   "ja": "T1: 腫瘍の最大径が2cm以下で膵臓内に限局",
+   "en": "T1: Tumor ≤ 2 cm in greatest dimension, limited to the pancreas"
+  },
+  "t.T2": {
+   "ja": "T2: 腫瘍の最大径が2cmを超えるが膵臓内に限局",
+   "en": "T2: Tumor > 2 cm in greatest dimension, limited to the pancreas"
+  },
+  "t.T3": {
+   "ja": "T3: 膵外への進展があるが、腹腔動脈または上腸間膜動脈に及ばない",
+   "en": "T3: Extension beyond the pancreas, but no involvement of the celiac axis or superior mesenteric artery"
+  },
+  "t.T4": {
+   "ja": "T4: 腹腔動脈または上腸間膜動脈に及ぶ",
+   "en": "T4: Involvement of the celiac axis or superior mesenteric artery"
+  },
+  "n.N0": {
+   "ja": "N0: 所属リンパ節転移なし",
+   "en": "N0: No regional lymph node metastasis"
+  },
+  "n.N1": {
+   "ja": "N1: 所属リンパ節転移あり",
+   "en": "N1: Regional lymph node metastasis present"
+  },
+  "m.M0": {
+   "ja": "M0: 遠隔転移なし",
+   "en": "M0: No distant metastasis"
+  },
+  "m.M1": {
+   "ja": "M1: 遠隔転移あり",
+   "en": "M1: Distant metastasis present"
+  }
+ },
+ "pancreas-uicc": {
+  "t.Tis": {
+   "ja": "Tis: 上皮内癌",
+   "en": "Tis: Carcinoma in situ"
+  },
+  "t.T1": {
+   "ja": "T1: 腫瘍の最大径が2cm以下 (T1a: ≤0.5cm, T1b: >0.5-<1cm, T1c: 1-2cm)",
+   "en": "T1: Tumor ≤ 2 cm in greatest dimension (T1a: ≤0.5cm, T1b: >0.5-<1cm, T1c: 1-2cm)"
+  },
+  "t.T2": {
+   "ja": "T2: 腫瘍の最大径が2cmを超え4cm以下",
+   "en": "T2: Tumor > 2 cm and ≤ 4 cm in greatest dimension"
+  },
+  "t.T3": {
+   "ja": "T3: 腫瘍の最大径が4cmを超える",
+   "en": "T3: Tumor > 4 cm in greatest dimension"
+  },
+  "t.T4": {
+   "ja": "T4: 腹腔動脈、上腸間膜動脈、総肝動脈に及ぶ腫瘍",
+   "en": "T4: Tumor involves celiac axis, superior mesenteric artery, or common hepatic artery"
+  },
+  "n.N0": {
+   "ja": "N0: 所属リンパ節転移なし",
+   "en": "N0: No regional lymph node metastasis"
+  },
+  "n.N1": {
+   "ja": "N1: 1〜3個の所属リンパ節転移あり",
+   "en": "N1: 1-3 regional lymph node metastases"
+  },
+  "n.N2": {
+   "ja": "N2: 4個以上の所属リンパ節転移あり",
+   "en": "N2: 4 or more regional lymph node metastases"
+  },
+  "m.M0": {
+   "ja": "M0: 遠隔転移なし",
+   "en": "M0: No distant metastasis"
+  },
+  "m.M1": {
+   "ja": "M1: 遠隔転移あり",
+   "en": "M1: Distant metastasis present"
+  }
+ },
+ "stomach-p": {
+  "t.T1": {
+   "ja": "T1: 癌が粘膜または粘膜下層にとどまる",
+   "en": "T1: Tumor invades lamina propria or submucosa"
+  },
+  "t.T2": {
+   "ja": "T2: 固有筋層にとどまる",
+   "en": "T2: Tumor invades muscularis propria"
+  },
+  "t.T3": {
+   "ja": "T3: 漿膜下層にとどまる",
+   "en": "T3: Tumor invades subserosa"
+  },
+  "t.T4a": {
+   "ja": "T4a: 漿膜を越えて胃の表面に露出",
+   "en": "T4a: Tumor penetrates serosa (visceral peritoneum)"
+  },
+  "t.T4b": {
+   "ja": "T4b: 周囲の他臓器に直接浸潤",
+   "en": "T4b: Tumor invades adjacent structures"
+  },
+  "n.N0": {
+   "ja": "N0: リンパ節転移なし",
+   "en": "N0: No regional lymph node metastasis"
+  },
+  "n.N1": {
+   "ja": "N1: 1〜2個",
+   "en": "N1: 1-2 regional lymph nodes"
+  },
+  "n.N2": {
+   "ja": "N2: 3〜6個",
+   "en": "N2: 3-6 regional lymph nodes"
+  },
+  "n.N3a": {
+   "ja": "N3a: 7〜15個",
+   "en": "N3a: 7-15 regional lymph nodes"
+  },
+  "n.N3b": {
+   "ja": "N3b: 16個以上",
+   "en": "N3b: 16 or more regional lymph nodes"
+  },
+  "m.M0": {
+   "ja": "M0: 遠隔転移なし",
+   "en": "M0: No distant metastasis"
+  },
+  "m.M1": {
+   "ja": "M1: 遠隔転移あり",
+   "en": "M1: Distant metastasis present"
+  }
+ },
+ "stomach": {
+  "t.T1": {
+   "ja": "T1: 癌が粘膜または粘膜下層にとどまる",
+   "en": "T1: Tumor invades lamina propria or submucosa"
+  },
+  "t.T2": {
+   "ja": "T2: 固有筋層にとどまる",
+   "en": "T2: Tumor invades muscularis propria"
+  },
+  "t.T3": {
+   "ja": "T3: 漿膜下層にとどまる",
+   "en": "T3: Tumor invades subserosa"
+  },
+  "t.T4a": {
+   "ja": "T4a: 漿膜を越えて胃の表面に露出",
+   "en": "T4a: Tumor penetrates serosa (visceral peritoneum)"
+  },
+  "t.T4b": {
+   "ja": "T4b: 周囲の他臓器に直接浸潤",
+   "en": "T4b: Tumor invades adjacent structures"
+  },
+  "n.N0": {
+   "ja": "N0: リンパ節転移なし",
+   "en": "N0: No regional lymph node metastasis"
+  },
+  "n.N1": {
+   "ja": "N1: 1〜2個",
+   "en": "N1: 1-2 regional lymph nodes"
+  },
+  "n.N2": {
+   "ja": "N2: 3〜6個",
+   "en": "N2: 3-6 regional lymph nodes"
+  },
+  "n.N3a": {
+   "ja": "N3a: 7〜15個",
+   "en": "N3a: 7-15 regional lymph nodes"
+  },
+  "n.N3b": {
+   "ja": "N3b: 16個以上",
+   "en": "N3b: 16 or more regional lymph nodes"
+  },
+  "m.M0": {
+   "ja": "M0: 遠隔転移なし",
+   "en": "M0: No distant metastasis"
+  },
+  "m.M1": {
+   "ja": "M1: 遠隔転移あり",
+   "en": "M1: Distant metastasis present"
+  }
+ }
+}

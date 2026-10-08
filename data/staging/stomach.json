@@ -2,7 +2,7 @@
   "id": "stomach",
   "name": { "ja": "胃癌", "en": "Gastric Cancer" },
   "edition": "stomach",
-  "labelStatus": "legacy",
+  "labelStatus": "summarized-unreviewed",
   "scope": { "ja": "臨床分類 cStage", "en": "clinical stage, cStage" },
   "factors": [
     {
@@ -15,36 +15,36 @@
         {
           "value": "T1",
           "label": {
-            "ja": "T1: 癌が粘膜または粘膜下層にとどまる",
-            "en": "T1: Tumor invades lamina propria or submucosa"
+            "ja": "T1: 粘膜〜粘膜下層まで",
+            "en": "T1: Mucosa to submucosa"
           }
         },
         {
           "value": "T2",
           "label": {
-            "ja": "T2: 固有筋層にとどまる",
-            "en": "T2: Tumor invades muscularis propria"
+            "ja": "T2: 固有筋層まで",
+            "en": "T2: Into the muscle layer"
           }
         },
         {
           "value": "T3",
           "label": {
-            "ja": "T3: 漿膜下層にとどまる",
-            "en": "T3: Tumor invades subserosa"
+            "ja": "T3: 漿膜下層まで",
+            "en": "T3: Into the subserosa"
           }
         },
         {
           "value": "T4a",
           "label": {
-            "ja": "T4a: 漿膜を越えて胃の表面に露出",
-            "en": "T4a: Tumor penetrates serosa (visceral peritoneum)"
+            "ja": "T4a: 漿膜表面に露出",
+            "en": "T4a: Reaches the serosal surface"
           }
         },
         {
           "value": "T4b",
           "label": {
-            "ja": "T4b: 周囲の他臓器に直接浸潤",
-            "en": "T4b: Tumor invades adjacent structures"
+            "ja": "T4b: 隣接臓器へ直接浸潤",
+            "en": "T4b: Directly involves nearby organs"
           }
         }
       ]

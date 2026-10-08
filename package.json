@@ -3,6 +3,7 @@
   "scripts": {
     "test": "node --test tests/staging.test.mjs",
     "build": "node tools/build.mjs",
+    "label-review": "node tools/label-review.mjs",
     "golden": "node tests/generate-golden.mjs"
   }
 }

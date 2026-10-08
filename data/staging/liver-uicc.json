@@ -2,7 +2,7 @@
   "id": "liver-uicc",
   "name": { "ja": "肝癌（UICC）", "en": "Hepatocellular Carcinoma (UICC)" },
   "edition": "liver-uicc",
-  "labelStatus": "legacy",
+  "labelStatus": "summarized-unreviewed",
   "factors": [
     {
       "key": "t",
@@ -14,36 +14,36 @@
         {
           "value": "T1a",
           "label": {
-            "ja": "T1a: 孤立性腫瘍で最大径が2cm以下（脈管浸潤の有無を問わない）",
-            "en": "T1a: Solitary tumor ≤ 2 cm in greatest dimension (with or without vascular invasion)"
+            "ja": "T1a: 単発2cm以下",
+            "en": "T1a: Single, 2 cm or less"
           }
         },
         {
           "value": "T1b",
           "label": {
-            "ja": "T1b: 孤立性腫瘍で最大径が2cmを超える（脈管浸潤なし）",
-            "en": "T1b: Solitary tumor > 2 cm in greatest dimension (without vascular invasion)"
+            "ja": "T1b: 単発2cm超・脈管浸潤なし",
+            "en": "T1b: Single, over 2 cm, no vascular invasion"
           }
         },
         {
           "value": "T2",
           "label": {
-            "ja": "T2: 孤立性腫瘍で最大径が2cmを超え、脈管浸潤を認める。または、多発性腫瘍で最大径が5cm以下。",
-            "en": "T2: Solitary tumor > 2 cm with vascular invasion, or multiple tumors, none > 5 cm"
+            "ja": "T2: 単発2cm超で脈管浸潤あり／多発ですべて5cm以下",
+            "en": "T2: Single over 2 cm with vascular invasion, or multiple all 5 cm or less"
           }
         },
         {
           "value": "T3",
           "label": {
-            "ja": "T3: 多発性腫瘍で、少なくとも1つが最大径5cmを超える。",
-            "en": "T3: Multiple tumors, at least one > 5 cm"
+            "ja": "T3: 多発・5cm超を含む",
+            "en": "T3: Multiple, at least one over 5 cm"
           }
         },
         {
           "value": "T4",
           "label": {
-            "ja": "T4: 門脈または肝静脈の主枝に浸潤する腫瘍。または、胆嚢を除く隣接臓器に直接浸潤、または臓側腹膜を穿破する腫瘍。",
-            "en": "T4: Tumor with vascular invasion of a major branch of the portal vein or hepatic vein, or tumor with direct invasion of adjacent organs other than the gallbladder, or tumor with perforation of the visceral peritoneum"
+            "ja": "T4: 門脈・肝静脈の主枝へ浸潤／胆嚢以外の隣接臓器へ直接浸潤／臓側腹膜を破る",
+            "en": "T4: Major portal or hepatic vein branch; or nearby organs other than gallbladder; or breaches visceral peritoneum"
           }
         }
       ]

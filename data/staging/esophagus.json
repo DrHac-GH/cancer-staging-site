@@ -2,7 +2,7 @@
   "id": "esophagus",
   "name": { "ja": "食道癌", "en": "Esophageal Cancer" },
   "edition": "esophagus",
-  "labelStatus": "legacy",
+  "labelStatus": "summarized-unreviewed",
   "factors": [
     {
       "key": "t",
@@ -21,36 +21,36 @@
         {
           "value": "T1",
           "label": {
-            "ja": "T1: 癌が粘膜または粘膜下層にとどまる (T1a: 粘膜, T1b: 粘膜下層)",
-            "en": "T1: Tumor invades lamina propria, muscularis mucosae, or submucosa (T1a: lamina propria or muscularis mucosae, T1b: submucosa)"
+            "ja": "T1: 粘膜〜粘膜下層まで（T1a 粘膜／T1b 粘膜下層）",
+            "en": "T1: Mucosa to submucosa (T1a mucosa / T1b submucosa)"
           }
         },
         {
           "value": "T2",
           "label": {
-            "ja": "T2: 固有筋層にとどまる",
-            "en": "T2: Tumor invades muscularis propria"
+            "ja": "T2: 固有筋層まで",
+            "en": "T2: Into the muscle layer"
           }
         },
         {
           "value": "T3",
           "label": {
-            "ja": "T3: 食道外膜まで浸潤",
-            "en": "T3: Tumor invades adventitia"
+            "ja": "T3: 外膜まで",
+            "en": "T3: Into the adventitia"
           }
         },
         {
           "value": "T4a",
           "label": {
-            "ja": "T4a: 周囲の他臓器に浸潤 (胸膜、心膜、横隔膜など)",
-            "en": "T4a: Tumor invades adjacent structures (pleura, pericardium, diaphragm, etc.)"
+            "ja": "T4a: 胸膜・心膜・横隔膜などへ浸潤",
+            "en": "T4a: Pleura, pericardium, diaphragm, etc."
           }
         },
         {
           "value": "T4b",
           "label": {
-            "ja": "T4b: 周囲の他臓器に浸潤 (大動脈、気管、椎体など)",
-            "en": "T4b: Tumor invades adjacent structures (aorta, trachea, vertebral body, etc.)"
+            "ja": "T4b: 大動脈・気管・椎体などへ浸潤",
+            "en": "T4b: Aorta, trachea, vertebral body, etc."
           }
         }
       ]
@@ -109,8 +109,8 @@
         {
           "value": "M1",
           "label": {
-            "ja": "M1: あり（日本の規約第12版では、鎖骨上リンパ節転移をM1aとして区別することがある）",
-            "en": "M1: Present (In the 12th edition of the Japanese classification, supraclavicular lymph node metastasis may be classified as M1a)"
+            "ja": "M1: あり",
+            "en": "M1: Present"
           }
         }
       ]

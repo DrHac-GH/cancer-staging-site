@@ -2,7 +2,7 @@
   "id": "pancreas-jp",
   "name": { "ja": "膵癌（規約）", "en": "Pancreatic Cancer (Japanese Rules)" },
   "edition": "pancreas-jp",
-  "labelStatus": "legacy",
+  "labelStatus": "summarized-unreviewed",
   "factors": [
     {
       "key": "t",
@@ -21,29 +21,29 @@
         {
           "value": "T1",
           "label": {
-            "ja": "T1: 腫瘍の最大径が2cm以下で膵臓内に限局",
-            "en": "T1: Tumor ≤ 2 cm in greatest dimension, limited to the pancreas"
+            "ja": "T1: 2cm以下・膵内",
+            "en": "T1: 2 cm or less, within the pancreas"
           }
         },
         {
           "value": "T2",
           "label": {
-            "ja": "T2: 腫瘍の最大径が2cmを超えるが膵臓内に限局",
-            "en": "T2: Tumor > 2 cm in greatest dimension, limited to the pancreas"
+            "ja": "T2: 2cm超・膵内",
+            "en": "T2: Over 2 cm, within the pancreas"
           }
         },
         {
           "value": "T3",
           "label": {
-            "ja": "T3: 膵外への進展があるが、腹腔動脈または上腸間膜動脈に及ばない",
-            "en": "T3: Extension beyond the pancreas, but no involvement of the celiac axis or superior mesenteric artery"
+            "ja": "T3: 膵外へ進展（腹腔・上腸間膜の動脈には及ばない）",
+            "en": "T3: Beyond the pancreas, sparing the celiac axis and SMA"
           }
         },
         {
           "value": "T4",
           "label": {
-            "ja": "T4: 腹腔動脈または上腸間膜動脈に及ぶ",
-            "en": "T4: Involvement of the celiac axis or superior mesenteric artery"
+            "ja": "T4: 主要動脈（腹腔・上腸間膜）に及ぶ",
+            "en": "T4: Reaches the celiac axis or SMA"
           }
         }
       ]

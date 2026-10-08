@@ -26,7 +26,8 @@
   （肝癌の規約は 3 条件の該当数から T を決める）。
 - `rules`: Stage 表。上から順に見て、`when` の全条件（因子 key → 許す値の配列）を満たす
   最初の行の `stage` が結果。どの行にも当たらなければ判定不能（`null`）。
-- `labelStatus`: `legacy` は選択肢ラベルが旧ページからの持ち越しで、要約への書き換えが未了。
+- `labelStatus`: `summarized-unreviewed` は自前の要約に書き換え済みで医学的な検収が未了、`reviewed` は検収済み。
+  対照表は `npm run label-review` で `docs/label-review.md` に出す。
 
 ## `data/editions.json`
 

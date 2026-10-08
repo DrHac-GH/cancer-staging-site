@@ -2,7 +2,7 @@
   "id": "liver-jp",
   "name": { "ja": "肝癌（規約）", "en": "Hepatocellular Carcinoma (Japanese Rules)" },
   "edition": "liver-jp",
-  "labelStatus": "legacy",
+  "labelStatus": "summarized-unreviewed",
   "factors": [
     {
       "key": "tumorCount",

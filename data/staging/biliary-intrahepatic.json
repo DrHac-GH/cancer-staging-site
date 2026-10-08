@@ -2,7 +2,7 @@
   "id": "biliary-intrahepatic",
   "name": { "ja": "肝内胆管癌", "en": "Intrahepatic Cholangiocarcinoma" },
   "edition": "biliary-intrahepatic",
-  "labelStatus": "legacy",
+  "labelStatus": "summarized-unreviewed",
   "factors": [
     {
       "key": "t",
@@ -21,36 +21,36 @@
         {
           "value": "T1a",
           "label": {
-            "ja": "T1a: 脈管侵襲を伴わない孤立性腫瘍で5cm以下",
-            "en": "T1a: Solitary tumor ≤ 5cm without vascular invasion"
+            "ja": "T1a: 単発5cm以下・脈管侵襲なし",
+            "en": "T1a: Single, 5 cm or less, no vascular invasion"
           }
         },
         {
           "value": "T1b",
           "label": {
-            "ja": "T1b: 脈管侵襲を伴わない孤立性腫瘍で5cm超",
-            "en": "T1b: Solitary tumor > 5cm without vascular invasion"
+            "ja": "T1b: 単発5cm超・脈管侵襲なし",
+            "en": "T1b: Single, over 5 cm, no vascular invasion"
           }
         },
         {
           "value": "T2",
           "label": {
-            "ja": "T2: 肝内脈管侵襲を伴う孤立性腫瘍、または脈管侵襲の有無にかかわらず多発性腫瘍",
-            "en": "T2: Solitary tumor with intrahepatic vascular invasion, or multiple tumors with or without vascular invasion"
+            "ja": "T2: 単発で肝内脈管侵襲あり／多発",
+            "en": "T2: Single with intrahepatic vascular invasion, or multiple"
           }
         },
         {
           "value": "T3",
           "label": {
-            "ja": "T3: 臓側腹膜を穿破する腫瘍",
-            "en": "T3: Tumor perforating the visceral peritoneum"
+            "ja": "T3: 臓側腹膜を破る",
+            "en": "T3: Breaches the visceral peritoneum"
           }
         },
         {
           "value": "T4",
           "label": {
-            "ja": "T4: 直接浸潤により肝外の局所構造に及ぶ腫瘍",
-            "en": "T4: Tumor directly invading adjacent extrahepatic structures"
+            "ja": "T4: 肝外の隣接構造へ直接浸潤",
+            "en": "T4: Direct spread to nearby extrahepatic structures"
           }
         }
       ]

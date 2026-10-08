@@ -4,6 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import { MAX_LEN, MAX_SIMILARITY, SHORT, desc, similarity } from './labels.mjs';
 import { GOLDEN_DIR, ROOT, TYPES, allCombos, htmlFiles, loadEditions, loadEngine, loadStagingDef } from './lib.mjs';
 
 const engine = loadEngine();
@@ -64,6 +65,31 @@ for (const type of TYPES) {
     }
   });
 }
+
+// ---- 選択肢ラベル（自前の要約であること） ----
+
+test('選択肢ラベルは旧サイトの言い回しを引き継がず、短く、版数を含まない', () => {
+  const legacy = JSON.parse(readFileSync(path.join(ROOT, 'tests', 'legacy-labels.json'), 'utf8'));
+  for (const type of TYPES) {
+    const def = loadStagingDef(type);
+    assert.notEqual(def.labelStatus, 'legacy', `${type}: 要約化が未了`);
+    for (const factor of def.factors) {
+      for (const opt of factor.options) {
+        const old = legacy[type]?.[`${factor.key}.${opt.value}`];
+        for (const lang of ['ja', 'en']) {
+          const where = `${type} ${factor.key}.${opt.value} ${lang}`;
+          const now = desc(opt.label[lang]);
+          assert.ok(!/第\s?\d+\s?版|\d+(st|nd|rd|th) [Ee]d/.test(now), `${where}: 版数を含む`);
+          assert.ok(now.length <= MAX_LEN[lang], `${where}: 長すぎる（${now.length}）`);
+          // 旧ラベルが無い選択肢（版改訂で新設）と、事実の短い表記は言い回しの比較をしない
+          if (!old || desc(old[lang]).length <= SHORT[lang]) continue;
+          const sim = similarity(desc(old[lang]), now);
+          assert.ok(sim < MAX_SIMILARITY[lang], `${where}: 旧ラベルと言い回しが近い（一致率 ${sim.toFixed(2)}）`);
+        }
+      }
+    }
+  }
+});
 
 // ---- ページの結線 ----
 
