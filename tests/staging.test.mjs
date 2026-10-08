@@ -71,16 +71,35 @@ const pages = htmlFiles();
 const read = (f) => readFileSync(path.join(ROOT, f), 'utf8');
 const toolPages = pages.filter((f) => /data-cancer-type=/.test(read(f)));
 
-test('全系統にツールページがあり、JSON から描画する構成になっている', () => {
-  const types = toolPages.map((f) => read(f).match(/data-cancer-type="([^"]+)"/)[1]).sort();
-  assert.deepEqual(types, TYPES);
+test('ツールページは JSON から描画する構成で、選択肢・版数の直書きがない', () => {
   for (const f of toolPages) {
     const html = read(f);
+    assert.ok(TYPES.includes(html.match(/data-cancer-type="([^"]+)"/)[1]), `${f}: 未定義の系統`);
     for (const need of ['id="factors"', 'id="edition-basis"', 'id="result"', 'js/staging-engine.js', 'js/editions.js', 'js/main.js']) {
       assert.ok(html.includes(need), `${f}: ${need}`);
     }
     assert.ok(!/<select|<option/.test(html), `${f}: 選択肢の直書きが残っている`);
-    assert.ok(!/第\s?\d+\s?版|\d+(st|nd|rd|th) Ed/.test(html), `${f}: 版数の直書きが残っている`);
+  }
+});
+
+test('全系統が情報ページに載り、情報ページは JSON から描画する構成になっている', () => {
+  const shown = [];
+  for (const f of pages) {
+    const html = read(f);
+    const ids = (html.match(/id="staging-info" data-staging="([^"]*)"/) || [])[1];
+    if (ids === undefined) continue;
+    shown.push(...ids.split(/\s+/));
+    for (const need of ['js/staging-engine.js', 'js/editions.js', 'js/info.js']) assert.ok(html.includes(need), `${f}: ${need}`);
+    assert.equal((html.match(/<body data-editions="([^"]*)"/) || [])[1], ids, `${f}: data-editions と data-staging の一致`);
+  }
+  assert.deepEqual(shown.sort(), TYPES);
+});
+
+test('版数と Stage 表を HTML に直書きしていない（生成物の changelog.html を除く）', () => {
+  for (const f of pages.filter((p) => p !== 'changelog.html')) {
+    const html = read(f);
+    assert.ok(!/第\s?\d+\s?版|\d+(st|nd|rd|th) [Ee]d/.test(html), `${f}: 版数の直書きが残っている`);
+    assert.ok(!/<table|<td/.test(html), `${f}: 表の直書きが残っている`);
   }
 });
 

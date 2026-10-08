@@ -1,6 +1,6 @@
 // このファイルは tools/build.mjs が生成する。直接編集しない。
 // キャッシュ名は配信ファイルの内容ハッシュ。データやページを変えると自動で新しい版になる。
-const CACHE_NAME = 'cancer-staging-43f55dd629b2';
+const CACHE_NAME = 'cancer-staging-e24307dda136';
 const urlsToCache = [
   "./",
   "./biliary-tract/distal.html",
@@ -26,6 +26,7 @@ const urlsToCache = [
   "./data/staging/liver-uicc.json",
   "./data/staging/pancreas-jp.json",
   "./data/staging/pancreas-uicc.json",
+  "./data/staging/stomach-p.json",
   "./data/staging/stomach.json",
   "./esophagus/index.html",
   "./esophagus/tool.html",
@@ -33,6 +34,7 @@ const urlsToCache = [
   "./images/icon-512x512.png",
   "./index.html",
   "./js/editions.js",
+  "./js/info.js",
   "./js/language.js",
   "./js/main.js",
   "./js/staging-engine.js",

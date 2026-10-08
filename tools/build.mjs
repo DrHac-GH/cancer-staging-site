@@ -34,7 +34,9 @@ export function buildChangelog() {
       return { ja: `${name.ja} ${ed.ja}`, en: `${name.en}, ${ed.en}` };
     });
     const text = { ja: basis.map((b) => b.ja).join('・'), en: basis.map((b) => b.en).join('; ') };
-    return `                <tr>\n                    ${t('td', def.name)}\n                    ${t('td', text)}\n                    ${t('td', STATUS[e.status])}\n                </tr>`;
+    const scope = def.scope ? { ja: `（${def.scope.ja}）`, en: ` (${def.scope.en})` } : { ja: '', en: '' };
+    const name = { ja: def.name.ja + scope.ja, en: def.name.en + scope.en };
+    return `                <tr>\n                    ${t('td', name)}\n                    ${t('td', text)}\n                    ${t('td', STATUS[e.status])}\n                </tr>`;
   });
   const entries = [...data.changelog]
     .sort((a, b) => b.date.localeCompare(a.date))

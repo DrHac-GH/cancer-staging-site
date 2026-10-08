@@ -7,6 +7,7 @@ const StagingEngine = {
     resolve(def, values) {
         const v = { ...values };
         for (const [key, d] of Object.entries(def.derive || {})) {
+            if (v[key] !== undefined) continue; // 導出先を直接指定された場合はそのまま使う
             const met = d.count.filter((c) => v[c.factor] === c.equals).length;
             v[key] = d.map[String(met)];
         }

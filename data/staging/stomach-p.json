@@ -1,0 +1,151 @@
+{
+  "id": "stomach-p",
+  "name": {
+    "ja": "胃癌",
+    "en": "Gastric Cancer"
+  },
+  "edition": "stomach-p",
+  "labelStatus": "legacy",
+  "scope": {
+    "ja": "病理分類 pStage",
+    "en": "pathological stage, pStage"
+  },
+  "factors": [
+    {
+      "key": "t",
+      "label": {
+        "ja": "T因子:",
+        "en": "T Factor:"
+      },
+      "options": [
+        {
+          "value": "T1",
+          "label": {
+            "ja": "T1: 癌が粘膜または粘膜下層にとどまる",
+            "en": "T1: Tumor invades lamina propria or submucosa"
+          }
+        },
+        {
+          "value": "T2",
+          "label": {
+            "ja": "T2: 固有筋層にとどまる",
+            "en": "T2: Tumor invades muscularis propria"
+          }
+        },
+        {
+          "value": "T3",
+          "label": {
+            "ja": "T3: 漿膜下層にとどまる",
+            "en": "T3: Tumor invades subserosa"
+          }
+        },
+        {
+          "value": "T4a",
+          "label": {
+            "ja": "T4a: 漿膜を越えて胃の表面に露出",
+            "en": "T4a: Tumor penetrates serosa (visceral peritoneum)"
+          }
+        },
+        {
+          "value": "T4b",
+          "label": {
+            "ja": "T4b: 周囲の他臓器に直接浸潤",
+            "en": "T4b: Tumor invades adjacent structures"
+          }
+        }
+      ]
+    },
+    {
+      "key": "n",
+      "label": {
+        "ja": "N因子:",
+        "en": "N Factor:"
+      },
+      "options": [
+        {
+          "value": "N0",
+          "label": {
+            "ja": "N0: リンパ節転移なし",
+            "en": "N0: No regional lymph node metastasis"
+          }
+        },
+        {
+          "value": "N1",
+          "label": {
+            "ja": "N1: 1〜2個",
+            "en": "N1: 1-2 regional lymph nodes"
+          }
+        },
+        {
+          "value": "N2",
+          "label": {
+            "ja": "N2: 3〜6個",
+            "en": "N2: 3-6 regional lymph nodes"
+          }
+        },
+        {
+          "value": "N3a",
+          "label": {
+            "ja": "N3a: 7〜15個",
+            "en": "N3a: 7-15 regional lymph nodes"
+          }
+        },
+        {
+          "value": "N3b",
+          "label": {
+            "ja": "N3b: 16個以上",
+            "en": "N3b: 16 or more regional lymph nodes"
+          }
+        }
+      ]
+    },
+    {
+      "key": "m",
+      "label": {
+        "ja": "M因子:",
+        "en": "M Factor:"
+      },
+      "options": [
+        {
+          "value": "M0",
+          "label": {
+            "ja": "M0: 遠隔転移なし",
+            "en": "M0: No distant metastasis"
+          }
+        },
+        {
+          "value": "M1",
+          "label": {
+            "ja": "M1: 遠隔転移あり",
+            "en": "M1: Distant metastasis present"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": [
+    { "when": {"m":["M1"]}, "stage": "IV" },
+    { "when": {"t":["T1"],"n":["N0"]}, "stage": "IA" },
+    { "when": {"t":["T1"],"n":["N1"]}, "stage": "IB" },
+    { "when": {"t":["T1"],"n":["N2"]}, "stage": "IIA" },
+    { "when": {"t":["T1"],"n":["N3a"]}, "stage": "IIB" },
+    { "when": {"t":["T1"],"n":["N3b"]}, "stage": "IIIB" },
+    { "when": {"t":["T2"],"n":["N0"]}, "stage": "IB" },
+    { "when": {"t":["T2"],"n":["N1"]}, "stage": "IIA" },
+    { "when": {"t":["T2"],"n":["N2"]}, "stage": "IIB" },
+    { "when": {"t":["T2"],"n":["N3a"]}, "stage": "IIIA" },
+    { "when": {"t":["T2"],"n":["N3b"]}, "stage": "IIIB" },
+    { "when": {"t":["T3"],"n":["N0"]}, "stage": "IIA" },
+    { "when": {"t":["T3"],"n":["N1"]}, "stage": "IIB" },
+    { "when": {"t":["T3"],"n":["N2"]}, "stage": "IIIA" },
+    { "when": {"t":["T3"],"n":["N3a"]}, "stage": "IIIB" },
+    { "when": {"t":["T3"],"n":["N3b"]}, "stage": "IIIC" },
+    { "when": {"t":["T4a"],"n":["N0"]}, "stage": "IIB" },
+    { "when": {"t":["T4a"],"n":["N1","N2"]}, "stage": "IIIA" },
+    { "when": {"t":["T4a"],"n":["N3a"]}, "stage": "IIIB" },
+    { "when": {"t":["T4a"],"n":["N3b"]}, "stage": "IIIC" },
+    { "when": {"t":["T4b"],"n":["N0"]}, "stage": "IIIA" },
+    { "when": {"t":["T4b"],"n":["N1","N2"]}, "stage": "IIIB" },
+    { "when": {"t":["T4b"],"n":["N3a","N3b"]}, "stage": "IIIC" }
+  ]
+}

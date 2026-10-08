@@ -8,6 +8,7 @@ import { GOLDEN_DIR, TYPES, allCombos, loadEngine, loadStagingDef } from './lib.
 // 版との一致が未検収の系統。ゴールデンは「現行挙動の固定」であり、版として正しいことの保証ではない。
 const NOTES = {
   esophagus: '現行挙動の固定（第12版の表と一致するかは未検証・要照合）',
+  'stomach-p': '旧情報ページの手書き表をデータ化したもの（原本との照合は未了）',
 };
 
 const engine = loadEngine();
