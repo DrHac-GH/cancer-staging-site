@@ -1,5 +1,6 @@
 {
   "id": "pancreas-jp",
+  "name": { "ja": "膵癌（規約）", "en": "Pancreatic Cancer (Japanese Rules)" },
   "edition": "pancreas-jp",
   "labelStatus": "legacy",
   "factors": [

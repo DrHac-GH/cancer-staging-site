@@ -1,6 +1,6 @@
 {
  "type": "liver-jp",
- "args": ["tumorCount","tumorSize","vascularInvasion","nFactor","mFactor"],
+ "args": ["tumorCount","tumorSize","vascularInvasion","n","m"],
  "cases": [
   ["single","le2cm","none","N0","M0","I"],
   ["single","le2cm","none","N0","M1","IVB"],

@@ -1,6 +1,6 @@
 {
  "type": "stomach",
- "args": ["tFactor","nFactor","mFactor"],
+ "args": ["t","n","m"],
  "cases": [
   ["T1","N0","M0","I"],
   ["T1","N0","M1","IVB"],

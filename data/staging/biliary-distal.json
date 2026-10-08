@@ -1,5 +1,6 @@
 {
   "id": "biliary-distal",
+  "name": { "ja": "遠位胆管癌", "en": "Distal Cholangiocarcinoma" },
   "edition": "biliary-distal",
   "labelStatus": "legacy",
   "factors": [

@@ -1,7 +1,9 @@
 {
   "id": "stomach",
+  "name": { "ja": "胃癌", "en": "Gastric Cancer" },
   "edition": "stomach",
   "labelStatus": "legacy",
+  "scope": { "ja": "臨床分類 cStage", "en": "clinical stage, cStage" },
   "factors": [
     {
       "key": "t",

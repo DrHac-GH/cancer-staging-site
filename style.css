@@ -261,3 +261,33 @@ tbody tr:nth-child(even) {
     }
 }
 
+
+/* 準拠版・出典・免責（data/editions.json から生成） */
+.edition-basis {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+.source-note {
+    max-width: 800px;
+    margin: 40px auto 20px;
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    font-size: 0.85em;
+    color: #555;
+    text-align: left;
+}
+.source-note h2 {
+    font-size: 1em;
+    margin: 0 0 8px;
+}
+.source-note ul {
+    margin: 0 0 8px;
+    padding-left: 1.2em;
+}
+.source-note .edition-outdated {
+    color: #b45309;
+}
+.source-note .disclaimer {
+    margin: 8px 0 0;
+}

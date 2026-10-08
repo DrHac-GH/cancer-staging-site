@@ -1,5 +1,6 @@
 {
   "id": "biliary-intrahepatic",
+  "name": { "ja": "肝内胆管癌", "en": "Intrahepatic Cholangiocarcinoma" },
   "edition": "biliary-intrahepatic",
   "labelStatus": "legacy",
   "factors": [

@@ -1,6 +1,6 @@
 {
  "type": "liver-uicc",
- "args": ["tFactor","nFactor","mFactor"],
+ "args": ["t","n","m"],
  "cases": [
   ["T1a","N0","M0","IA"],
   ["T1a","N0","M1","IVB"],

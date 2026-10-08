@@ -1,5 +1,6 @@
 {
   "id": "liver-uicc",
+  "name": { "ja": "肝癌（UICC）", "en": "Hepatocellular Carcinoma (UICC)" },
   "edition": "liver-uicc",
   "labelStatus": "legacy",
   "factors": [

@@ -1,5 +1,6 @@
 {
   "id": "pancreas-uicc",
+  "name": { "ja": "膵癌（UICC）", "en": "Pancreatic Cancer (UICC)" },
   "edition": "pancreas-uicc",
   "labelStatus": "legacy",
   "factors": [

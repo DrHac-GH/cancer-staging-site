@@ -1,5 +1,6 @@
 {
   "id": "colorectal",
+  "name": { "ja": "大腸癌", "en": "Colorectal Cancer" },
   "edition": "colorectal",
   "labelStatus": "legacy",
   "factors": [

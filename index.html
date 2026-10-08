@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
-<body>
+<body data-editions="">
     <div class="language-selector">
         <button onclick="setLanguage('ja')">日本語</button>
         <button onclick="setLanguage('en')">English</button>
@@ -27,6 +27,9 @@
         </ul>
     </nav>
 
+    <footer id="source-note" class="source-note"></footer>
+
+    <script src="js/editions.js"></script>
     <script src="js/language.js"></script>
     <script>
       if ('serviceWorker' in navigator) {

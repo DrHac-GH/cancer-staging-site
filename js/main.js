@@ -1,68 +1,77 @@
-function calculateStage() {
-    const toolContainer = document.querySelector('.tool-container');
-    if (!toolContainer) return;
+// ステージングツール: 因子の選択肢と判定表を data/staging/<癌腫>.json から読み、画面を組み立てる。
+const stagingDataBase = new URL('../data/staging/', document.currentScript.src);
 
-    const cancerType = toolContainer.dataset.cancerType;
-    const resultDiv = document.getElementById('result');
-    const lang = localStorage.getItem('language') || 'ja';
+const TOOL_TEXT = {
+    placeholder: { ja: '選択してください', en: 'Please select' },
+    incomplete: { ja: '全ての因子を選択してください。', en: 'Please select all factors.' },
+    stage: { ja: 'ステージ: ', en: 'Stage: ' },
+    undetermined: { ja: '判定不能', en: 'Not determinable' },
+    basis: { ja: '準拠: ', en: 'Based on: ' },
+    loadError: { ja: 'データを読み込めませんでした。', en: 'Failed to load data.' },
+};
 
-    const errorMessages = {
-        ja: '全ての因子を選択してください。',
-        en: 'Please select all factors.'
-    };
-
-    const resultMessages = {
-        ja: 'ステージ: ',
-        en: 'Stage: '
-    };
-
-    let allFactorsSelected = true;
-    let t, n, m, tumorCount, tumorSize, vascularInvasion;
-
-    if (cancerType === 'liver-jp') {
-        tumorCount = document.getElementById('tumorCount')?.value;
-        tumorSize = document.getElementById('tumorSize')?.value;
-        vascularInvasion = document.getElementById('vascularInvasion')?.value;
-        n = document.getElementById('nFactor')?.value;
-        m = document.getElementById('mFactor')?.value;
-
-        if (!tumorCount || !tumorSize || !vascularInvasion || !n || !m) {
-            allFactorsSelected = false;
+function renderFactors(def, container) {
+    for (const factor of def.factors) {
+        const group = document.createElement('div');
+        group.className = 'form-group';
+        const label = Editions.el('label', factor.label);
+        label.htmlFor = `factor-${factor.key}`;
+        const select = document.createElement('select');
+        select.id = label.htmlFor;
+        select.dataset.factor = factor.key;
+        select.setAttribute('aria-label', factor.label.en.replace(/:$/, ''));
+        const placeholder = Editions.el('option', TOOL_TEXT.placeholder);
+        placeholder.value = '';
+        select.appendChild(placeholder);
+        for (const opt of factor.options) {
+            const option = Editions.el('option', opt.label);
+            option.value = opt.value;
+            select.appendChild(option);
         }
-    } else {
-        t = document.getElementById('tFactor')?.value;
-        n = document.getElementById('nFactor')?.value;
-        m = document.getElementById('mFactor')?.value;
-
-        if (!t || !n || !m) {
-            allFactorsSelected = false;
-        }
-    }
-
-    if (!allFactorsSelected) {
-        resultDiv.textContent = errorMessages[lang];
-        return;
-    }
-
-    if (stagingLogic[cancerType]) {
-        let stage;
-        if (cancerType === 'liver-jp') {
-            stage = stagingLogic[cancerType](tumorCount, tumorSize, vascularInvasion, n, m);
-        } else {
-            stage = stagingLogic[cancerType](t, n, m);
-        }
-        resultDiv.textContent = resultMessages[lang] + stage;
-    } else {
-        resultDiv.textContent = 'この癌腫の計算ロジックが見つかりません。';
+        group.append(label, select);
+        container.appendChild(group);
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const selects = document.querySelectorAll('.tool-container select');
-    selects.forEach(select => {
-        select.addEventListener('change', calculateStage);
-    });
+function calculateStage(def) {
+    const resultDiv = document.getElementById('result');
+    const lang = Editions.lang();
+    const values = {};
+    for (const select of document.querySelectorAll('.tool-container select')) {
+        values[select.dataset.factor] = select.value;
+    }
+    if (Object.values(values).some((v) => !v)) {
+        resultDiv.textContent = TOOL_TEXT.incomplete[lang];
+        return;
+    }
+    const { stage } = StagingEngine.resolve(def, values);
+    resultDiv.textContent = TOOL_TEXT.stage[lang] + (stage ?? TOOL_TEXT.undetermined[lang]);
+}
 
-    // Initial calculation on page load
-    calculateStage();
+document.addEventListener('DOMContentLoaded', async () => {
+    const toolContainer = document.querySelector('.tool-container');
+    if (!toolContainer) return;
+    const resultDiv = document.getElementById('result');
+    try {
+        const type = toolContainer.dataset.cancerType;
+        const [def, editions] = await Promise.all([
+            fetch(new URL(`${type}.json`, stagingDataBase)).then((r) => r.json()),
+            Editions.load(),
+        ]);
+        renderFactors(def, document.getElementById('factors'));
+
+        const basis = Editions.basisText(editions, def.edition);
+        const scope = def.scope ? { ja: `（${def.scope.ja}）`, en: ` (${def.scope.en})` } : { ja: '', en: '' };
+        const basisEl = document.getElementById('edition-basis');
+        const text = { ja: TOOL_TEXT.basis.ja + basis.ja + scope.ja, en: TOOL_TEXT.basis.en + basis.en + scope.en };
+        basisEl.dataset.ja = text.ja;
+        basisEl.dataset.en = text.en;
+        basisEl.textContent = text[Editions.lang()];
+
+        toolContainer.addEventListener('change', () => calculateStage(def));
+        calculateStage(def);
+    } catch (err) {
+        console.error('staging tool:', err);
+        resultDiv.textContent = TOOL_TEXT.loadError[Editions.lang()];
+    }
 });

@@ -1,5 +1,6 @@
 {
   "id": "esophagus",
+  "name": { "ja": "食道癌", "en": "Esophageal Cancer" },
   "edition": "esophagus",
   "labelStatus": "legacy",
   "factors": [

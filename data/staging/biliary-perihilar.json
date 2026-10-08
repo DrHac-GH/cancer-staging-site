@@ -1,5 +1,6 @@
 {
   "id": "biliary-perihilar",
+  "name": { "ja": "肝門部領域胆管癌", "en": "Perihilar Cholangiocarcinoma" },
   "edition": "biliary-perihilar",
   "labelStatus": "legacy",
   "factors": [

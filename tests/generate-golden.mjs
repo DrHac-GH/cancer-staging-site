@@ -1,23 +1,27 @@
-// 現行の判定結果を全組合せで書き出し、ゴールデンケースとして固定する。
-// 使い方: node tests/generate-golden.mjs
-// 判定表を意図して変えたとき（版改訂の検収後）だけ実行し、差分を確認してコミットする。
+// data/staging の表から全組合せの判定結果を書き出し、ゴールデンケースとして固定する。
+// 使い方: npm run golden
+// 判定表を意図して変えたとき（版改訂の検収後）だけ実行し、git diff で差分を確認してコミットする。
 import { writeFileSync } from 'node:fs';
 import path from 'node:path';
-import { GOLDEN_DIR, TOOL_PAGES, allCombos, argOrder, loadStagingLogic } from './lib.mjs';
+import { GOLDEN_DIR, TYPES, allCombos, loadEngine, loadStagingDef } from './lib.mjs';
 
 // 版との一致が未検収の系統。ゴールデンは「現行挙動の固定」であり、版として正しいことの保証ではない。
 const NOTES = {
   esophagus: '現行挙動の固定（第12版の表と一致するかは未検証・要照合）',
 };
 
-const logic = loadStagingLogic();
-for (const type of Object.keys(TOOL_PAGES)) {
-  const cases = allCombos(type).map((args) => [...args, logic[type](...args)]);
-  const body = { type, args: argOrder(type), cases };
+const engine = loadEngine();
+for (const type of TYPES) {
+  const def = loadStagingDef(type);
+  const keys = def.factors.map((f) => f.key);
+  const cases = allCombos(def).map((args) => {
+    const values = Object.fromEntries(keys.map((k, i) => [k, args[i]]));
+    return [...args, engine.resolve(def, values).stage ?? '判定不能'];
+  });
   const json =
     `{\n "type": ${JSON.stringify(type)},\n` +
     (NOTES[type] ? ` "note": ${JSON.stringify(NOTES[type])},\n` : '') +
-    ` "args": ${JSON.stringify(body.args)},\n "cases": [\n` +
+    ` "args": ${JSON.stringify(keys)},\n "cases": [\n` +
     cases.map((c) => '  ' + JSON.stringify(c)).join(',\n') +
     '\n ]\n}\n';
   writeFileSync(path.join(GOLDEN_DIR, `${type}.json`), json);

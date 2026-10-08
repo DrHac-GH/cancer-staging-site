@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "test": "node --test tests/staging.test.mjs",
+    "build": "node tools/build.mjs",
     "golden": "node tests/generate-golden.mjs"
   }
 }

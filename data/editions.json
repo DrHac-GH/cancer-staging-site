@@ -5,13 +5,13 @@
     "en": "This is an unofficial tool for learning and reference. It summarizes key points in our own words and does not reproduce the source classifications. Always rely on the original publications and the treating physician for final decisions."
   },
   "sources": {
-    "jp-esophagus": { "name": { "ja": "食道癌取扱い規約", "en": "Japanese Classification of Esophageal Cancer" }, "society": { "ja": "日本食道学会", "en": "Japan Esophageal Society" }, "publisher": "金原出版" },
-    "jp-stomach": { "name": { "ja": "胃癌取扱い規約", "en": "Japanese Classification of Gastric Carcinoma" }, "society": { "ja": "日本胃癌学会", "en": "Japanese Gastric Cancer Association" }, "publisher": "金原出版" },
-    "jp-colorectal": { "name": { "ja": "大腸癌取扱い規約", "en": "Japanese Classification of Colorectal, Appendiceal, and Anal Carcinoma" }, "society": { "ja": "大腸癌研究会", "en": "Japanese Society for Cancer of the Colon and Rectum" }, "publisher": "金原出版" },
-    "jp-liver": { "name": { "ja": "原発性肝癌取扱い規約", "en": "General Rules for the Clinical and Pathological Study of Primary Liver Cancer" }, "society": { "ja": "日本肝癌研究会", "en": "Liver Cancer Study Group of Japan" }, "publisher": "金原出版" },
-    "jp-pancreas": { "name": { "ja": "膵癌取扱い規約", "en": "Japanese Classification of Pancreatic Carcinoma" }, "society": { "ja": "日本膵臓学会", "en": "Japan Pancreas Society" }, "publisher": "金原出版" },
-    "jp-biliary": { "name": { "ja": "胆道癌取扱い規約", "en": "Japanese Classification of Biliary Tract Cancer" }, "society": { "ja": "日本肝胆膵外科学会", "en": "Japanese Society of Hepato-Biliary-Pancreatic Surgery" }, "publisher": "金原出版" },
-    "uicc": { "name": { "ja": "UICC TNM分類", "en": "UICC TNM Classification of Malignant Tumours" }, "society": { "ja": "UICC", "en": "UICC" }, "publisher": "Wiley-Blackwell" }
+    "jp-esophagus": { "name": { "ja": "食道癌取扱い規約", "en": "Japanese Classification of Esophageal Cancer" }, "society": { "ja": "日本食道学会", "en": "Japan Esophageal Society" }, "publisher": { "ja": "金原出版", "en": "Kanehara & Co." } },
+    "jp-stomach": { "name": { "ja": "胃癌取扱い規約", "en": "Japanese Classification of Gastric Carcinoma" }, "society": { "ja": "日本胃癌学会", "en": "Japanese Gastric Cancer Association" }, "publisher": { "ja": "金原出版", "en": "Kanehara & Co." } },
+    "jp-colorectal": { "name": { "ja": "大腸癌取扱い規約", "en": "Japanese Classification of Colorectal, Appendiceal, and Anal Carcinoma" }, "society": { "ja": "大腸癌研究会", "en": "Japanese Society for Cancer of the Colon and Rectum" }, "publisher": { "ja": "金原出版", "en": "Kanehara & Co." } },
+    "jp-liver": { "name": { "ja": "原発性肝癌取扱い規約", "en": "General Rules for the Clinical and Pathological Study of Primary Liver Cancer" }, "society": { "ja": "日本肝癌研究会", "en": "Liver Cancer Study Group of Japan" }, "publisher": { "ja": "金原出版", "en": "Kanehara & Co." } },
+    "jp-pancreas": { "name": { "ja": "膵癌取扱い規約", "en": "Japanese Classification of Pancreatic Carcinoma" }, "society": { "ja": "日本膵臓学会", "en": "Japan Pancreas Society" }, "publisher": { "ja": "金原出版", "en": "Kanehara & Co." } },
+    "jp-biliary": { "name": { "ja": "胆道癌取扱い規約", "en": "Japanese Classification of Biliary Tract Cancer" }, "society": { "ja": "日本肝胆膵外科学会", "en": "Japanese Society of Hepato-Biliary-Pancreatic Surgery" }, "publisher": { "ja": "金原出版", "en": "Kanehara & Co." } },
+    "uicc": { "name": { "ja": "UICC TNM分類", "en": "UICC TNM Classification of Malignant Tumours" }, "society": { "ja": "UICC", "en": "UICC" }, "publisher": { "ja": "Wiley-Blackwell", "en": "Wiley-Blackwell" } }
   },
   "editions": {
     "esophagus": {
@@ -89,5 +89,11 @@
       "effectiveFrom": null
     }
   },
-  "changelog": []
+  "changelog": [
+    {
+      "date": "2026-10-09",
+      "ja": "判定表と版情報をデータ化しました（判定結果の変更はありません）。全ページに出典・準拠版・免責を表示します。",
+      "en": "Staging tables and edition information are now data-driven (no change to staging results). Sources, editions and a disclaimer are shown on every page."
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 {
  "type": "esophagus",
  "note": "現行挙動の固定（第12版の表と一致するかは未検証・要照合）",
- "args": ["tFactor","nFactor","mFactor"],
+ "args": ["t","n","m"],
  "cases": [
   ["Tis","N0","M0","0"],
   ["Tis","N0","M1","IVB"],

@@ -1,5 +1,6 @@
 {
   "id": "biliary-gallbladder",
+  "name": { "ja": "胆嚢癌", "en": "Gallbladder Cancer" },
   "edition": "biliary-gallbladder",
   "labelStatus": "legacy",
   "factors": [
