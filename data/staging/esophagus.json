@@ -3,6 +3,7 @@
   "name": { "ja": "食道癌", "en": "Esophageal Cancer" },
   "edition": "esophagus",
   "labelStatus": "summarized-unreviewed",
+  "scope": { "ja": "臨床的進行度", "en": "clinical stage" },
   "factors": [
     {
       "key": "t",
@@ -12,17 +13,24 @@
       },
       "options": [
         {
-          "value": "Tis",
+          "value": "T0",
           "label": {
-            "ja": "Tis: 高度異形成（上皮内癌）",
-            "en": "Tis: High-grade dysplasia (carcinoma in situ)"
+            "ja": "T0: 原発巣を認めない",
+            "en": "T0: No primary tumor found"
           }
         },
         {
-          "value": "T1",
+          "value": "T1a",
           "label": {
-            "ja": "T1: 粘膜〜粘膜下層まで（T1a 粘膜／T1b 粘膜下層）",
-            "en": "T1: Mucosa to submucosa (T1a mucosa / T1b submucosa)"
+            "ja": "T1a: 粘膜内（上皮内癌を含む）",
+            "en": "T1a: Within the mucosa (includes carcinoma in situ)"
+          }
+        },
+        {
+          "value": "T1b",
+          "label": {
+            "ja": "T1b: 粘膜下層まで",
+            "en": "T1b: Into the submucosa"
           }
         },
         {
@@ -33,24 +41,24 @@
           }
         },
         {
-          "value": "T3",
+          "value": "T3r",
           "label": {
-            "ja": "T3: 外膜まで",
-            "en": "T3: Into the adventitia"
+            "ja": "T3r: 外膜まで・切除可能",
+            "en": "T3r: Into the adventitia, resectable"
           }
         },
         {
-          "value": "T4a",
+          "value": "T3br",
           "label": {
-            "ja": "T4a: 胸膜・心膜・横隔膜などへ浸潤",
-            "en": "T4a: Pleura, pericardium, diaphragm, etc."
+            "ja": "T3br: 外膜まで・切除可能境界",
+            "en": "T3br: Into the adventitia, borderline resectable"
           }
         },
         {
-          "value": "T4b",
+          "value": "T4",
           "label": {
-            "ja": "T4b: 大動脈・気管・椎体などへ浸潤",
-            "en": "T4b: Aorta, trachea, vertebral body, etc."
+            "ja": "T4: 隣接臓器へ浸潤",
+            "en": "T4: Involves adjacent structures"
           }
         }
       ]
@@ -107,25 +115,32 @@
           }
         },
         {
-          "value": "M1",
+          "value": "M1a",
           "label": {
-            "ja": "M1: あり",
-            "en": "M1: Present"
+            "ja": "M1a: 領域外だが郭清の効果を見込めるリンパ節（鎖骨上など）",
+            "en": "M1a: Extra-regional nodes where dissection may still help (e.g. supraclavicular)"
+          }
+        },
+        {
+          "value": "M1b",
+          "label": {
+            "ja": "M1b: その他の領域外リンパ節・遠隔臓器",
+            "en": "M1b: Other extra-regional nodes or distant organs"
           }
         }
       ]
     }
   ],
   "rules": [
-    { "when": {"m":["M1"]}, "stage": "IVB" },
-    { "when": {"n":["N3"]}, "stage": "IVB" },
-    { "when": {"n":["N2"]}, "stage": "IVA" },
-    { "when": {"n":["N1"]}, "stage": "IIIC" },
-    { "when": {"n":["N0"],"t":["Tis"]}, "stage": "0" },
-    { "when": {"n":["N0"],"t":["T1"]}, "stage": "I" },
-    { "when": {"n":["N0"],"t":["T2"]}, "stage": "II" },
-    { "when": {"n":["N0"],"t":["T3"]}, "stage": "IIIA" },
-    { "when": {"n":["N0"],"t":["T4a"]}, "stage": "IIIB" },
-    { "when": {"n":["N0"],"t":["T4b"]}, "stage": "IIIC" }
+    { "when": {"m":["M1b"]}, "stage": "IVB" },
+    { "when": {"t":["T4"]}, "stage": "IVA" },
+    { "when": {"t":["T3br"]}, "stage": "IIIB" },
+    { "when": {"m":["M1a"]}, "stage": "IIIA" },
+    { "when": {"n":["N2","N3"]}, "stage": "IIIA" },
+    { "when": {"n":["N1"],"t":["T0","T1a","T1b"]}, "stage": "II" },
+    { "when": {"n":["N1"],"t":["T2","T3r"]}, "stage": "IIIA" },
+    { "when": {"n":["N0"],"t":["T0","T1a"]}, "stage": "0" },
+    { "when": {"n":["N0"],"t":["T1b"]}, "stage": "I" },
+    { "when": {"n":["N0"],"t":["T2","T3r"]}, "stage": "II" }
   ]
 }

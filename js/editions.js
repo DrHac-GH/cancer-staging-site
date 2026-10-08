@@ -86,6 +86,19 @@ const Editions = (() => {
                     list.appendChild(sourceLine(data, b));
                 }
             }
+            const refs = new Map();
+            for (const id of ids) {
+                const ref = data.editions[id].reference;
+                if (ref) refs.set(ref.url, ref);
+            }
+            for (const ref of refs.values()) {
+                const li = document.createElement('li');
+                const a = el('a', ref.label);
+                a.href = ref.url;
+                a.rel = 'noopener';
+                li.appendChild(a);
+                list.appendChild(li);
+            }
             footer.appendChild(list);
             if (ids.some((id) => data.editions[id].status === 'unverified')) {
                 footer.appendChild(el('p', {

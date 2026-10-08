@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ja="食道癌ステージングツール（病理）" data-en="Esophageal Cancer Staging Tool (Pathological)">食道癌ステージングツール（病理）</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 25px; /* Adjusted for consistency */
+            background-color: #fff;
+            border-radius: 10px; /* Adjusted for consistency */
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* Adjusted for consistency */
+        }
+        .main-content p {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 12px; /* Adjusted for consistency */
+            border: 1px solid #ced4da;
+            border-radius: 6px; /* Adjusted for consistency */
+            font-size: 1em;
+        }
+        .result-box {
+            margin-top: 20px;
+            padding: 20px; /* Adjusted for consistency */
+            border: 1px solid #28a745; /* Adjusted for consistency */
+            border-radius: 10px; /* Adjusted for consistency */
+            background-color: #e6ffe6; /* Adjusted for consistency */
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0; /* Initial state for fade-in */
+            animation: fadeIn 0.5s forwards; /* Fade-in animation */
+        }
+        /* Keyframe for fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body data-editions="esophagus-p">
+    <nav class="page-nav">
+        <a href="../index.html" data-ja="ホームに戻る" data-en="Back to Home">ホームに戻る</a>
+        <a href="index.html" data-ja="食道癌ステージング情報へ" data-en="Back to Esophageal Cancer Staging Info">食道癌ステージング情報へ</a>
+    </nav>
+
+    <div class="main-content">
+        <h1 data-ja="食道癌ステージングツール（病理）" data-en="Esophageal Cancer Staging Tool (Pathological)">食道癌ステージングツール（病理）</h1>
+        <p data-ja="T, N, M因子を選択して、食道癌のステージを判定します。" data-en="Select T, N, and M factors to determine the stage of esophageal cancer.">T, N, M因子を選択して、食道癌のステージを判定します。</p>
+
+        <p id="edition-basis" class="edition-basis"></p>
+
+        <div class="tool-container" data-cancer-type="esophagus-p">
+            <div id="factors"></div>
+            <div class="result-box" id="result" role="status"></div>
+        </div>
+
+        <footer id="source-note" class="source-note"></footer>
+    </div>
+
+    <script src="../js/staging-engine.js"></script>
+    <script src="../js/editions.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/language.js"></script>
+</body>
+</html>

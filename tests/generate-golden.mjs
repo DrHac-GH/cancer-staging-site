@@ -5,9 +5,10 @@ import { writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { GOLDEN_DIR, TYPES, allCombos, loadEngine, loadStagingDef } from './lib.mjs';
 
-// 版との一致が未検収の系統。ゴールデンは「現行挙動の固定」であり、版として正しいことの保証ではない。
+// 照合の根拠や未検収の事情を系統ごとに残す。
 const NOTES = {
-  esophagus: '現行挙動の固定（第12版の表と一致するかは未検証・要照合）',
+  esophagus: '第12版 臨床的進行度。学会公式英訳版 Table 7 と照合・書籍未照合',
+  'esophagus-p': '第12版 組織学的進行度。学会公式英訳版 Table 8 と照合・書籍未照合',
   'stomach-p': '旧情報ページの手書き表をデータ化したもの（原本との照合は未了）',
 };
 

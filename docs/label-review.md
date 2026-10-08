@@ -88,22 +88,43 @@
 | M1b | 2つ以上の臓器に遠隔転移がある | 遠隔転移2臓器以上 | Two or more organs | 0.45 |
 | M1c | 腹膜に転移がある（他の臓器転移の有無を問わない） | 腹膜転移あり（他臓器は問わない） | Peritoneal spread, with or without other organs | 0.42 |
 
-## 食道癌 `esophagus`
+## 食道癌（組織学的進行度） `esophagus-p`
 
 | 選択肢 | 旧サイトの表記 | 現在の要約 | English | 一致率 |
 |---|---|---|---|---|
-| Tis | 高度異形成（上皮内癌） | （変更なし） | High-grade dysplasia (carcinoma in situ) | — |
-| T1 | 癌が粘膜または粘膜下層にとどまる (T1a: 粘膜, T1b: 粘膜下層) | 粘膜〜粘膜下層まで（T1a 粘膜／T1b 粘膜下層） | Mucosa to submucosa (T1a mucosa / T1b submucosa) | 0.44 |
+| T0 | （新設） | 原発巣を認めない | No primary tumor found | — |
+| T1a | （新設） | 粘膜内（上皮内癌を含む） | Within the mucosa (includes carcinoma in situ) | — |
+| T1b | （新設） | 粘膜下層まで | Into the submucosa | — |
+| T2 | （新設） | 固有筋層まで | Into the muscle layer | — |
+| T3 | （新設） | 外膜まで | Into the adventitia | — |
+| T4a | （新設） | 胸膜・心膜・横隔膜などへ浸潤 | Pleura, pericardium, diaphragm, etc. | — |
+| T4b | （新設） | 大動脈・気管・椎体などへ浸潤 | Aorta, trachea, vertebral body, etc. | — |
+| N0 | （新設） | なし | None | — |
+| N1 | （新設） | 1〜2個 | 1-2 nodes | — |
+| N2 | （新設） | 3〜6個 | 3-6 nodes | — |
+| N3 | （新設） | 7個以上 | 7 or more nodes | — |
+| M0 | （新設） | なし | None | — |
+| M1a | （新設） | 領域外だが郭清の効果を見込めるリンパ節（鎖骨上など） | Extra-regional nodes where dissection may still help (e.g. supraclavicular) | — |
+| M1b | （新設） | その他の領域外リンパ節・遠隔臓器 | Other extra-regional nodes or distant organs | — |
+
+## 食道癌（臨床的進行度） `esophagus`
+
+| 選択肢 | 旧サイトの表記 | 現在の要約 | English | 一致率 |
+|---|---|---|---|---|
+| T0 | （新設） | 原発巣を認めない | No primary tumor found | — |
+| T1a | （新設） | 粘膜内（上皮内癌を含む） | Within the mucosa (includes carcinoma in situ) | — |
+| T1b | （新設） | 粘膜下層まで | Into the submucosa | — |
 | T2 | 固有筋層にとどまる | 固有筋層まで | Into the muscle layer | — |
-| T3 | 食道外膜まで浸潤 | 外膜まで | Into the adventitia | — |
-| T4a | 周囲の他臓器に浸潤 (胸膜、心膜、横隔膜など) | 胸膜・心膜・横隔膜などへ浸潤 | Pleura, pericardium, diaphragm, etc. | 0.41 |
-| T4b | 周囲の他臓器に浸潤 (大動脈、気管、椎体など) | 大動脈・気管・椎体などへ浸潤 | Aorta, trachea, vertebral body, etc. | 0.41 |
+| T3r | （新設） | 外膜まで・切除可能 | Into the adventitia, resectable | — |
+| T3br | （新設） | 外膜まで・切除可能境界 | Into the adventitia, borderline resectable | — |
+| T4 | （新設） | 隣接臓器へ浸潤 | Involves adjacent structures | — |
 | N0 | なし | （変更なし） | None | — |
 | N1 | 1〜2個 | （変更なし） | 1-2 nodes | — |
 | N2 | 3〜6個 | （変更なし） | 3-6 nodes | — |
 | N3 | 7個以上 | （変更なし） | 7 or more nodes | — |
 | M0 | なし | （変更なし） | None | — |
-| M1 | あり（日本の規約第12版では、鎖骨上リンパ節転移をM1aとして区別することがある） | あり | Present | 0.05 |
+| M1a | （新設） | 領域外だが郭清の効果を見込めるリンパ節（鎖骨上など） | Extra-regional nodes where dissection may still help (e.g. supraclavicular) | — |
+| M1b | （新設） | その他の領域外リンパ節・遠隔臓器 | Other extra-regional nodes or distant organs | — |
 
 ## 肝癌（規約） `liver-jp`
 

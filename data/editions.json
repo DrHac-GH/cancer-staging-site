@@ -1,5 +1,5 @@
 {
-  "_doc": "版・出典・適用日の単一正本。画面の版数表記・出典・変更履歴・SW キャッシュ版はここから生成する。status: current=現行版を実装 / outdated=実装が旧版（新版あり） / unverified=表示版と実装の一致が未検収。日付や URL が null の項目は未確認（推測で埋めない）。",
+  "_doc": "版・出典・適用日の単一正本。画面の版数表記・出典・変更履歴・SW キャッシュ版はここから生成する。status: current=現行版を実装 / outdated=実装が旧版（新版あり） / unverified=表示版と実装の一致が未検収。verification は照合の根拠の内部記録（画面には出さない）。reference は照合に使った公開文献（出典欄にリンクを出す）。日付や URL が null の項目は未確認（推測で埋めない）。",
   "disclaimer": {
     "ja": "本サイトは学習・参照用の非公式ツールです。各取扱い規約・TNM分類の内容を転載したものではなく、要点を独自に要約しています。最終的な判断は必ず原本と主治医・担当医の判断に基づいてください。",
     "en": "This is an unofficial tool for learning and reference. It summarizes key points in our own words and does not reproduce the source classifications. Always rely on the original publications and the treating physician for final decisions."
@@ -15,10 +15,18 @@
   },
   "editions": {
     "esophagus": {
-      "status": "unverified",
-      "basis": [{ "source": "jp-esophagus", "implemented": "12", "latest": "12", "published": null, "sourceUrl": null, "errataAppliedAt": null }],
-      "effectiveFrom": null,
-      "note": "要照合・書籍未入手。実装の因子区分と Stage 表は第12版と一致しない（学会公式の英訳版 Esophagus 2024 と照合・docs/diff/esophagus-12.md）。反映は書籍での検収後。"
+      "status": "current",
+      "basis": [{ "source": "jp-esophagus", "implemented": "12", "latest": "12", "published": "2022-09", "sourceUrl": null, "errataAppliedAt": null }],
+      "reference": { "label": { "ja": "学会公式英訳版 Esophagus (2024) Part I", "en": "Official English edition, Esophagus (2024) Part I" }, "url": "https://doi.org/10.1007/s10388-024-01054-y" },
+      "verification": "英訳版で照合・書籍未照合（2026-10-09・Table 7 臨床 / Table 8 病理を目視で読み取り）",
+      "effectiveFrom": null
+    },
+    "esophagus-p": {
+      "status": "current",
+      "basis": [{ "source": "jp-esophagus", "implemented": "12", "latest": "12", "published": "2022-09", "sourceUrl": null, "errataAppliedAt": null }],
+      "reference": { "label": { "ja": "学会公式英訳版 Esophagus (2024) Part I", "en": "Official English edition, Esophagus (2024) Part I" }, "url": "https://doi.org/10.1007/s10388-024-01054-y" },
+      "verification": "英訳版で照合・書籍未照合（2026-10-09・Table 7 臨床 / Table 8 病理を目視で読み取り）",
+      "effectiveFrom": null
     },
     "stomach": {
       "status": "outdated",
@@ -98,6 +106,11 @@
     }
   },
   "changelog": [
+    {
+      "date": "2026-10-09",
+      "ja": "食道癌を取扱い規約 第12版の区分に合わせました。臨床と病理の進行度を分け、T3r／T3br・M1a／M1b を追加しています。",
+      "en": "Esophageal cancer now follows the 12th edition of the Japanese classification: separate clinical and pathological stages, with T3r/T3br and M1a/M1b."
+    },
     {
       "date": "2026-10-09",
       "ja": "判定表と版情報をデータ化しました（判定結果の変更はありません）。全ページに出典・準拠版・免責を表示します。",

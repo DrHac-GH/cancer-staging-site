@@ -1,0 +1,158 @@
+{
+  "id": "esophagus-p",
+  "name": { "ja": "食道癌", "en": "Esophageal Cancer" },
+  "edition": "esophagus-p",
+  "labelStatus": "summarized-unreviewed",
+  "scope": { "ja": "組織学的進行度", "en": "pathological stage" },
+  "factors": [
+    {
+      "key": "t",
+      "label": {
+        "ja": "T因子:",
+        "en": "T Factor:"
+      },
+      "options": [
+        {
+          "value": "T0",
+          "label": {
+            "ja": "T0: 原発巣を認めない",
+            "en": "T0: No primary tumor found"
+          }
+        },
+        {
+          "value": "T1a",
+          "label": {
+            "ja": "T1a: 粘膜内（上皮内癌を含む）",
+            "en": "T1a: Within the mucosa (includes carcinoma in situ)"
+          }
+        },
+        {
+          "value": "T1b",
+          "label": {
+            "ja": "T1b: 粘膜下層まで",
+            "en": "T1b: Into the submucosa"
+          }
+        },
+        {
+          "value": "T2",
+          "label": {
+            "ja": "T2: 固有筋層まで",
+            "en": "T2: Into the muscle layer"
+          }
+        },
+        {
+          "value": "T3",
+          "label": {
+            "ja": "T3: 外膜まで",
+            "en": "T3: Into the adventitia"
+          }
+        },
+        {
+          "value": "T4a",
+          "label": {
+            "ja": "T4a: 胸膜・心膜・横隔膜などへ浸潤",
+            "en": "T4a: Pleura, pericardium, diaphragm, etc."
+          }
+        },
+        {
+          "value": "T4b",
+          "label": {
+            "ja": "T4b: 大動脈・気管・椎体などへ浸潤",
+            "en": "T4b: Aorta, trachea, vertebral body, etc."
+          }
+        }
+      ]
+    },
+    {
+      "key": "n",
+      "label": {
+        "ja": "N因子:",
+        "en": "N Factor:"
+      },
+      "options": [
+        {
+          "value": "N0",
+          "label": {
+            "ja": "N0: なし",
+            "en": "N0: None"
+          }
+        },
+        {
+          "value": "N1",
+          "label": {
+            "ja": "N1: 1〜2個",
+            "en": "N1: 1-2 nodes"
+          }
+        },
+        {
+          "value": "N2",
+          "label": {
+            "ja": "N2: 3〜6個",
+            "en": "N2: 3-6 nodes"
+          }
+        },
+        {
+          "value": "N3",
+          "label": {
+            "ja": "N3: 7個以上",
+            "en": "N3: 7 or more nodes"
+          }
+        }
+      ]
+    },
+    {
+      "key": "m",
+      "label": {
+        "ja": "M因子:",
+        "en": "M Factor:"
+      },
+      "options": [
+        {
+          "value": "M0",
+          "label": {
+            "ja": "M0: なし",
+            "en": "M0: None"
+          }
+        },
+        {
+          "value": "M1a",
+          "label": {
+            "ja": "M1a: 領域外だが郭清の効果を見込めるリンパ節（鎖骨上など）",
+            "en": "M1a: Extra-regional nodes where dissection may still help (e.g. supraclavicular)"
+          }
+        },
+        {
+          "value": "M1b",
+          "label": {
+            "ja": "M1b: その他の領域外リンパ節・遠隔臓器",
+            "en": "M1b: Other extra-regional nodes or distant organs"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": [
+    { "when": {"m":["M1b"]}, "stage": "IVB" },
+    { "when": {"t":["T4b"]}, "stage": "IVA" },
+    { "when": {"m":["M1a"],"t":["T0","T1a","T1b"]}, "stage": "IIIA" },
+    { "when": {"m":["M1a"],"t":["T2"]}, "stage": "IIIB" },
+    { "when": {"m":["M1a"],"t":["T3","T4a"]}, "stage": "IVA" },
+    { "when": {"n":["N3"],"t":["T0","T1a","T1b"]}, "stage": "IIIA" },
+    { "when": {"n":["N3"],"t":["T2"]}, "stage": "IIIB" },
+    { "when": {"n":["N3"],"t":["T3","T4a"]}, "stage": "IVA" },
+    { "when": {"n":["N2"],"t":["T0"]}, "stage": "IIA" },
+    { "when": {"n":["N2"],"t":["T1a"]}, "stage": "IIB" },
+    { "when": {"n":["N2"],"t":["T1b","T2"]}, "stage": "IIIA" },
+    { "when": {"n":["N2"],"t":["T3"]}, "stage": "IIIB" },
+    { "when": {"n":["N2"],"t":["T4a"]}, "stage": "IVA" },
+    { "when": {"n":["N1"],"t":["T0","T1a","T1b"]}, "stage": "IIA" },
+    { "when": {"n":["N1"],"t":["T2"]}, "stage": "IIB" },
+    { "when": {"n":["N1"],"t":["T3"]}, "stage": "IIIA" },
+    { "when": {"n":["N1"],"t":["T4a"]}, "stage": "IIIB" },
+    { "when": {"n":["N0"],"t":["T0","T1a"]}, "stage": "0" },
+    { "when": {"n":["N0"],"t":["T1b"]}, "stage": "I" },
+    { "when": {"n":["N0"],"t":["T2"]}, "stage": "IIA" },
+    { "when": {"n":["N0"],"t":["T3"]}, "stage": "IIB" },
+    { "when": {"n":["N0"],"t":["T4a"]}, "stage": "IIIB" }
+  ]
+}
