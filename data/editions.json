@@ -108,6 +108,11 @@
   "changelog": [
     {
       "date": "2026-10-09",
+      "ja": "大腸癌: T4b でリンパ節転移あり（M0）が判定不能になっていたのを修正しました（IIIC）。",
+      "en": "Colorectal cancer: T4b with nodal metastasis (M0) was shown as not determinable; it is now IIIC."
+    },
+    {
+      "date": "2026-10-09",
       "ja": "食道癌を取扱い規約 第12版の区分に合わせました。臨床と病理の進行度を分け、T3r／T3br・M1a／M1b を追加しています。",
       "en": "Esophageal cancer now follows the 12th edition of the Japanese classification: separate clinical and pathological stages, with T3r/T3br and M1a/M1b."
     },

@@ -159,6 +159,7 @@
     { "when": {"m":["M0"],"n":["N2a"],"t":["T2","T3"]}, "stage": "IIIB" },
     { "when": {"m":["M0"],"n":["N2a"],"t":["T4a"]}, "stage": "IIIC" },
     { "when": {"m":["M0"],"n":["N2b"],"t":["T1","T2"]}, "stage": "IIIB" },
-    { "when": {"m":["M0"],"n":["N2b"],"t":["T3","T4a"]}, "stage": "IIIC" }
+    { "when": {"m":["M0"],"n":["N2b"],"t":["T3","T4a"]}, "stage": "IIIC" },
+    { "when": {"m":["M0"],"n":["N1a","N1b","N1c","N2a","N2b"],"t":["T4b"]}, "stage": "IIIC" }
   ]
 }
