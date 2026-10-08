@@ -1,0 +1,154 @@
+{
+  "id": "liver-jp",
+  "edition": "liver-jp",
+  "labelStatus": "legacy",
+  "factors": [
+    {
+      "key": "tumorCount",
+      "label": {
+        "ja": "腫瘍数:",
+        "en": "Number of Tumors:"
+      },
+      "options": [
+        {
+          "value": "single",
+          "label": {
+            "ja": "単発",
+            "en": "Single"
+          }
+        },
+        {
+          "value": "multiple",
+          "label": {
+            "ja": "多発",
+            "en": "Multiple"
+          }
+        }
+      ]
+    },
+    {
+      "key": "tumorSize",
+      "label": {
+        "ja": "腫瘍径:",
+        "en": "Tumor Size:"
+      },
+      "options": [
+        {
+          "value": "le2cm",
+          "label": {
+            "ja": "2cm以下",
+            "en": "≤ 2cm"
+          }
+        },
+        {
+          "value": "gt2cm",
+          "label": {
+            "ja": "2cm超",
+            "en": "> 2cm"
+          }
+        }
+      ]
+    },
+    {
+      "key": "vascularInvasion",
+      "label": {
+        "ja": "脈管侵襲:",
+        "en": "Vascular Invasion:"
+      },
+      "options": [
+        {
+          "value": "none",
+          "label": {
+            "ja": "なし",
+            "en": "None"
+          }
+        },
+        {
+          "value": "present",
+          "label": {
+            "ja": "あり",
+            "en": "Present"
+          }
+        }
+      ]
+    },
+    {
+      "key": "n",
+      "label": {
+        "ja": "N因子:",
+        "en": "N Factor:"
+      },
+      "options": [
+        {
+          "value": "N0",
+          "label": {
+            "ja": "N0: 所属リンパ節転移なし",
+            "en": "N0: No regional lymph node metastasis"
+          }
+        },
+        {
+          "value": "N1",
+          "label": {
+            "ja": "N1: 所属リンパ節転移あり",
+            "en": "N1: Regional lymph node metastasis present"
+          }
+        }
+      ]
+    },
+    {
+      "key": "m",
+      "label": {
+        "ja": "M因子:",
+        "en": "M Factor:"
+      },
+      "options": [
+        {
+          "value": "M0",
+          "label": {
+            "ja": "M0: 遠隔転移なし",
+            "en": "M0: No distant metastasis"
+          }
+        },
+        {
+          "value": "M1",
+          "label": {
+            "ja": "M1: 遠隔転移あり",
+            "en": "M1: Distant metastasis present"
+          }
+        }
+      ]
+    }
+  ],
+  "derive": {
+    "t": {
+      "count": [
+        {
+          "factor": "tumorCount",
+          "equals": "single"
+        },
+        {
+          "factor": "tumorSize",
+          "equals": "le2cm"
+        },
+        {
+          "factor": "vascularInvasion",
+          "equals": "none"
+        }
+      ],
+      "map": {
+        "0": "T4",
+        "1": "T3",
+        "2": "T2",
+        "3": "T1"
+      }
+    }
+  },
+  "rules": [
+    { "when": {"m":["M1"]}, "stage": "IVB" },
+    { "when": {"n":["N1"]}, "stage": "IVB" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T1"]}, "stage": "I" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T2"]}, "stage": "II" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T3"]}, "stage": "III" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T4"]}, "stage": "IVA" }
+  ]
+}

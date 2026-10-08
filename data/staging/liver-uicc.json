@@ -1,0 +1,106 @@
+{
+  "id": "liver-uicc",
+  "edition": "liver-uicc",
+  "labelStatus": "legacy",
+  "factors": [
+    {
+      "key": "t",
+      "label": {
+        "ja": "T因子:",
+        "en": "T Factor:"
+      },
+      "options": [
+        {
+          "value": "T1a",
+          "label": {
+            "ja": "T1a: 孤立性腫瘍で最大径が2cm以下（脈管浸潤の有無を問わない）",
+            "en": "T1a: Solitary tumor ≤ 2 cm in greatest dimension (with or without vascular invasion)"
+          }
+        },
+        {
+          "value": "T1b",
+          "label": {
+            "ja": "T1b: 孤立性腫瘍で最大径が2cmを超える（脈管浸潤なし）",
+            "en": "T1b: Solitary tumor > 2 cm in greatest dimension (without vascular invasion)"
+          }
+        },
+        {
+          "value": "T2",
+          "label": {
+            "ja": "T2: 孤立性腫瘍で最大径が2cmを超え、脈管浸潤を認める。または、多発性腫瘍で最大径が5cm以下。",
+            "en": "T2: Solitary tumor > 2 cm with vascular invasion, or multiple tumors, none > 5 cm"
+          }
+        },
+        {
+          "value": "T3",
+          "label": {
+            "ja": "T3: 多発性腫瘍で、少なくとも1つが最大径5cmを超える。",
+            "en": "T3: Multiple tumors, at least one > 5 cm"
+          }
+        },
+        {
+          "value": "T4",
+          "label": {
+            "ja": "T4: 門脈または肝静脈の主枝に浸潤する腫瘍。または、胆嚢を除く隣接臓器に直接浸潤、または臓側腹膜を穿破する腫瘍。",
+            "en": "T4: Tumor with vascular invasion of a major branch of the portal vein or hepatic vein, or tumor with direct invasion of adjacent organs other than the gallbladder, or tumor with perforation of the visceral peritoneum"
+          }
+        }
+      ]
+    },
+    {
+      "key": "n",
+      "label": {
+        "ja": "N因子:",
+        "en": "N Factor:"
+      },
+      "options": [
+        {
+          "value": "N0",
+          "label": {
+            "ja": "N0: 所属リンパ節転移なし",
+            "en": "N0: No regional lymph node metastasis"
+          }
+        },
+        {
+          "value": "N1",
+          "label": {
+            "ja": "N1: 所属リンパ節転移あり",
+            "en": "N1: Regional lymph node metastasis present"
+          }
+        }
+      ]
+    },
+    {
+      "key": "m",
+      "label": {
+        "ja": "M因子:",
+        "en": "M Factor:"
+      },
+      "options": [
+        {
+          "value": "M0",
+          "label": {
+            "ja": "M0: 遠隔転移なし",
+            "en": "M0: No distant metastasis"
+          }
+        },
+        {
+          "value": "M1",
+          "label": {
+            "ja": "M1: 遠隔転移あり",
+            "en": "M1: Distant metastasis present"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": [
+    { "when": {"m":["M1"]}, "stage": "IVB" },
+    { "when": {"n":["N1"]}, "stage": "IVA" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T1a"]}, "stage": "IA" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T1b"]}, "stage": "IB" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T2"]}, "stage": "II" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T3"]}, "stage": "IIIA" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T4"]}, "stage": "IIIB" }
+  ]
+}

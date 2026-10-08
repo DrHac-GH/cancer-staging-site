@@ -1,0 +1,114 @@
+{
+  "id": "biliary-intrahepatic",
+  "edition": "biliary-intrahepatic",
+  "labelStatus": "legacy",
+  "factors": [
+    {
+      "key": "t",
+      "label": {
+        "ja": "T因子:",
+        "en": "T Factor:"
+      },
+      "options": [
+        {
+          "value": "Tis",
+          "label": {
+            "ja": "Tis: 上皮内癌（管内腫瘍）",
+            "en": "Tis: Carcinoma in situ (intraductal tumor)"
+          }
+        },
+        {
+          "value": "T1a",
+          "label": {
+            "ja": "T1a: 脈管侵襲を伴わない孤立性腫瘍で5cm以下",
+            "en": "T1a: Solitary tumor ≤ 5cm without vascular invasion"
+          }
+        },
+        {
+          "value": "T1b",
+          "label": {
+            "ja": "T1b: 脈管侵襲を伴わない孤立性腫瘍で5cm超",
+            "en": "T1b: Solitary tumor > 5cm without vascular invasion"
+          }
+        },
+        {
+          "value": "T2",
+          "label": {
+            "ja": "T2: 肝内脈管侵襲を伴う孤立性腫瘍、または脈管侵襲の有無にかかわらず多発性腫瘍",
+            "en": "T2: Solitary tumor with intrahepatic vascular invasion, or multiple tumors with or without vascular invasion"
+          }
+        },
+        {
+          "value": "T3",
+          "label": {
+            "ja": "T3: 臓側腹膜を穿破する腫瘍",
+            "en": "T3: Tumor perforating the visceral peritoneum"
+          }
+        },
+        {
+          "value": "T4",
+          "label": {
+            "ja": "T4: 直接浸潤により肝外の局所構造に及ぶ腫瘍",
+            "en": "T4: Tumor directly invading adjacent extrahepatic structures"
+          }
+        }
+      ]
+    },
+    {
+      "key": "n",
+      "label": {
+        "ja": "N因子:",
+        "en": "N Factor:"
+      },
+      "options": [
+        {
+          "value": "N0",
+          "label": {
+            "ja": "N0: 所属リンパ節転移なし",
+            "en": "N0: No regional lymph node metastasis"
+          }
+        },
+        {
+          "value": "N1",
+          "label": {
+            "ja": "N1: 所属リンパ節転移あり",
+            "en": "N1: Regional lymph node metastasis present"
+          }
+        }
+      ]
+    },
+    {
+      "key": "m",
+      "label": {
+        "ja": "M因子:",
+        "en": "M Factor:"
+      },
+      "options": [
+        {
+          "value": "M0",
+          "label": {
+            "ja": "M0: 遠隔転移なし",
+            "en": "M0: No distant metastasis"
+          }
+        },
+        {
+          "value": "M1",
+          "label": {
+            "ja": "M1: 遠隔転移あり",
+            "en": "M1: Distant metastasis present"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": [
+    { "when": {"m":["M1"]}, "stage": "IV" },
+    { "when": {"n":["N1"]}, "stage": "IIIB" },
+    { "when": {"n":["N0"],"t":["Tis"]}, "stage": "0" },
+    { "when": {"n":["N0"],"t":["T1a"]}, "stage": "IA" },
+    { "when": {"n":["N0"],"t":["T1b"]}, "stage": "IB" },
+    { "when": {"n":["N0"],"t":["T2"]}, "stage": "II" },
+    { "when": {"n":["N0"],"t":["T3"]}, "stage": "IIIA" },
+    { "when": {"n":["N0"],"t":["T4"]}, "stage": "IIIB" }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/staging.test.mjs",
+    "golden": "node tests/generate-golden.mjs"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "id": "colorectal",
+  "edition": "colorectal",
+  "labelStatus": "legacy",
+  "factors": [
+    {
+      "key": "t",
+      "label": {
+        "ja": "T因子:",
+        "en": "T Factor:"
+      },
+      "options": [
+        {
+          "value": "Tis",
+          "label": {
+            "ja": "Tis: 上皮内癌",
+            "en": "Tis: Carcinoma in situ"
+          }
+        },
+        {
+          "value": "T1",
+          "label": {
+            "ja": "T1: 粘膜下層まで",
+            "en": "T1: Invades submucosa"
+          }
+        },
+        {
+          "value": "T2",
+          "label": {
+            "ja": "T2: 固有筋層まで",
+            "en": "T2: Invades muscularis propria"
+          }
+        },
+        {
+          "value": "T3",
+          "label": {
+            "ja": "T3: 漿膜下層または固有筋層外の結腸・直腸周囲組織まで",
+            "en": "T3: Invades subserosa or pericolic/perirectal tissues"
+          }
+        },
+        {
+          "value": "T4a",
+          "label": {
+            "ja": "T4a: 腹膜の表面に露出",
+            "en": "T4a: Penetrates visceral peritoneum"
+          }
+        },
+        {
+          "value": "T4b",
+          "label": {
+            "ja": "T4b: 他の臓器に直接浸潤",
+            "en": "T4b: Directly invades other organs or structures"
+          }
+        }
+      ]
+    },
+    {
+      "key": "n",
+      "label": {
+        "ja": "N因子:",
+        "en": "N Factor:"
+      },
+      "options": [
+        {
+          "value": "N0",
+          "label": {
+            "ja": "N0: なし",
+            "en": "N0: None"
+          }
+        },
+        {
+          "value": "N1a",
+          "label": {
+            "ja": "N1a: 1個の転移",
+            "en": "N1a: 1 regional lymph node metastasis"
+          }
+        },
+        {
+          "value": "N1b",
+          "label": {
+            "ja": "N1b: 2-3個の転移",
+            "en": "N1b: 2-3 regional lymph node metastases"
+          }
+        },
+        {
+          "value": "N1c",
+          "label": {
+            "ja": "N1c: 漿膜下、腸間膜、または腹膜に覆われていない結腸・直腸周囲組織に腫瘍の塊があるが、リンパ節転移はない",
+            "en": "N1c: Tumor deposits in subserosa, mesentery, or non-peritonealized pericolic/perirectal tissues without lymph node metastasis"
+          }
+        },
+        {
+          "value": "N2a",
+          "label": {
+            "ja": "N2a: 4-6個の転移",
+            "en": "N2a: 4-6 regional lymph node metastases"
+          }
+        },
+        {
+          "value": "N2b",
+          "label": {
+            "ja": "N2b: 7個以上の転移",
+            "en": "N2b: 7 or more regional lymph node metastases"
+          }
+        }
+      ]
+    },
+    {
+      "key": "m",
+      "label": {
+        "ja": "M因子:",
+        "en": "M Factor:"
+      },
+      "options": [
+        {
+          "value": "M0",
+          "label": {
+            "ja": "M0: なし",
+            "en": "M0: None"
+          }
+        },
+        {
+          "value": "M1a",
+          "label": {
+            "ja": "M1a: 1つの臓器に遠隔転移がある（腹膜転移はなし）",
+            "en": "M1a: Distant metastasis to one organ (no peritoneal metastasis)"
+          }
+        },
+        {
+          "value": "M1b",
+          "label": {
+            "ja": "M1b: 2つ以上の臓器に遠隔転移がある",
+            "en": "M1b: Distant metastasis to two or more organs"
+          }
+        },
+        {
+          "value": "M1c",
+          "label": {
+            "ja": "M1c: 腹膜に転移がある（他の臓器転移の有無を問わない）",
+            "en": "M1c: Peritoneal metastasis (with or without other organ metastasis)"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": [
+    { "when": {"m":["M1c"]}, "stage": "IVC" },
+    { "when": {"m":["M1b"]}, "stage": "IVB" },
+    { "when": {"m":["M1a"]}, "stage": "IVA" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["Tis"]}, "stage": "0" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T1","T2"]}, "stage": "I" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T3"]}, "stage": "IIA" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T4a"]}, "stage": "IIB" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T4b"]}, "stage": "IIC" },
+    { "when": {"m":["M0"],"n":["N1a","N1b","N1c"],"t":["T1","T2"]}, "stage": "IIIA" },
+    { "when": {"m":["M0"],"n":["N1a","N1b","N1c"],"t":["T3","T4a"]}, "stage": "IIIB" },
+    { "when": {"m":["M0"],"n":["N2a"],"t":["T1"]}, "stage": "IIIA" },
+    { "when": {"m":["M0"],"n":["N2a"],"t":["T2","T3"]}, "stage": "IIIB" },
+    { "when": {"m":["M0"],"n":["N2a"],"t":["T4a"]}, "stage": "IIIC" },
+    { "when": {"m":["M0"],"n":["N2b"],"t":["T1","T2"]}, "stage": "IIIB" },
+    { "when": {"m":["M0"],"n":["N2b"],"t":["T3","T4a"]}, "stage": "IIIC" }
+  ]
+}

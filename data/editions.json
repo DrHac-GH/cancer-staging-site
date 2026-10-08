@@ -1,0 +1,93 @@
+{
+  "_doc": "版・出典・適用日の単一正本。画面の版数表記・出典・変更履歴・SW キャッシュ版はここから生成する。status: current=現行版を実装 / outdated=実装が旧版（新版あり） / unverified=表示版と実装の一致が未検収。日付や URL が null の項目は未確認（推測で埋めない）。",
+  "disclaimer": {
+    "ja": "本サイトは学習・参照用の非公式ツールです。各取扱い規約・TNM分類の内容を転載したものではなく、要点を独自に要約しています。最終的な判断は必ず原本と主治医・担当医の判断に基づいてください。",
+    "en": "This is an unofficial tool for learning and reference. It summarizes key points in our own words and does not reproduce the source classifications. Always rely on the original publications and the treating physician for final decisions."
+  },
+  "sources": {
+    "jp-esophagus": { "name": { "ja": "食道癌取扱い規約", "en": "Japanese Classification of Esophageal Cancer" }, "society": { "ja": "日本食道学会", "en": "Japan Esophageal Society" }, "publisher": "金原出版" },
+    "jp-stomach": { "name": { "ja": "胃癌取扱い規約", "en": "Japanese Classification of Gastric Carcinoma" }, "society": { "ja": "日本胃癌学会", "en": "Japanese Gastric Cancer Association" }, "publisher": "金原出版" },
+    "jp-colorectal": { "name": { "ja": "大腸癌取扱い規約", "en": "Japanese Classification of Colorectal, Appendiceal, and Anal Carcinoma" }, "society": { "ja": "大腸癌研究会", "en": "Japanese Society for Cancer of the Colon and Rectum" }, "publisher": "金原出版" },
+    "jp-liver": { "name": { "ja": "原発性肝癌取扱い規約", "en": "General Rules for the Clinical and Pathological Study of Primary Liver Cancer" }, "society": { "ja": "日本肝癌研究会", "en": "Liver Cancer Study Group of Japan" }, "publisher": "金原出版" },
+    "jp-pancreas": { "name": { "ja": "膵癌取扱い規約", "en": "Japanese Classification of Pancreatic Carcinoma" }, "society": { "ja": "日本膵臓学会", "en": "Japan Pancreas Society" }, "publisher": "金原出版" },
+    "jp-biliary": { "name": { "ja": "胆道癌取扱い規約", "en": "Japanese Classification of Biliary Tract Cancer" }, "society": { "ja": "日本肝胆膵外科学会", "en": "Japanese Society of Hepato-Biliary-Pancreatic Surgery" }, "publisher": "金原出版" },
+    "uicc": { "name": { "ja": "UICC TNM分類", "en": "UICC TNM Classification of Malignant Tumours" }, "society": { "ja": "UICC", "en": "UICC" }, "publisher": "Wiley-Blackwell" }
+  },
+  "editions": {
+    "esophagus": {
+      "status": "unverified",
+      "basis": [{ "source": "jp-esophagus", "implemented": "12", "latest": "12", "published": null, "sourceUrl": null, "errataAppliedAt": null }],
+      "effectiveFrom": null,
+      "note": "要照合・書籍未入手。表示は第12版だが、実装の Stage 表が第12版と一致するか未検収（ネイティブ版の第12版実装と結果が異なる）。差分表は Web 公開情報で起草し、書籍照合は入手後。"
+    },
+    "stomach": {
+      "status": "outdated",
+      "basis": [
+        { "source": "jp-stomach", "implemented": "15", "latest": "16", "published": null, "latestPublished": "2026-03", "sourceUrl": null, "errataAppliedAt": null },
+        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
+      ],
+      "effectiveFrom": null
+    },
+    "colorectal": {
+      "status": "outdated",
+      "basis": [
+        { "source": "jp-colorectal", "implemented": "9", "latest": "9", "published": null, "sourceUrl": null, "errataAppliedAt": null },
+        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
+      ],
+      "effectiveFrom": null
+    },
+    "liver-jp": {
+      "status": "outdated",
+      "basis": [{ "source": "jp-liver", "implemented": "6補訂", "latest": "7", "published": null, "latestPublished": "2025-10", "sourceUrl": null, "errataAppliedAt": null }],
+      "effectiveFrom": null
+    },
+    "liver-uicc": {
+      "status": "outdated",
+      "basis": [{ "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }],
+      "effectiveFrom": null
+    },
+    "pancreas-jp": {
+      "status": "outdated",
+      "basis": [{ "source": "jp-pancreas", "implemented": "7", "latest": "8増補", "published": null, "latestPublished": "2026-07", "sourceUrl": null, "errataAppliedAt": null }],
+      "effectiveFrom": null
+    },
+    "pancreas-uicc": {
+      "status": "outdated",
+      "basis": [{ "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }],
+      "effectiveFrom": null
+    },
+    "biliary-intrahepatic": {
+      "status": "outdated",
+      "basis": [
+        { "source": "jp-biliary", "implemented": "7", "latest": "7", "published": null, "sourceUrl": null, "errataAppliedAt": null },
+        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
+      ],
+      "effectiveFrom": null
+    },
+    "biliary-perihilar": {
+      "status": "outdated",
+      "basis": [
+        { "source": "jp-biliary", "implemented": "7", "latest": "7", "published": null, "sourceUrl": null, "errataAppliedAt": null },
+        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
+      ],
+      "effectiveFrom": null
+    },
+    "biliary-distal": {
+      "status": "outdated",
+      "basis": [
+        { "source": "jp-biliary", "implemented": "7", "latest": "7", "published": null, "sourceUrl": null, "errataAppliedAt": null },
+        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
+      ],
+      "effectiveFrom": null
+    },
+    "biliary-gallbladder": {
+      "status": "outdated",
+      "basis": [
+        { "source": "jp-biliary", "implemented": "7", "latest": "7", "published": null, "sourceUrl": null, "errataAppliedAt": null },
+        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
+      ],
+      "effectiveFrom": null
+    }
+  },
+  "changelog": []
+}

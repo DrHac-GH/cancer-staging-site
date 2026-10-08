@@ -1,0 +1,130 @@
+{
+  "id": "esophagus",
+  "edition": "esophagus",
+  "labelStatus": "legacy",
+  "factors": [
+    {
+      "key": "t",
+      "label": {
+        "ja": "T因子:",
+        "en": "T Factor:"
+      },
+      "options": [
+        {
+          "value": "Tis",
+          "label": {
+            "ja": "Tis: 高度異形成（上皮内癌）",
+            "en": "Tis: High-grade dysplasia (carcinoma in situ)"
+          }
+        },
+        {
+          "value": "T1",
+          "label": {
+            "ja": "T1: 癌が粘膜または粘膜下層にとどまる (T1a: 粘膜, T1b: 粘膜下層)",
+            "en": "T1: Tumor invades lamina propria, muscularis mucosae, or submucosa (T1a: lamina propria or muscularis mucosae, T1b: submucosa)"
+          }
+        },
+        {
+          "value": "T2",
+          "label": {
+            "ja": "T2: 固有筋層にとどまる",
+            "en": "T2: Tumor invades muscularis propria"
+          }
+        },
+        {
+          "value": "T3",
+          "label": {
+            "ja": "T3: 食道外膜まで浸潤",
+            "en": "T3: Tumor invades adventitia"
+          }
+        },
+        {
+          "value": "T4a",
+          "label": {
+            "ja": "T4a: 周囲の他臓器に浸潤 (胸膜、心膜、横隔膜など)",
+            "en": "T4a: Tumor invades adjacent structures (pleura, pericardium, diaphragm, etc.)"
+          }
+        },
+        {
+          "value": "T4b",
+          "label": {
+            "ja": "T4b: 周囲の他臓器に浸潤 (大動脈、気管、椎体など)",
+            "en": "T4b: Tumor invades adjacent structures (aorta, trachea, vertebral body, etc.)"
+          }
+        }
+      ]
+    },
+    {
+      "key": "n",
+      "label": {
+        "ja": "N因子:",
+        "en": "N Factor:"
+      },
+      "options": [
+        {
+          "value": "N0",
+          "label": {
+            "ja": "N0: なし",
+            "en": "N0: None"
+          }
+        },
+        {
+          "value": "N1",
+          "label": {
+            "ja": "N1: 1〜2個",
+            "en": "N1: 1-2 nodes"
+          }
+        },
+        {
+          "value": "N2",
+          "label": {
+            "ja": "N2: 3〜6個",
+            "en": "N2: 3-6 nodes"
+          }
+        },
+        {
+          "value": "N3",
+          "label": {
+            "ja": "N3: 7個以上",
+            "en": "N3: 7 or more nodes"
+          }
+        }
+      ]
+    },
+    {
+      "key": "m",
+      "label": {
+        "ja": "M因子:",
+        "en": "M Factor:"
+      },
+      "options": [
+        {
+          "value": "M0",
+          "label": {
+            "ja": "M0: なし",
+            "en": "M0: None"
+          }
+        },
+        {
+          "value": "M1",
+          "label": {
+            "ja": "M1: あり（日本の規約第12版では、鎖骨上リンパ節転移をM1aとして区別することがある）",
+            "en": "M1: Present (In the 12th edition of the Japanese classification, supraclavicular lymph node metastasis may be classified as M1a)"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": [
+    { "when": {"m":["M1"]}, "stage": "IVB" },
+    { "when": {"n":["N3"]}, "stage": "IVB" },
+    { "when": {"n":["N2"]}, "stage": "IVA" },
+    { "when": {"n":["N1"]}, "stage": "IIIC" },
+    { "when": {"n":["N0"],"t":["Tis"]}, "stage": "0" },
+    { "when": {"n":["N0"],"t":["T1"]}, "stage": "I" },
+    { "when": {"n":["N0"],"t":["T2"]}, "stage": "II" },
+    { "when": {"n":["N0"],"t":["T3"]}, "stage": "IIIA" },
+    { "when": {"n":["N0"],"t":["T4a"]}, "stage": "IIIB" },
+    { "when": {"n":["N0"],"t":["T4b"]}, "stage": "IIIC" }
+  ]
+}

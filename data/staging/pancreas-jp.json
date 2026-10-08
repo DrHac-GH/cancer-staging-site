@@ -1,0 +1,106 @@
+{
+  "id": "pancreas-jp",
+  "edition": "pancreas-jp",
+  "labelStatus": "legacy",
+  "factors": [
+    {
+      "key": "t",
+      "label": {
+        "ja": "T因子:",
+        "en": "T Factor:"
+      },
+      "options": [
+        {
+          "value": "Tis",
+          "label": {
+            "ja": "Tis: 上皮内癌",
+            "en": "Tis: Carcinoma in situ"
+          }
+        },
+        {
+          "value": "T1",
+          "label": {
+            "ja": "T1: 腫瘍の最大径が2cm以下で膵臓内に限局",
+            "en": "T1: Tumor ≤ 2 cm in greatest dimension, limited to the pancreas"
+          }
+        },
+        {
+          "value": "T2",
+          "label": {
+            "ja": "T2: 腫瘍の最大径が2cmを超えるが膵臓内に限局",
+            "en": "T2: Tumor > 2 cm in greatest dimension, limited to the pancreas"
+          }
+        },
+        {
+          "value": "T3",
+          "label": {
+            "ja": "T3: 膵外への進展があるが、腹腔動脈または上腸間膜動脈に及ばない",
+            "en": "T3: Extension beyond the pancreas, but no involvement of the celiac axis or superior mesenteric artery"
+          }
+        },
+        {
+          "value": "T4",
+          "label": {
+            "ja": "T4: 腹腔動脈または上腸間膜動脈に及ぶ",
+            "en": "T4: Involvement of the celiac axis or superior mesenteric artery"
+          }
+        }
+      ]
+    },
+    {
+      "key": "n",
+      "label": {
+        "ja": "N因子:",
+        "en": "N Factor:"
+      },
+      "options": [
+        {
+          "value": "N0",
+          "label": {
+            "ja": "N0: 所属リンパ節転移なし",
+            "en": "N0: No regional lymph node metastasis"
+          }
+        },
+        {
+          "value": "N1",
+          "label": {
+            "ja": "N1: 所属リンパ節転移あり",
+            "en": "N1: Regional lymph node metastasis present"
+          }
+        }
+      ]
+    },
+    {
+      "key": "m",
+      "label": {
+        "ja": "M因子:",
+        "en": "M Factor:"
+      },
+      "options": [
+        {
+          "value": "M0",
+          "label": {
+            "ja": "M0: 遠隔転移なし",
+            "en": "M0: No distant metastasis"
+          }
+        },
+        {
+          "value": "M1",
+          "label": {
+            "ja": "M1: 遠隔転移あり",
+            "en": "M1: Distant metastasis present"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": [
+    { "when": {"m":["M1"]}, "stage": "IV" },
+    { "when": {"n":["N1"],"t":["T1","T2","T3"]}, "stage": "IIB" },
+    { "when": {"n":["N0"],"t":["Tis"]}, "stage": "0" },
+    { "when": {"n":["N0"],"t":["T1"]}, "stage": "IA" },
+    { "when": {"n":["N0"],"t":["T2"]}, "stage": "IB" },
+    { "when": {"n":["N0"],"t":["T3"]}, "stage": "IIA" },
+    { "when": {"n":["N0"],"t":["T4"]}, "stage": "III" }
+  ]
+}
