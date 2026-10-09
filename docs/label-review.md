@@ -67,7 +67,29 @@
 | M0 | 遠隔転移なし | （変更なし） | No distant metastasis | — |
 | M1 | 遠隔転移あり | （変更なし） | Distant metastasis present | — |
 
-## 大腸癌 `colorectal`
+## 大腸癌（規約） `colorectal-jp`
+
+| 選択肢 | 旧サイトの表記 | 現在の要約 | English | 一致率 |
+|---|---|---|---|---|
+| Tis | （新設） | 粘膜内 | Within the mucosa | — |
+| T1a | （新設） | 粘膜下層・浸潤1000μm未満 | Submucosa, invasion under 1000 μm | — |
+| T1b | （新設） | 粘膜下層・浸潤1000μm以上 | Submucosa, invasion 1000 μm or more | — |
+| T2 | （新設） | 固有筋層まで | Into the muscle layer | — |
+| T3 | （新設） | 固有筋層を越える（漿膜下層・外膜まで） | Beyond the muscle layer (subserosa or adventitia) | — |
+| T4a | （新設） | 漿膜表面に接する・露出 | Touches or breaks through the serosal surface | — |
+| T4b | （新設） | 他臓器へ直接浸潤 | Directly involves other organs | — |
+| N0 | （新設） | なし | None | — |
+| N1a | （新設） | 腸管傍・中間リンパ節に1個 | 1 pericolic/intermediate node | — |
+| N1b | （新設） | 腸管傍・中間リンパ節に2〜3個 | 2-3 pericolic/intermediate nodes | — |
+| N2a | （新設） | 腸管傍・中間リンパ節に4〜6個 | 4-6 pericolic/intermediate nodes | — |
+| N2b | （新設） | 腸管傍・中間リンパ節に7個以上 | 7 or more pericolic/intermediate nodes | — |
+| N3 | （新設） | 主リンパ節（下部直腸では側方リンパ節も） | Main nodes (also lateral nodes for lower rectum) | — |
+| M0 | （新設） | なし | None | — |
+| M1a | （新設） | 1臓器（腹膜転移を除く） | One organ (excluding peritoneum) | — |
+| M1b | （新設） | 2臓器以上（腹膜転移を除く） | Two or more organs (excluding peritoneum) | — |
+| M1c | （新設） | 腹膜転移あり | Peritoneal metastasis | — |
+
+## 大腸癌（UICC） `colorectal`
 
 | 選択肢 | 旧サイトの表記 | 現在の要約 | English | 一致率 |
 |---|---|---|---|---|

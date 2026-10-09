@@ -1,0 +1,172 @@
+{
+  "id": "colorectal-jp",
+  "name": { "ja": "大腸癌（規約）", "en": "Colorectal Cancer (Japanese Rules)" },
+  "edition": "colorectal-jp",
+  "labelStatus": "summarized-unreviewed",
+  "factors": [
+    {
+      "key": "t",
+      "label": {
+        "ja": "T因子:",
+        "en": "T Factor:"
+      },
+      "options": [
+        {
+          "value": "Tis",
+          "label": {
+            "ja": "Tis: 粘膜内",
+            "en": "Tis: Within the mucosa"
+          }
+        },
+        {
+          "value": "T1a",
+          "label": {
+            "ja": "T1a: 粘膜下層・浸潤1000μm未満",
+            "en": "T1a: Submucosa, invasion under 1000 μm"
+          }
+        },
+        {
+          "value": "T1b",
+          "label": {
+            "ja": "T1b: 粘膜下層・浸潤1000μm以上",
+            "en": "T1b: Submucosa, invasion 1000 μm or more"
+          }
+        },
+        {
+          "value": "T2",
+          "label": {
+            "ja": "T2: 固有筋層まで",
+            "en": "T2: Into the muscle layer"
+          }
+        },
+        {
+          "value": "T3",
+          "label": {
+            "ja": "T3: 固有筋層を越える（漿膜下層・外膜まで）",
+            "en": "T3: Beyond the muscle layer (subserosa or adventitia)"
+          }
+        },
+        {
+          "value": "T4a",
+          "label": {
+            "ja": "T4a: 漿膜表面に接する・露出",
+            "en": "T4a: Touches or breaks through the serosal surface"
+          }
+        },
+        {
+          "value": "T4b",
+          "label": {
+            "ja": "T4b: 他臓器へ直接浸潤",
+            "en": "T4b: Directly involves other organs"
+          }
+        }
+      ]
+    },
+    {
+      "key": "n",
+      "label": {
+        "ja": "N因子:",
+        "en": "N Factor:"
+      },
+      "options": [
+        {
+          "value": "N0",
+          "label": {
+            "ja": "N0: なし",
+            "en": "N0: None"
+          }
+        },
+        {
+          "value": "N1a",
+          "label": {
+            "ja": "N1a: 腸管傍・中間リンパ節に1個",
+            "en": "N1a: 1 pericolic/intermediate node"
+          }
+        },
+        {
+          "value": "N1b",
+          "label": {
+            "ja": "N1b: 腸管傍・中間リンパ節に2〜3個",
+            "en": "N1b: 2-3 pericolic/intermediate nodes"
+          }
+        },
+        {
+          "value": "N2a",
+          "label": {
+            "ja": "N2a: 腸管傍・中間リンパ節に4〜6個",
+            "en": "N2a: 4-6 pericolic/intermediate nodes"
+          }
+        },
+        {
+          "value": "N2b",
+          "label": {
+            "ja": "N2b: 腸管傍・中間リンパ節に7個以上",
+            "en": "N2b: 7 or more pericolic/intermediate nodes"
+          }
+        },
+        {
+          "value": "N3",
+          "label": {
+            "ja": "N3: 主リンパ節（下部直腸では側方リンパ節も）",
+            "en": "N3: Main nodes (also lateral nodes for lower rectum)"
+          }
+        }
+      ]
+    },
+    {
+      "key": "m",
+      "label": {
+        "ja": "M因子:",
+        "en": "M Factor:"
+      },
+      "options": [
+        {
+          "value": "M0",
+          "label": {
+            "ja": "M0: なし",
+            "en": "M0: None"
+          }
+        },
+        {
+          "value": "M1a",
+          "label": {
+            "ja": "M1a: 1臓器（腹膜転移を除く）",
+            "en": "M1a: One organ (excluding peritoneum)"
+          }
+        },
+        {
+          "value": "M1b",
+          "label": {
+            "ja": "M1b: 2臓器以上（腹膜転移を除く）",
+            "en": "M1b: Two or more organs (excluding peritoneum)"
+          }
+        },
+        {
+          "value": "M1c",
+          "label": {
+            "ja": "M1c: 腹膜転移あり",
+            "en": "M1c: Peritoneal metastasis"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": [
+    { "when": {"m":["M1c"]}, "stage": "IVc" },
+    { "when": {"m":["M1b"]}, "stage": "IVb" },
+    { "when": {"m":["M1a"]}, "stage": "IVa" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["Tis"]}, "stage": "0" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T1a","T1b","T2"]}, "stage": "I" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T3"]}, "stage": "IIa" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T4a"]}, "stage": "IIb" },
+    { "when": {"m":["M0"],"n":["N0"],"t":["T4b"]}, "stage": "IIc" },
+    { "when": {"m":["M0"],"n":["N1a","N1b"],"t":["T1a","T1b","T2"]}, "stage": "IIIa" },
+    { "when": {"m":["M0"],"n":["N1a","N1b"],"t":["T3","T4a"]}, "stage": "IIIb" },
+    { "when": {"m":["M0"],"n":["N1a","N1b"],"t":["T4b"]}, "stage": "IIIc" },
+    { "when": {"m":["M0"],"n":["N2a"],"t":["T1a","T1b"]}, "stage": "IIIa" },
+    { "when": {"m":["M0"],"n":["N2a"],"t":["T2","T3"]}, "stage": "IIIb" },
+    { "when": {"m":["M0"],"n":["N2a"],"t":["T4a","T4b"]}, "stage": "IIIc" },
+    { "when": {"m":["M0"],"n":["N2b","N3"],"t":["T1a","T1b","T2"]}, "stage": "IIIb" },
+    { "when": {"m":["M0"],"n":["N2b","N3"],"t":["T3","T4a","T4b"]}, "stage": "IIIc" }
+  ]
+}
