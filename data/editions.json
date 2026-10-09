@@ -47,9 +47,9 @@
     "colorectal": {
       "status": "outdated",
       "basis": [
-        { "source": "jp-colorectal", "implemented": "9", "latest": "9", "published": null, "sourceUrl": null, "errataAppliedAt": null },
         { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
       ],
+      "note": "区分は UICC（N1c あり・N3 なし）。大腸癌取扱い規約 第9版（N3 あり・N1c なし）は別系統として未収載（ネイティブ版 1.0.1 は colorectal-jp として収載）。",
       "effectiveFrom": null
     },
     "liver-jp": {
@@ -106,6 +106,11 @@
     }
   },
   "changelog": [
+    {
+      "date": "2026-10-09",
+      "ja": "T4 で判定不能になっていた組合せを修正しました（膵癌 T4 N1 M0 は III、遠位胆管癌 T4 は IIIB、胆嚢癌 T4 N1 M0 は IVA）。",
+      "en": "Filled gaps for T4: pancreatic T4 N1 M0 is Stage III, distal bile duct T4 is IIIB, gallbladder T4 N1 M0 is IVA."
+    },
     {
       "date": "2026-10-09",
       "ja": "大腸癌: T4b でリンパ節転移あり（M0）が判定不能になっていたのを修正しました（IIIC）。",

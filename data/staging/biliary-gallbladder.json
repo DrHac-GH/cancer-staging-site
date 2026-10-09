@@ -120,6 +120,7 @@
     { "when": {"m":["M1"]}, "stage": "IVB" },
     { "when": {"n":["N2"]}, "stage": "IVB" },
     { "when": {"n":["N1"],"t":["T1a","T1b","T2a","T2b","T3"]}, "stage": "IIIB" },
+    { "when": {"n":["N1"],"t":["T4"]}, "stage": "IVA" },
     { "when": {"n":["N0"],"t":["Tis"]}, "stage": "0" },
     { "when": {"n":["N0"],"t":["T1a"]}, "stage": "IA" },
     { "when": {"n":["N0"],"t":["T1b"]}, "stage": "IB" },

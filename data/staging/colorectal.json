@@ -1,6 +1,6 @@
 {
   "id": "colorectal",
-  "name": { "ja": "大腸癌", "en": "Colorectal Cancer" },
+  "name": { "ja": "大腸癌（UICC）", "en": "Colorectal Cancer (UICC)" },
   "edition": "colorectal",
   "labelStatus": "summarized-unreviewed",
   "factors": [

@@ -104,6 +104,7 @@
   ],
   "rules": [
     { "when": {"m":["M1"]}, "stage": "IV" },
+    { "when": {"t":["T4"]}, "stage": "III" },
     { "when": {"n":["N2"]}, "stage": "III" },
     { "when": {"n":["N1"],"t":["T1","T2","T3"]}, "stage": "IIB" },
     { "when": {"n":["N0"],"t":["Tis"]}, "stage": "0" },
