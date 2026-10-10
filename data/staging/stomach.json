@@ -13,10 +13,17 @@
       },
       "options": [
         {
+          "value": "Tis",
+          "label": {
+            "ja": "Tis: 粘膜上皮内（粘膜固有層への浸潤なし）",
+            "en": "Tis: Within the epithelium, no invasion of the lamina propria"
+          }
+        },
+        {
           "value": "T1",
           "label": {
-            "ja": "T1: 粘膜〜粘膜下層まで",
-            "en": "T1: Mucosa to submucosa"
+            "ja": "T1: 粘膜固有層〜粘膜下層まで",
+            "en": "T1: Lamina propria to submucosa"
           }
         },
         {
@@ -29,15 +36,15 @@
         {
           "value": "T3",
           "label": {
-            "ja": "T3: 漿膜下層まで",
-            "en": "T3: Into the subserosa"
+            "ja": "T3: 固有筋層を越える（漿膜表面には達しない）",
+            "en": "T3: Beyond the muscle layer, not reaching the serosal surface"
           }
         },
         {
           "value": "T4a",
           "label": {
-            "ja": "T4a: 漿膜表面に露出",
-            "en": "T4a: Reaches the serosal surface"
+            "ja": "T4a: 漿膜表面に接する・露出",
+            "en": "T4a: Touches or breaks through the serosal surface"
           }
         },
         {
@@ -119,6 +126,7 @@
   ],
   "rules": [
     { "when": {"m":["M1"]}, "stage": "IVB" },
+    { "when": {"t":["Tis"],"n":["N0"]}, "stage": "0" },
     { "when": {"t":["T4b"]}, "stage": "IVA" },
     { "when": {"t":["T3","T4a"],"n":["N0"]}, "stage": "IIB" },
     { "when": {"t":["T3","T4a"]}, "stage": "III" },

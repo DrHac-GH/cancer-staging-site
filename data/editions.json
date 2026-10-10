@@ -29,19 +29,17 @@
       "effectiveFrom": null
     },
     "stomach": {
-      "status": "outdated",
-      "basis": [
-        { "source": "jp-stomach", "implemented": "15", "latest": "16", "published": null, "latestPublished": "2026-03", "sourceUrl": null, "errataAppliedAt": null },
-        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
-      ],
+      "status": "current",
+      "basis": [{ "source": "jp-stomach", "implemented": "16", "latest": "16", "published": "2026-03", "sourceUrl": null, "errataAppliedAt": null }],
+      "reference": { "label": { "ja": "金原出版『胃癌取扱い規約 第16版』書籍ページ", "en": "Kanehara: Japanese Classification of Gastric Carcinoma, 16th Ed. (in Japanese)" }, "url": "https://www.kanehara-shuppan.co.jp/books/detail.html?isbn=9784307205078" },
+      "verification": "出版社の立ち読み（主な改訂点・壁深達度）で照合（2026-10-10）。進行度の変更は Tis 導入に伴う更新のみと判断し、第15版の表に Tis N0 M0＝0 を追加。臨床分類の Stage 0 は表を直接は未確認。書籍未照合",
       "effectiveFrom": null
     },
     "stomach-p": {
-      "status": "outdated",
-      "basis": [
-        { "source": "jp-stomach", "implemented": "15", "latest": "16", "published": null, "latestPublished": "2026-03", "sourceUrl": null, "errataAppliedAt": null },
-        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
-      ],
+      "status": "current",
+      "basis": [{ "source": "jp-stomach", "implemented": "16", "latest": "16", "published": "2026-03", "sourceUrl": null, "errataAppliedAt": null }],
+      "reference": { "label": { "ja": "金原出版『胃癌取扱い規約 第16版』書籍ページ", "en": "Kanehara: Japanese Classification of Gastric Carcinoma, 16th Ed. (in Japanese)" }, "url": "https://www.kanehara-shuppan.co.jp/books/detail.html?isbn=9784307205078" },
+      "verification": "出版社の立ち読み（主な改訂点・壁深達度）で照合（2026-10-10）。進行度の変更は Tis 導入に伴う更新のみと判断し、第15版の表に Tis N0 M0＝0 を追加。臨床分類の Stage 0 は表を直接は未確認。書籍未照合",
       "effectiveFrom": null
     },
     "colorectal-jp": {
@@ -115,6 +113,11 @@
     }
   },
   "changelog": [
+    {
+      "date": "2026-10-10",
+      "ja": "胃癌を取扱い規約 第16版に合わせました。Tis（Tis N0 M0 は Stage 0）を追加し、T3・T4a の説明を新しい定義に更新しています。",
+      "en": "Gastric cancer now follows the 16th edition: Tis added (Tis N0 M0 is Stage 0), and the T3/T4a descriptions updated."
+    },
     {
       "date": "2026-10-10",
       "ja": "肝癌（規約）: リンパ節転移あり・遠隔転移なしを IVB と表示していたのを IVA に修正しました。",

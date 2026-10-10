@@ -210,10 +210,11 @@
 
 | 選択肢 | 旧サイトの表記 | 現在の要約 | English | 一致率 |
 |---|---|---|---|---|
-| T1 | 癌が粘膜または粘膜下層にとどまる | 粘膜〜粘膜下層まで | Mucosa to submucosa | 0.35 |
+| Tis | （新設） | 粘膜上皮内（粘膜固有層への浸潤なし） | Within the epithelium, no invasion of the lamina propria | — |
+| T1 | 癌が粘膜または粘膜下層にとどまる | 粘膜固有層〜粘膜下層まで | Lamina propria to submucosa | 0.31 |
 | T2 | 固有筋層にとどまる | 固有筋層まで | Into the muscle layer | — |
-| T3 | 漿膜下層にとどまる | 漿膜下層まで | Into the subserosa | — |
-| T4a | 漿膜を越えて胃の表面に露出 | 漿膜表面に露出 | Reaches the serosal surface | 0.56 |
+| T3 | 漿膜下層にとどまる | 固有筋層を越える（漿膜表面には達しない） | Beyond the muscle layer, not reaching the serosal surface | — |
+| T4a | 漿膜を越えて胃の表面に露出 | 漿膜表面に接する・露出 | Touches or breaks through the serosal surface | 0.36 |
 | T4b | 周囲の他臓器に直接浸潤 | 隣接臓器へ直接浸潤 | Directly involves nearby organs | — |
 | N0 | リンパ節転移なし | （変更なし） | No regional lymph node metastasis | — |
 | N1 | 1〜2個 | （変更なし） | 1-2 regional lymph nodes | — |
@@ -227,10 +228,11 @@
 
 | 選択肢 | 旧サイトの表記 | 現在の要約 | English | 一致率 |
 |---|---|---|---|---|
-| T1 | 癌が粘膜または粘膜下層にとどまる | 粘膜〜粘膜下層まで | Mucosa to submucosa | 0.35 |
+| Tis | （新設） | 粘膜上皮内（粘膜固有層への浸潤なし） | Within the epithelium, no invasion of the lamina propria | — |
+| T1 | 癌が粘膜または粘膜下層にとどまる | 粘膜固有層〜粘膜下層まで | Lamina propria to submucosa | 0.31 |
 | T2 | 固有筋層にとどまる | 固有筋層まで | Into the muscle layer | — |
-| T3 | 漿膜下層にとどまる | 漿膜下層まで | Into the subserosa | — |
-| T4a | 漿膜を越えて胃の表面に露出 | 漿膜表面に露出 | Reaches the serosal surface | 0.56 |
+| T3 | 漿膜下層にとどまる | 固有筋層を越える（漿膜表面には達しない） | Beyond the muscle layer, not reaching the serosal surface | — |
+| T4a | 漿膜を越えて胃の表面に露出 | 漿膜表面に接する・露出 | Touches or breaks through the serosal surface | 0.36 |
 | T4b | 周囲の他臓器に直接浸潤 | 隣接臓器へ直接浸潤 | Directly involves nearby organs | — |
 | N0 | リンパ節転移なし | （変更なし） | No regional lymph node metastasis | — |
 | N1 | 1〜2個 | （変更なし） | 1-2 regional lymph nodes | — |
