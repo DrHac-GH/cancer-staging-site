@@ -146,7 +146,7 @@
   },
   "rules": [
     { "when": {"m":["M1"]}, "stage": "IVB" },
-    { "when": {"n":["N1"]}, "stage": "IVB" },
+    { "when": {"n":["N1"]}, "stage": "IVA" },
     { "when": {"m":["M0"],"n":["N0"],"t":["T1"]}, "stage": "I" },
     { "when": {"m":["M0"],"n":["N0"],"t":["T2"]}, "stage": "II" },
     { "when": {"m":["M0"],"n":["N0"],"t":["T3"]}, "stage": "III" },

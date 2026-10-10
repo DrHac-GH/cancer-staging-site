@@ -60,8 +60,10 @@
       "effectiveFrom": null
     },
     "liver-jp": {
-      "status": "outdated",
-      "basis": [{ "source": "jp-liver", "implemented": "6補訂", "latest": "7", "published": null, "latestPublished": "2025-10", "sourceUrl": null, "errataAppliedAt": null }],
+      "status": "current",
+      "basis": [{ "source": "jp-liver", "implemented": "7", "latest": "7", "published": "2025-10", "sourceUrl": null, "errataAppliedAt": null }],
+      "reference": { "label": { "ja": "国立がん研究センター がん情報サービス「肝臓がん 治療」", "en": "National Cancer Center Japan, Cancer Information Service: Liver cancer treatment (in Japanese)" }, "url": "https://ganjoho.jp/public/cancer/liver/treatment.html" },
+      "verification": "がん情報サービスの表3（規約第7版より作成）で照合（2026-10-10）・書籍未照合",
       "effectiveFrom": null
     },
     "liver-uicc": {
@@ -113,6 +115,11 @@
     }
   },
   "changelog": [
+    {
+      "date": "2026-10-10",
+      "ja": "肝癌（規約）: リンパ節転移あり・遠隔転移なしを IVB と表示していたのを IVA に修正しました。",
+      "en": "Liver (Japanese rules): nodal metastasis without distant metastasis was shown as IVB; it is now IVA."
+    },
     {
       "date": "2026-10-09",
       "ja": "大腸癌に取扱い規約 第9版（N3 を含む）の分類を追加しました。従来の分類は UICC 第8版です。",
