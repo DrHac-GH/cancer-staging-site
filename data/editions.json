@@ -50,9 +50,9 @@
       "effectiveFrom": null
     },
     "colorectal": {
-      "status": "outdated",
+      "status": "current",
       "basis": [
-        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
+        { "source": "uicc", "implemented": "9", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
       ],
       "note": "区分は UICC（N1c あり・N3 なし）。大腸癌取扱い規約 第9版（N3 あり・N1c なし）は別系統として未収載（ネイティブ版 1.0.1 は colorectal-jp として収載）。",
       "effectiveFrom": null
@@ -65,8 +65,8 @@
       "effectiveFrom": null
     },
     "liver-uicc": {
-      "status": "outdated",
-      "basis": [{ "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }],
+      "status": "current",
+      "basis": [{ "source": "uicc", "implemented": "9", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }],
       "effectiveFrom": null
     },
     "pancreas-jp": {
@@ -75,44 +75,49 @@
       "effectiveFrom": null
     },
     "pancreas-uicc": {
-      "status": "outdated",
-      "basis": [{ "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }],
+      "status": "current",
+      "basis": [{ "source": "uicc", "implemented": "9", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }],
       "effectiveFrom": null
     },
     "biliary-intrahepatic": {
-      "status": "outdated",
+      "status": "current",
       "basis": [
         { "source": "jp-biliary", "implemented": "7", "latest": "7", "published": null, "sourceUrl": null, "errataAppliedAt": null },
-        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
+        { "source": "uicc", "implemented": "9", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
       ],
       "effectiveFrom": null
     },
     "biliary-perihilar": {
-      "status": "outdated",
+      "status": "current",
       "basis": [
         { "source": "jp-biliary", "implemented": "7", "latest": "7", "published": null, "sourceUrl": null, "errataAppliedAt": null },
-        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
+        { "source": "uicc", "implemented": "9", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
       ],
       "effectiveFrom": null
     },
     "biliary-distal": {
-      "status": "outdated",
+      "status": "current",
       "basis": [
         { "source": "jp-biliary", "implemented": "7", "latest": "7", "published": null, "sourceUrl": null, "errataAppliedAt": null },
-        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
+        { "source": "uicc", "implemented": "9", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
       ],
       "effectiveFrom": null
     },
     "biliary-gallbladder": {
-      "status": "outdated",
+      "status": "current",
       "basis": [
         { "source": "jp-biliary", "implemented": "7", "latest": "7", "published": null, "sourceUrl": null, "errataAppliedAt": null },
-        { "source": "uicc", "implemented": "8", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
+        { "source": "uicc", "implemented": "9", "latest": "9", "published": null, "latestPublished": null, "sourceUrl": null, "errataAppliedAt": null }
       ],
       "effectiveFrom": null
     }
   },
   "changelog": [
+    {
+      "date": "2026-10-15",
+      "ja": "UICC TNM分類の準拠を第9版に更新しました。本サイトの消化器の各部位は第8版から分類・病期とも変更がないため、判定結果は変わりません。",
+      "en": "UICC classifications now follow the TNM 9th edition. For the digestive sites here, categories and stage groups are unchanged from the 8th edition, so results do not change."
+    },
     {
       "date": "2026-10-10",
       "ja": "胃癌を取扱い規約 第16版に合わせました。Tis（Tis N0 M0 は Stage 0）を追加し、T3・T4a の説明を新しい定義に更新しています。",

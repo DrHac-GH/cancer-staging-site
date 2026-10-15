@@ -1,6 +1,6 @@
 // このファイルは tools/build.mjs が生成する。直接編集しない。
 // キャッシュ名は配信ファイルの内容ハッシュ。データやページを変えると自動で新しい版になる。
-const CACHE_NAME = 'cancer-staging-22af47fb1db3';
+const CACHE_NAME = 'cancer-staging-93a7d28de6b7';
 const urlsToCache = [
   "./",
   "./biliary-tract/distal.html",
