@@ -70,8 +70,10 @@
       "effectiveFrom": null
     },
     "pancreas-jp": {
-      "status": "outdated",
-      "basis": [{ "source": "jp-pancreas", "implemented": "7", "latest": "8増補", "published": null, "latestPublished": "2026-07", "sourceUrl": null, "errataAppliedAt": null }],
+      "status": "current",
+      "basis": [{ "source": "jp-pancreas", "implemented": "8増補", "latest": "8増補", "published": "2026-07", "sourceUrl": null, "errataAppliedAt": null }],
+      "reference": { "label": { "ja": "日本膵臓学会 規約第8版 公式英訳（J Hepatobiliary Pancreat Sci 2024）", "en": "Japan Pancreas Society, 8th edition (J Hepatobiliary Pancreat Sci 2024)" }, "url": "https://doi.org/10.1002/jhbp.12056" },
+      "verification": "公式英訳 Table 3 と全マス一致（2026-10-09）。増補版（2026-07）は緒言で進行度の変更なし（立ち読みで確認・2026-10-10）。書籍未照合",
       "effectiveFrom": null
     },
     "pancreas-uicc": {

@@ -189,7 +189,7 @@
 | N0 | 所属リンパ節転移なし | （変更なし） | No regional lymph node metastasis | — |
 | N1 | 所属リンパ節転移あり | （変更なし） | Regional lymph node metastasis present | — |
 | M0 | 遠隔転移なし | （変更なし） | No distant metastasis | — |
-| M1 | 遠隔転移あり | （変更なし） | Distant metastasis present | — |
+| M1 | 遠隔転移あり | 遠隔転移あり（腹腔細胞診陽性を含む） | Distant metastasis present (including positive peritoneal cytology) | — |
 
 ## 膵癌（UICC） `pancreas-uicc`
 

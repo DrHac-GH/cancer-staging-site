@@ -88,8 +88,8 @@
         {
           "value": "M1",
           "label": {
-            "ja": "M1: 遠隔転移あり",
-            "en": "M1: Distant metastasis present"
+            "ja": "M1: 遠隔転移あり（腹腔細胞診陽性を含む）",
+            "en": "M1: Distant metastasis present (including positive peritoneal cytology)"
           }
         }
       ]
